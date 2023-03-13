@@ -2,9 +2,37 @@
 @tailwind components;
 @tailwind utilities;
 
-
 @layer {
   .orange-gradient {
     background: linear-gradient(92.48deg, #d80027 2.08%, #fb9e3c 117.25%);
+  }
+  @keyframes countdown-new {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes countdown-old {
+    0% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+  }
+
+  .animate-countdown-new {
+    animation: countdown-new 1s ease-in-out forwards;
+  }
+
+  .animate-countdown-old {
+    animation: countdown-old 1s ease-in-out forwards;
   }
 }

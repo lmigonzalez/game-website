@@ -1,10 +1,12 @@
 import Head from 'next/head';
-import { Audiowide } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import CountDown from '@/sections/Home/CountDown';
 
-const audiowide = Audiowide({
-  weight: ['400'],
+
+const poppins = Poppins({
+  weight: ['400', '500', '700'],
   subsets: ['latin'],
 });
 
@@ -17,19 +19,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${audiowide.className}`}>
+      <main className={`${poppins.className}`}>
         <Navbar/>
-        <div className="py-4 px-10 bg-black w-full flex justify-center">
-          <h1 className="text-transparent bg-clip-text orange-gradient text-8xl">
-            00:
-          </h1>
-          <h1 className="text-transparent bg-clip-text orange-gradient text-8xl">
-            00: 
-          </h1>
-          <h1 className="text-transparent bg-clip-text orange-gradient text-8xl">
-            00
-          </h1>
-        </div>
+        <CountDown duration={10000}/>
 
         <div className='h-20 w-40 orange-gradient'>
           hwloo

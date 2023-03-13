@@ -1,18 +1,13 @@
 import React from 'react';
 import Link from 'next/link';
-import { Poppins } from 'next/font/google';
 
-const poppins = Poppins({
-  weight: ['400', '500', '700'],
-  subsets: ['latin'],
-});
 
 const Footer = () => {
   return (
-    <footer className={`${poppins.className} bg-black text-white `}>
+    <footer className={`mt-auto bg-black text-white font-light`}>
       <div className="flex justify-between space-x-8 mb-8 border-solid border-b-2  px-4 py-10">
         <div className="space-y-4 ">
-          <p>LOGO</p>
+          <p className='font-extrabold'>LOGO</p>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.{' '}
