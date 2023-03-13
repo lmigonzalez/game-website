@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import { Audiowide } from 'next/font/google';
+import Navbar from '@/components/Navbar';
+import Footer from '@/components/Footer';
 
 const audiowide = Audiowide({
   weight: ['400'],
@@ -16,6 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={`${audiowide.className}`}>
+        <Navbar/>
         <div className="py-4 px-10 bg-black w-full flex justify-center">
           <h1 className="text-transparent bg-clip-text orange-gradient text-8xl">
             00:
@@ -27,6 +30,11 @@ export default function Home() {
             00
           </h1>
         </div>
+
+        <div className='h-20 w-40 orange-gradient'>
+          hwloo
+        </div>
+        <Footer/>
       </main>
     </>
   );
