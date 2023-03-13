@@ -36,3 +36,5 @@ yarn-error.log*
 next-env.d.ts
 
 /src/pages/testing.tsx
+/prettier.config.js
+/public/testingImg.jpg
