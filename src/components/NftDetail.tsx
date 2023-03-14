@@ -15,6 +15,8 @@ export interface INftDetail {
   packsLeft: number;
   live: Boolean;
   timeRemain: number;
+  whitelist: number | string;
+  presale: number | string;
 }
 
 export function NftDetail(props: INftDetail) {
@@ -57,6 +59,9 @@ export function NftDetail(props: INftDetail) {
           {timeUnits(timeRemain)?.minutes}min:
           {timeUnits(timeRemain)?.seconds}sec
         </span>
+      </div>
+      <div>
+        <span>props</span>
       </div>
     </div>
   );

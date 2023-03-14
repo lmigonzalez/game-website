@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import { Audiowide } from 'next/font/google';
-import moment from 'moment';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { Audiowide } from "next/font/google";
+import moment from "moment";
+import { motion, AnimatePresence } from "framer-motion";
 const audiowide = Audiowide({
-  weight: ['400'],
-  subsets: ['latin'],
+  weight: ["400"],
+  subsets: ["latin"],
 });
 
 interface CountdownProps {
   duration: number;
 }
 
-const CountDown: React.FC<CountdownProps> = () => {
+const CountDown: React.FC<CountdownProps> = ({ duration }) => {
   const [timeLeft, setTimeLeft] = useState(10);
-  const [initialValue, setInitialValue] = useState(222545);
+  const [initialValue, setInitialValue] = useState(duration);
 
   const time = moment({
     hour: Math.floor(initialValue / 10000),
@@ -37,15 +37,15 @@ const CountDown: React.FC<CountdownProps> = () => {
   const [hoursLast, setHoursLast] = useState(parseInt(hours.toString()[0]));
   const [hoursFirst, setHoursFirst] = useState(parseInt(hours.toString()[1]));
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-          setInitialValue(initialValue - 1);
-          secondsCountDown();
-          minutesCountDown();
-          hoursCountDown();
-        }, 1000);
-        return () => clearInterval(interval);
-    }, [initialValue]);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setInitialValue(initialValue - 1);
+      secondsCountDown();
+      minutesCountDown();
+      hoursCountDown();
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [initialValue]);
 
   useEffect(() => {
     if (timeLeft === 0) return;
