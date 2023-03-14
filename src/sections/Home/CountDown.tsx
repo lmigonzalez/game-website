@@ -1,9 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { Audiowide } from 'next/font/google';
+import { Audiowide, Poppins } from 'next/font/google';
 import moment from 'moment';
 import { motion, AnimatePresence } from 'framer-motion';
+import Link from 'next/link';
+import { url } from 'inspector';
+
 const audiowide = Audiowide({
   weight: ['400'],
+  subsets: ['latin'],
+});
+
+const poppins = Poppins({
+  weight: ['500'],
   subsets: ['latin'],
 });
 
@@ -37,25 +45,15 @@ const CountDown: React.FC<CountdownProps> = () => {
   const [hoursLast, setHoursLast] = useState(parseInt(hours.toString()[0]));
   const [hoursFirst, setHoursFirst] = useState(parseInt(hours.toString()[1]));
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-          setInitialValue(initialValue - 1);
-          secondsCountDown();
-          minutesCountDown();
-          hoursCountDown();
-        }, 1000);
-        return () => clearInterval(interval);
-    }, [initialValue]);
-
   useEffect(() => {
-    if (timeLeft === 0) return;
-
-    const intervalId = setInterval(() => {
-      setTimeLeft(timeLeft - 1);
-    }, 1000);
-
-    return () => clearInterval(intervalId);
-  }, [timeLeft]);
+    // const interval = setInterval(() => {
+    //   setInitialValue(initialValue - 1);
+    //   secondsCountDown();
+    //   minutesCountDown();
+    //   hoursCountDown();
+    // }, 1000);
+    // return () => clearInterval(interval);
+  }, [initialValue]);
 
   function secondsCountDown() {
     setSecondLast(secondLast === 0 ? 9 : secondLast - 1);
@@ -143,6 +141,28 @@ const CountDown: React.FC<CountdownProps> = () => {
               SECONDS
             </p>
           </div>
+        </div>
+        <div
+          className={`${poppins.className} mt-20 flex items-center justify-center space-x-5 `}
+        >
+          {' '}
+          <button
+            className=" border-[#DB0F29]  w-48 rounded-full
+            border-2 
+            py-4 text-center"
+          >
+            {' '}
+            <p className="text-color">View Drop</p>{' '}
+          </button>
+          <button
+            className="orange-gradient h-14 w-48 rounded-full bg-transparent text-white"
+            style={{
+              background:
+                'linear-gradient(92.48deg, #d80027 2.08%, #fb9e3c 117.25%)',
+            }}
+          >
+            Mint Now
+          </button>
         </div>
       </div>
     </section>
