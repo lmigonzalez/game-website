@@ -79,7 +79,7 @@ export function NftDetail(props: INftDetail) {
             </span>
           </div>
         </div>
-        <MintButton nftId={props.id} />
+        <MintButton />
       </div>
     </div>
   );
