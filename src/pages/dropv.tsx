@@ -38,7 +38,6 @@ export default function dropv() {
             <NftCard {...testNft} />
           </div>
         </div>
-
         <Footer />
       </main>
     </>

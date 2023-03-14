@@ -10,13 +10,13 @@ export default function nftDetail() {
   return (
     <>
       <Modal {...nft} />
+      <Navbar />
       <main>
-        <Navbar />
         <div className="m-20 flex items-center justify-center">
           <NftDetail {...nft} />
         </div>
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 }
