@@ -26,9 +26,7 @@ export function NftDetail(props: INftDetail) {
   }, []);
 
   return (
-    <div
-      className={`${poppins.className} flex flex-row justify-around gap-16 `}
-    >
+    <div className={`${poppins.className} flex flex-row justify-around gap-16`}>
       <div className="h-auto w-auto flex-auto">
         <Image
           className="rounded-3xl "
