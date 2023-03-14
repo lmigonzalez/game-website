@@ -13,8 +13,36 @@ export default function asd() {
       <Modal />
       <main>
         <Navbar />
-        <div className="my-20 flex h-[1920] items-center justify-center border-solid bg-slate-300">
-          <NftDetail {...testNft} />
+        <div className="my-20 border-solid bg-slate-300">
+          <div className=" grid grid-flow-col-dense grid-rows-2   gap-2">
+            <div>
+              <NftCard {...testNft} />
+            </div>
+            <div>
+              <NftCard {...testNft} />
+            </div>
+            <div>
+              <NftCard {...testNft} />
+            </div>
+            <div>
+              <NftCard {...testNft} />
+            </div>
+            <div>
+              <NftCard {...testNft} />
+            </div>
+            <div>
+              <NftCard {...testNft} />
+            </div>
+            <div>
+              <NftCard {...testNft} />
+            </div>
+            <div>
+              <NftCard {...testNft} />
+            </div>
+            <div>
+              <NftCard {...testNft} />
+            </div>
+          </div>
         </div>
         {/* <div className="my-20 flex h-[1920] items-center justify-center border-solid bg-slate-300">
           <NftCard {...testNft} />
