@@ -1,11 +1,8 @@
-
-
-
 export type nft = INftDetail & INftCard;
 
 export const testNft: nft  = {
   id: "1234",
-  numb: "Abcdef",
+  name: "Alberto",
   img: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
   packsCount: 100,
   maxCount: 5,
@@ -20,7 +17,7 @@ export const testNft: nft  = {
 
 export interface INftCard {
   id: string;
-  numb: string;
+  name: string;
   img: string;
   packsCount: number;
   collectiblesCount: number;
@@ -30,7 +27,7 @@ export interface INftCard {
 
 export interface INftDetail {
   id: string;
-  numb: string;
+  name: string;
   img: string;
   maxCount: number;
   price: number;
