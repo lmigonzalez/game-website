@@ -6,33 +6,47 @@
   .orange-gradient {
     background: linear-gradient(92.48deg, #d80027 2.08%, #fb9e3c 117.25%);
   }
-  @keyframes countdown-new {
-    0% {
-      opacity: 0;
-      transform: translateY(-100%);
-    }
-    100% {
-      opacity: 1;
-      transform: translateY(0);
-    }
+
+  .gradient-border {
+    background: transparent;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    border-image: linear-gradient(to right, #f00, #0f0, #00f) 1;
   }
 
-  @keyframes countdown-old {
-    0% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    100% {
-      opacity: 0;
-      transform: translateY(100%);
-    }
+  /* Define the Tailwind colors */
+  /* border-image-slice: 1; */
+  /* .border-gradient {
+    width: 10rem;
+    text-align: center;
+    border-image-source: url('/orange-gradient.png')!important;
+    border: solid 2px white;
+    border-radius: 100%;
+  } */
+
+  .border-radium {
+    border: solid 2px linear-gradient(92.48deg, #d80027 2.08%, #fb9e3c 117.25%);
+    border-radius: 1rem;
   }
 
-  .animate-countdown-new {
-    animation: countdown-new 1s ease-in-out forwards;
+  .text-color {
+    font-size: 1rem;
+    background: -webkit-linear-gradient(
+      92.48deg,
+      #d80027 2.08%,
+      #fb9e3c 117.25%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: linear-gradient(92.48deg, #d80027 2.08%, #fb9e3c 117.25%);
   }
 
-  .animate-countdown-old {
-    animation: countdown-old 1s ease-in-out forwards;
+  .text-with-border {
+    color: white;
+    text-shadow: -1px -1px 0 #da0828, 1px -1px 0 #da0828, -1px 1px 0 #da0828,
+      1px 1px 0 #da0828;
+  }
+  .hide-scroll-bar::-webkit-scrollbar {
+    display: none;
   }
 }
