@@ -5,7 +5,7 @@ import { nft } from "@/pages/api/testdb";
 export const NftCard: FC<nft> = (nft) => {
   return (
     <div className="flex flex-col gap-1 font-[roboto]">
-      <div className="flex h-auto flex-auto ">
+      <div className="flex h-auto ">
         <Image
           className=" rounded-sm"
           src={nft.img}
