@@ -1,13 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Audiowide, Poppins } from 'next/font/google';
-import moment from 'moment';
-import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
-import { url } from 'inspector';
-
+import React, { useState, useEffect } from "react";
+import { Audiowide, Poppins } from "next/font/google";
+import moment from "moment";
+import { motion, AnimatePresence } from "framer-motion";
 const audiowide = Audiowide({
-  weight: ['400'],
-  subsets: ['latin'],
+  weight: ["400"],
+  subsets: ["latin"],
 });
 
 const poppins = Poppins({
@@ -19,9 +16,9 @@ interface CountdownProps {
   duration: number;
 }
 
-const CountDown: React.FC<CountdownProps> = () => {
+const CountDown: React.FC<CountdownProps> = ({ duration }) => {
   const [timeLeft, setTimeLeft] = useState(10);
-  const [initialValue, setInitialValue] = useState(222545);
+  const [initialValue, setInitialValue] = useState(duration);
 
   const time = moment({
     hour: Math.floor(initialValue / 10000),
@@ -45,14 +42,15 @@ const CountDown: React.FC<CountdownProps> = () => {
   const [hoursLast, setHoursLast] = useState(parseInt(hours.toString()[0]));
   const [hoursFirst, setHoursFirst] = useState(parseInt(hours.toString()[1]));
 
+
   useEffect(() => {
-    // const interval = setInterval(() => {
-    //   setInitialValue(initialValue - 1);
-    //   secondsCountDown();
-    //   minutesCountDown();
-    //   hoursCountDown();
-    // }, 1000);
-    // return () => clearInterval(interval);
+    const interval = setInterval(() => {
+      setInitialValue(initialValue - 1);
+      secondsCountDown();
+      minutesCountDown();
+      hoursCountDown();
+    }, 1000);
+    return () => clearInterval(interval);
   }, [initialValue]);
 
   function secondsCountDown() {

@@ -24,7 +24,7 @@ export default function Home() {
       <main className={`${poppins.className}`}>
         <Navbar/>
         <Hero/>
-        <CountDown duration={10000}/>
+        <CountDown duration={122545}/>
         <HowToMint/>
         <Footer/>
       </main>
