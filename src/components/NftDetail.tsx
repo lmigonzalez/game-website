@@ -1,26 +1,11 @@
 import React from "react";
 import Image from "next/image";
-import { poppins } from "../utils/fonts";
-import { TimeLike } from "fs";
 import useCountDown from "react-countdown-hook";
 import { timeUnits } from "../utils/unitTime";
 import MintButton from "./MintButton";
+import { nft } from "@/pages/api/testdb";
 
-export interface INftDetail {
-  id: string;
-  numb: string;
-  img: string;
-  maxCount: number;
-  price: number;
-  packsCount: number;
-  packsLeft: number;
-  live: Boolean;
-  timeRemain: number;
-  whitelist: number | string;
-  presale: number | string;
-}
-
-export function NftDetail(props: INftDetail) {
+export function NftDetail(props: nft) {
   const [timeRemain, { start, pause, resume, reset }] = useCountDown(
     props.timeRemain
   );
@@ -29,31 +14,35 @@ export function NftDetail(props: INftDetail) {
   }, []);
 
   return (
-    <div className={` flex h-auto flex-col justify-around gap-16 md:flex-row`}>
-      <div className="h-auto w-auto flex-auto">
+    <div
+      className={` flex flex-col justify-between  md:flex-row md:items-center `}
+    >
+      <div className="flex justify-end  ">
         <Image
-          className="rounded-3xl "
-          src={props.img}
-          alt=""
-          height={622}
-          width={580}
+          className=" rounded-3xl"
+          src="/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg"
+          alt="kds-tickets-m"
+          width={640}
+          height={270}
         />
       </div>
-      <div className="mt-16  flex flex-col gap-6 ">
-        <span className="text-2xl text-[#292929]">NFT #{props.numb}</span>
+      <div className="mx-6 flex flex-col md:gap-4  ">
+        <span className="text-[#292929] lg:text-2xl">NFT #{props.numb}</span>
         <div className="flex flex-row gap-2 whitespace-nowrap">
-          <span className=" text-6xl font-bold">Public Mint is</span>
+          <span className=" text-3xl font-bold lg:text-6xl">
+            Public Mint is
+          </span>
           <div
-            className={`items-center justify-center gap-2  rounded-2xl ${
+            className={`items-center justify-center gap-2 rounded-2xl text-3xl ${
               props.live ? `bg-green-700` : `bg-red-700`
             }`}
           >
-            <span className=" m-5 text-6xl font-bold text-white">
+            <span className=" m-5 font-bold text-white lg:text-6xl">
               {props.live ? `Live` : `Off`}
             </span>
           </div>
         </div>
-        <span className="  text-xl">
+        <span className="lg:text-xl">
           Mint end in:
           {timeUnits(timeRemain)?.days}days:
           {timeUnits(timeRemain)?.hours}:hours
@@ -69,12 +58,14 @@ export function NftDetail(props: INftDetail) {
         </div>
         <div className=" flex flex-row gap-28">
           <div className="flex flex-col">
-            <span className="text-xl"> Price:</span>
-            <span className="text-4xl font-bold">{props.price} ETH</span>
+            <span className="lg:text-xl"> Price:</span>
+            <span className="text-2xl font-bold lg:text-4xl">
+              {props.price} ETH
+            </span>
           </div>
           <div className="flex flex-col">
-            <span className="text-xl"> Remaining:</span>
-            <span className="text-4xl font-bold">
+            <span className="lg:text-xl"> Remaining:</span>
+            <span className="text-2xl font-bold lg:text-4xl">
               {props.packsLeft}/{props.packsCount}
             </span>
           </div>

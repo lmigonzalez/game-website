@@ -1,18 +1,8 @@
 import React from "react";
 import Image from "next/image";
-import { Poppins } from "next/font/google";
+import { nft } from "@/pages/api/testdb";
 
-export interface INftCard {
-  id: string;
-  name: string;
-  img: string;
-  packsCount: number;
-  collectiblesCount: number;
-  price: number;
-  packsLeft: number;
-}
-
-export function NftCard(props: INftCard) {
+export function NftCard(props: nft) {
   return (
     <div className="flex flex-col gap-1">
       <div className="flex h-auto flex-auto ">
@@ -27,7 +17,7 @@ export function NftCard(props: INftCard) {
       <div className="flex flex-col gap-3">
         <div className="flex flex-col">
           <span className=" text-xl">{props.packsCount} Packs</span>
-          <span className=" text-2xl font-semibold">{props.name}</span>
+          <span className=" text-2xl font-semibold">{props.numb}</span>
           <span className=" text-xl text-gray-400">
             Contains {props.collectiblesCount}
             {props.collectiblesCount == 1 ? " collectible" : "collectibles"}
