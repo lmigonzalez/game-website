@@ -1,4 +1,7 @@
-export default function MintButton() {
+import { nft } from "@/pages/api/testdb";
+import { FC } from "react";
+
+export const MintButton: FC<nft> = (nft) => {
   return (
     <>
       <label
@@ -9,4 +12,4 @@ export default function MintButton() {
       </label>
     </>
   );
-}
+};

@@ -1,17 +1,19 @@
-import Modal from "@/components/Modal";
+import { Modal } from "@/components/Modal";
 import Navbar from "@/components/Navbar";
 import NftDetail from "@/components/NftDetail";
-import { testNft } from "./api/testdb";
+import { nft, testNft } from "./api/testdb";
 import Footer from "@/components/Footer";
+import { useState } from "react";
 
 export default function nftDetail() {
+  const [nft, setNft] = useState<nft>(testNft);
   return (
     <>
-      <Modal />
+      <Modal {...nft} />
       <main>
         <Navbar />
         <div className="m-20 flex items-center justify-center">
-          <NftDetail {...testNft} />
+          <NftDetail {...nft} />
         </div>
         <Footer />
       </main>
