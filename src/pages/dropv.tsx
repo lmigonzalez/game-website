@@ -7,15 +7,15 @@ import NftCard from "@/components/NftCard";
 export default function dropv() {
   return (
     <>
+      <Navbar />
       <main>
-        <Navbar />
-        <div className=" my-10 ml-10 grid grid-flow-col-dense grid-rows-2 gap-10">
-          {testNft.map((item) => (
-            <NftCard {...item} />
+        <div className=" m-10 grid grid-flow-col grid-rows-2 gap-10 whitespace-nowrap ">
+          {testNft.map((item, i) => (
+            <NftCard {...item} key={i} />
           ))}
         </div>
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 }

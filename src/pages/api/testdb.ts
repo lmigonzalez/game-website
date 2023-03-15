@@ -38,7 +38,7 @@ export const testNft: nft[]  = [{
   timeRemain: 234254534,
   whitelist: "Soldout",
   presale: "Soldout",
-  collectiblesCount: 1
+  collectiblesCount: 4
 },{
   id: "1234",
   name: "Alberto",
@@ -51,7 +51,7 @@ export const testNft: nft[]  = [{
   timeRemain: 6000000,
   whitelist: "Soldout",
   presale: "Soldout",
-  collectiblesCount: 1
+  collectiblesCount: 2
 },{
   id: "1234",
   name: "Alberto",
@@ -64,7 +64,7 @@ export const testNft: nft[]  = [{
   timeRemain: 6000000,
   whitelist: "Soldout",
   presale: "Soldout",
-  collectiblesCount: 1
+  collectiblesCount: 5
 },{
   id: "1234",
   name: "Alberto",
@@ -77,7 +77,7 @@ export const testNft: nft[]  = [{
   timeRemain: 6000000,
   whitelist: "Soldout",
   presale: "Soldout",
-  collectiblesCount: 1
+  collectiblesCount: 6
 },{
   id: "1234",
   name: "Alberto",
@@ -90,7 +90,7 @@ export const testNft: nft[]  = [{
   timeRemain: 6000000,
   whitelist: "Soldout",
   presale: "Soldout",
-  collectiblesCount: 1
+  collectiblesCount: 6
 },{
   id: "1234",
   name: "Alberto",
@@ -103,7 +103,7 @@ export const testNft: nft[]  = [{
   timeRemain: 6000000,
   whitelist: "Soldout",
   presale: "Soldout",
-  collectiblesCount: 1
+  collectiblesCount: 10
 }];
 
 
