@@ -4,11 +4,12 @@ import Footer from "@/components/Footer";
 import NftCard from "@/components/NftCard";
 import classNames from "classnames";
 import { useState } from "react";
+import Info from "@/components/info";
 
 const cn = classNames;
 
 export default function dropv() {
-  const [showInfo, setShowInfo] = useState<boolean>();
+  const [showInfo, setShowInfo] = useState<boolean>(true);
   return (
     <>
       <Navbar />
@@ -37,6 +38,9 @@ export default function dropv() {
           {testNft.map((item, i) => (
             <NftCard {...item} key={i} />
           ))}
+        </div>
+        <div className="flex w-2/3 items-center justify-center">
+          <Info />
         </div>
       </main>
       <Footer />

@@ -1,18 +1,18 @@
-import React, { FC } from "react";
+import React, { FC, useEffect, useState } from "react";
 import Image from "next/image";
-import useCountDown from "react-countdown-hook";
 import { timeUnits } from "../utils/unitTime";
 import { MintButton } from "./MintButton";
 import { nft } from "@/pages/api/testdb";
 
 export const NftDetail: FC<nft> = (nft) => {
-  const [timeRemain, { start, pause, resume, reset }] = useCountDown(
-    nft.timeRemain
-  );
-  React.useEffect(() => {
-    start();
-  }, []);
+  const [timeLeft, setTimeLeft] = useState(1234234);
 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setTimeLeft((t) => t - 1000);
+    }, 1000);
+    return () => clearInterval(intervalId);
+  }, []);
   return (
     <div
       className={` flex flex-col justify-between  md:flex-row md:items-center `}
@@ -44,10 +44,16 @@ export const NftDetail: FC<nft> = (nft) => {
         </div>
         <span className="lg:text-xl">
           Mint end in:
-          {timeUnits(timeRemain)?.days}days:
-          {timeUnits(timeRemain)?.hours}:hours
-          {timeUnits(timeRemain)?.minutes}min:
-          {timeUnits(timeRemain)?.seconds}sec
+          {timeUnits(timeLeft)?.days !== 0
+            ? `${timeUnits(timeLeft)?.days} hours: `
+            : " "}
+          {timeUnits(timeLeft)?.hours !== 0
+            ? `${timeUnits(timeLeft)?.hours} hours: `
+            : " "}
+          {timeUnits(timeLeft)?.minutes !== 0
+            ? `${timeUnits(timeLeft)?.minutes} hours: `
+            : " "}
+          {`${timeUnits(timeLeft)?.seconds} sec`}
         </span>
         <div className="flex flex-col">
           <span className=" text-xl">Whitelist: {nft.whitelist}</span>

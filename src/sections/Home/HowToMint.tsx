@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { Poppins } from 'next/font/google';
 
 const poppins = Poppins({
-  weight: ['700'],
+  weight: ['600', '700'],
   subsets: ['latin'],
 });
 
@@ -11,8 +11,8 @@ const HowToMint = () => {
   return (
     <section className={`${poppins.className} py-20`}>
       <div className="m-auto w-[1400px] max-w-full space-y-8 px-4">
-        <p className="text-base font-bold text-[#DB0F29]">Easy Steps</p>
-        <h2 className="text-6xl font-bold">HOW TO MINT</h2>
+        <p className="text-2xl font-semibold text-[#DB0F29]">Easy Steps</p>
+        <h2 className= {`text-6xl font-bold`}>HOW TO MINT</h2>
         <div className="flex items-center justify-between">
           <div className="flex flex-nowrap items-start">
             <p className="text-with-border mr-8 text-6xl font-bold">1</p>
