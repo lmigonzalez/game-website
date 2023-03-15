@@ -14,7 +14,10 @@ module.exports = {
       colors: {
         orange: 'rgba(216, 0, 39, 0.9)',
       },
+      backgroundImage: {
+        'gradient-to-br': 'linear-gradient(to bottom right, #FF0000, #0000FF)',
+      },
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [require('daisyui')],
 };

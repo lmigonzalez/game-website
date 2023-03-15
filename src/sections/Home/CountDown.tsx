@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { Audiowide, Poppins } from "next/font/google";
-import moment from "moment";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useEffect, useRef } from 'react';
+import { Audiowide, Poppins } from 'next/font/google';
+import { timeUnits } from '@/utils/unitTime';
+import moment from 'moment';
+
 const audiowide = Audiowide({
-  weight: ["400"],
-  subsets: ["latin"],
+  weight: ['400'],
+  subsets: ['latin'],
 });
 
 const poppins = Poppins({
@@ -17,81 +18,14 @@ interface CountdownProps {
 }
 
 const CountDown: React.FC<CountdownProps> = ({ duration }) => {
-  const [timeLeft, setTimeLeft] = useState(10);
   const [initialValue, setInitialValue] = useState(duration);
 
-  const time = moment({
-    hour: Math.floor(initialValue / 10000),
-    minute: Math.floor(initialValue / 100) % 100,
-    second: initialValue % 100,
-  });
-  const seconds = time.second();
-  const minutes = time.minute();
-  const hours = time.hour();
-
-  const [secondLast, setSecondLast] = useState(9);
-  const [secondFirst, setSecondFirst] = useState(5);
-
-  const [minutesLast, setMinutesLast] = useState(
-    parseInt(minutes.toString()[0])
-  );
-  const [minutesFirst, setMinutesFirst] = useState(
-    parseInt(minutes.toString()[1])
-  );
-
-  const [hoursLast, setHoursLast] = useState(parseInt(hours.toString()[0]));
-  const [hoursFirst, setHoursFirst] = useState(parseInt(hours.toString()[1]));
-
-
   useEffect(() => {
-    // const interval = setInterval(() => {
-    //   setInitialValue(initialValue - 1);
-    //   secondsCountDown();
-    //   minutesCountDown();
-    //   hoursCountDown();
-    // }, 1000);
-    // return () => clearInterval(interval);
+    const interval = setInterval(() => {
+      setInitialValue((value) => value - 1000);
+    }, 1000);
+    return () => clearInterval(interval);
   }, [initialValue]);
-
-  function secondsCountDown() {
-    setSecondLast(secondLast === 0 ? 9 : secondLast - 1);
-
-    if (secondLast === 0) {
-      setSecondFirst(secondFirst === 0 ? 5 : secondFirst - 1);
-    }
-  }
-
-  function minutesCountDown() {
-    if (secondFirst === 0 && secondLast === 0) {
-      setMinutesLast(minutesLast === 0 ? 9 : minutesLast - 1);
-    }
-    if (minutesLast === 0 && secondFirst === 0 && secondLast === 0) {
-      setMinutesFirst(minutesFirst === 0 ? 5 : minutesFirst - 1);
-    }
-  }
-
-  function hoursCountDown() {
-    if (hoursFirst === 0 && hoursLast === 0) {
-      return;
-    }
-    if (
-      minutesFirst === 0 &&
-      minutesLast === 0 &&
-      secondFirst === 0 &&
-      secondLast === 0
-    ) {
-      setHoursLast(hoursLast === 0 ? 9 : hoursLast - 1);
-    }
-    if (
-      hoursLast === 0 &&
-      minutesFirst === 0 &&
-      minutesLast === 0 &&
-      secondFirst === 0 &&
-      secondLast === 0
-    ) {
-      setHoursFirst(hoursFirst > 0 ? hoursFirst - 1 : 0);
-    }
-  }
 
   return (
     <section className={`${audiowide.className}`}>
@@ -99,11 +33,14 @@ const CountDown: React.FC<CountdownProps> = ({ duration }) => {
         <div className="flex w-full items-center justify-center space-x-24 text-center">
           <div className="">
             <div className="space-x-4">
-              <span className="orange-gradient bg-clip-text text-8xl text-transparent">
-                {hoursFirst || 0}
-              </span>
-              <span className="orange-gradient bg-clip-text text-8xl text-transparent">
-                {hoursLast}
+              <span className="countdown font-mono text-8xl  ">
+                <span
+                  className="text-gradient text-8xl font-bold"
+                  style={{
+                    ['--value' as string]:
+                      initialValue > 3600000 ? timeUnits(initialValue)?.hours : 0,
+                  }}
+                ></span>
               </span>
             </div>
             <p className="orange-gradient bg-clip-text  text-transparent">
@@ -113,11 +50,16 @@ const CountDown: React.FC<CountdownProps> = ({ duration }) => {
 
           <div className="">
             <div className="space-x-4">
-              <span className="orange-gradient bg-clip-text text-8xl text-transparent">
-                {minutesFirst}
-              </span>
-              <span className="orange-gradient bg-clip-text text-8xl text-transparent">
-                {minutesLast}
+              <span className="countdown font-mono text-8xl  ">
+                <span
+                  className="text-gradient text-8xl font-bold"
+                  style={{
+                    ['--value' as string]:
+                      initialValue > 60000
+                        ? timeUnits(initialValue)?.minutes
+                        : 0,
+                  }}
+                ></span>
               </span>
             </div>
             <p className="orange-gradient bg-clip-text  text-transparent">
@@ -126,12 +68,16 @@ const CountDown: React.FC<CountdownProps> = ({ duration }) => {
           </div>
           <div className="">
             <div className="space-x-4">
-              <span className="orange-gradient relative top-0 bg-clip-text text-8xl text-transparent">
-                {secondFirst}
-              </span>
-
-              <span className="orange-gradient bg-clip-text text-8xl text-transparent">
-                {secondLast}
+              <span className="countdown font-mono text-8xl  ">
+                <span
+                  className="text-gradient text-8xl font-bold"
+                  style={{
+                    ['--value' as string]:
+                      initialValue > 1000
+                        ? timeUnits(initialValue)?.seconds
+                        : 0,
+                  }}
+                ></span>
               </span>
             </div>
 
@@ -145,8 +91,8 @@ const CountDown: React.FC<CountdownProps> = ({ duration }) => {
         >
           {' '}
           <button
-            className=" border-[#DB0F29]  w-48 rounded-full
-            border-2 
+            className=" w-48  rounded-full border-2
+            border-[#DB0F29] 
             py-4 text-center"
           >
             {' '}

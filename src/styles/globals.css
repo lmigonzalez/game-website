@@ -41,6 +41,12 @@
     color: linear-gradient(92.48deg, #d80027 2.08%, #fb9e3c 117.25%);
   }
 
+  .text-gradient::before{
+    background-image: linear-gradient(92.48deg, #d80027 2.08%, #fb9e3c 117.25%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   .text-with-border {
     color: white;
     text-shadow: -1px -1px 0 #da0828, 1px -1px 0 #da0828, -1px 1px 0 #da0828,
@@ -49,5 +55,4 @@
   .hide-scroll-bar::-webkit-scrollbar {
     display: none;
   }
-  
 }

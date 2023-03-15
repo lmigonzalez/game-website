@@ -4,7 +4,7 @@ const AboutDrop = () => {
   return (
     <section className="py-20">
       <div className="mb-36 w-[1400px] max-w-full px-4 m-auto">
-        <h2 className="orange-gradient mb-12  bg-clip-text text-center text-5xl font-bold text-transparent">
+        <h2 className="orange-gradient text-transparent bg-clip-text mb-12   text-center text-5xl font-bold ">
           About Drop
         </h2>
         <h3 className="font-bold mb-5 text-3xl">Own a Piece of the Legend</h3>
