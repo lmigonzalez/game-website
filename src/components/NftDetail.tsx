@@ -76,7 +76,12 @@ export const NftDetail: FC<nft> = (nft) => {
             </span>
           </div>
         </div>
-        <MintButton {...nft} />
+        <label
+          htmlFor="my-modal"
+          className="orange-gradient btn h-full w-full rounded-full border-none text-xl normal-case"
+        >
+          Mint Now
+        </label>
       </div>
     </div>
   );
