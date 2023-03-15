@@ -1,7 +1,6 @@
 import React, { FC, useEffect, useState } from "react";
 import Image from "next/image";
 import { timeUnits } from "../utils/unitTime";
-import { MintButton } from "./MintButton";
 import { nft } from "@/pages/api/testdb";
 
 export const NftDetail: FC<nft> = (nft) => {
@@ -76,7 +75,12 @@ export const NftDetail: FC<nft> = (nft) => {
             </span>
           </div>
         </div>
-        <MintButton {...nft} />
+        <label
+          htmlFor="my-modal"
+          className="orange-gradient btn h-full w-full rounded-full border-none text-xl normal-case"
+        >
+          Mint Now
+        </label>
       </div>
     </div>
   );
