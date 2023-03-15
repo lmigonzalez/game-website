@@ -5,6 +5,10 @@ import Footer from '@/components/Footer';
 import CountDown from '@/sections/Home/CountDown';
 import Hero from '@/sections/Home/Hero';
 import HowToMint from '@/sections/Home/HowToMint';
+import AboutDrop from '@/sections/Home/AboutDrop';
+import RoadMap from '@/sections/Home/RoadMap';
+import OurTeam from '@/sections/Home/OurTeam';
+
 
 
 const poppins = Poppins({
@@ -21,11 +25,14 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${poppins.className}`}>
+      <main className={`${poppins.className} bg-white text-black`}>
         <Navbar/>
         <Hero/>
         <CountDown duration={122545}/>
         <HowToMint/>
+        <AboutDrop/>
+        <RoadMap/>
+        <OurTeam/>
         <Footer/>
       </main>
     </>

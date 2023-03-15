@@ -44,13 +44,13 @@ const CountDown: React.FC<CountdownProps> = ({ duration }) => {
 
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setInitialValue(initialValue - 1);
-      secondsCountDown();
-      minutesCountDown();
-      hoursCountDown();
-    }, 1000);
-    return () => clearInterval(interval);
+    // const interval = setInterval(() => {
+    //   setInitialValue(initialValue - 1);
+    //   secondsCountDown();
+    //   minutesCountDown();
+    //   hoursCountDown();
+    // }, 1000);
+    // return () => clearInterval(interval);
   }, [initialValue]);
 
   function secondsCountDown() {
