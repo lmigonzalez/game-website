@@ -6,7 +6,7 @@ export const MintButton: FC<nft> = (nft) => {
     <>
       <label
         htmlFor="my-modal"
-        className="orange-gradient btn rounded-full border-none text-center font-[roboto]"
+        className="orange-gradient btn h-full w-full rounded-full border-none text-xl normal-case"
       >
         Mint Now
       </label>

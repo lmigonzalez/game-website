@@ -2,21 +2,23 @@ import React, { useState, useEffect } from "react";
 import { Audiowide, Poppins } from "next/font/google";
 import moment from "moment";
 import { motion, AnimatePresence } from "framer-motion";
+import { MintButton } from "@/components/MintButton";
+import { nft } from "@/pages/api/testdb";
 const audiowide = Audiowide({
   weight: ["400"],
   subsets: ["latin"],
 });
 
 const poppins = Poppins({
-  weight: ['500'],
-  subsets: ['latin'],
+  weight: ["500"],
+  subsets: ["latin"],
 });
 
 interface CountdownProps {
   duration: number;
 }
 
-const CountDown: React.FC<CountdownProps> = ({ duration }) => {
+const CountDown: React.FC<CountdownProps & nft> = ({ duration, ...nft }) => {
   const [timeLeft, setTimeLeft] = useState(10);
   const [initialValue, setInitialValue] = useState(duration);
 
@@ -41,7 +43,6 @@ const CountDown: React.FC<CountdownProps> = ({ duration }) => {
 
   const [hoursLast, setHoursLast] = useState(parseInt(hours.toString()[0]));
   const [hoursFirst, setHoursFirst] = useState(parseInt(hours.toString()[1]));
-
 
   useEffect(() => {
     // const interval = setInterval(() => {
@@ -143,24 +144,22 @@ const CountDown: React.FC<CountdownProps> = ({ duration }) => {
         <div
           className={`${poppins.className} mt-20 flex items-center justify-center space-x-5 `}
         >
-          {' '}
+          {" "}
           <button
-            className=" border-[#DB0F29]  w-48 rounded-full
-            border-2 
+            className=" w-48  rounded-full border-2
+            border-[#DB0F29] 
             py-4 text-center"
+            onClick={() => location.replace("/nft")}
           >
-            {' '}
-            <p className="text-color">View Drop</p>{' '}
+            {" "}
+            <p className="text-color">View Drop</p>{" "}
           </button>
-          <button
-            className="orange-gradient h-14 w-48 rounded-full bg-transparent text-white"
-            style={{
-              background:
-                'linear-gradient(92.48deg, #d80027 2.08%, #fb9e3c 117.25%)',
-            }}
+          <label
+            htmlFor="my-modal"
+            className="orange-gradient btn-circle btn h-14 w-48 border-none text-base normal-case"
           >
             Mint Now
-          </button>
+          </label>
         </div>
       </div>
     </section>
