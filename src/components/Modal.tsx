@@ -79,10 +79,10 @@ export const Modal: FC<nft> = (nft) => {
 
             <label
               htmlFor="my-modal"
-              className="orange-gradient w-30 btn rounded-full border-none text-base"
+              className="orange-gradient w-30 btn rounded-full border-none text-base normal-case "
               onClick={() => setQuantity(0)}
             >
-              Mint now
+              Mint Now
             </label>
           </div>
         </div>
