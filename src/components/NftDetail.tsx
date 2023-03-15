@@ -1,7 +1,6 @@
 import React, { FC, useEffect, useState } from "react";
 import Image from "next/image";
 import { timeUnits } from "../utils/unitTime";
-import { MintButton } from "./MintButton";
 import { nft } from "@/pages/api/testdb";
 
 export const NftDetail: FC<nft> = (nft) => {
