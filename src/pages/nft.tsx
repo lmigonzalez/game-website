@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import { useState } from "react";
 
 export default function nftDetail() {
-  const [nft, setNft] = useState<nft>(testNft);
+  const [nft, setNft] = useState<nft>(testNft[0]);
   return (
     <>
       <Modal {...nft} />
