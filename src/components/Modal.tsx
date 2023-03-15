@@ -1,6 +1,6 @@
 import { nft } from "@/pages/api/testdb";
 import Image from "next/image";
-import { FC, useState } from "react";
+import { FC, useReducer, useState } from "react";
 
 export const Modal: FC<nft> = (nft) => {
   const [quantity, setQuantity] = useState(0);
@@ -49,16 +49,25 @@ export const Modal: FC<nft> = (nft) => {
               <div className="flex flex-row justify-between border-b-2">
                 <span className="font-semibold">Price: </span>
                 <span className=" mb-3">
-                  {nft.price} <span className="font-semibold"> ETH</span>
+                  {nft.price * quantity}{" "}
+                  <span className="font-semibold"> ETH</span>
                 </span>
               </div>
               <div className="flex flex-row justify-between border-b-2">
                 <span className="mb-2 flex font-semibold">Quantity: </span>
-                <a className="hover cursor-pointer font-semibold hover:font-bold">
-                  +
+                <a
+                  className="hover cursor-pointer font-semibold hover:font-bold"
+                  onClick={() => (quantity > 0 ? setQuantity(quantity - 1) : 0)}
+                >
+                  -
                 </a>
                 <span>{quantity}</span>
-                <a className="hover cursor-pointer font-semibold hover:font-bold">
+                <a
+                  className="hover cursor-pointer font-semibold hover:font-bold"
+                  onClick={() =>
+                    quantity < nft.packsLeft ? setQuantity(quantity + 1) : 0
+                  }
+                >
                   +
                 </a>
                 <span>
@@ -71,7 +80,7 @@ export const Modal: FC<nft> = (nft) => {
             <label
               htmlFor="my-modal"
               className="orange-gradient w-30 btn rounded-full border-none text-base"
-              onClick={() => "submit"}
+              onClick={() => setQuantity(0)}
             >
               Mint now
             </label>
