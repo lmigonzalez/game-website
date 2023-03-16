@@ -16,13 +16,19 @@ export default function dropv() {
       <main>
         <div className="tabs flex justify-center gap-4">
           <a
-            className={cn("tab-bordered tab", { "tab-active": showInfo })}
+            className={cn("tab tab-bordered", {
+              "orange-gradient tab-active bg-clip-text text-transparent":
+                showInfo,
+            })}
             onClick={() => setShowInfo(true)}
           >
             Info
           </a>
           <a
-            className={cn("tab-bordered tab", { "tab-active": !showInfo })}
+            className={cn("tab tab-bordered", {
+              "orange-gradient tab-active bg-clip-text text-transparent":
+                !showInfo,
+            })}
             onClick={() => setShowInfo(false)}
           >
             Shop
@@ -32,14 +38,19 @@ export default function dropv() {
         <div
           className={cn(
             "m-10 grid grid-flow-col grid-rows-2 gap-10 whitespace-nowrap",
-            { hidden: showInfo }
+            { "hidden ": showInfo }
           )}
         >
           {testNft.map((item, i) => (
             <NftCard {...item} key={i} />
           ))}
         </div>
-        <div className="flex w-2/3 items-center justify-center">
+        <div
+          className={cn(
+            "m-10 grid grid-flow-col grid-rows-2 gap-10 whitespace-nowrap",
+            { "hidden ": !showInfo }
+          )}
+        >
           <Info />
         </div>
       </main>
