@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Audiowide, Poppins, JetBrains_Mono } from 'next/font/google';
 import { nft } from '@/pages/api/testdb';
 import { timeUnits } from '@/utils/unitTime';
+import { motion } from 'framer-motion';
 const audiowide = Audiowide({
   weight: ['400'],
   subsets: ['latin'],
@@ -40,9 +41,13 @@ const CountDown: React.FC<CountdownProps & nft> = ({ duration, ...nft }) => {
           loop
           muted
         >
-          <source src='/countdown-video.mp4' type='video/mp4'/>
+          <source src="/countdown-video.mp4" type="video/mp4" />
         </video>
-        <div
+        <motion.div
+          initial={{ y: -100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.8 }}
+          transition={{ delay: 0.5 }}
           className={`flex w-full items-center justify-center space-x-24 text-center`}
         >
           <div className="text-start">
@@ -60,7 +65,7 @@ const CountDown: React.FC<CountdownProps & nft> = ({ duration, ...nft }) => {
               </span>
             </div>
             <p
-              className={`${jetBrains.className} orange-gradient mt-6  ml-8 bg-clip-text font-normal text-transparent relative`}
+              className={`${jetBrains.className} orange-gradient relative  mt-6 ml-8 bg-clip-text font-normal text-transparent`}
             >
               HOURS
             </p>
@@ -81,7 +86,7 @@ const CountDown: React.FC<CountdownProps & nft> = ({ duration, ...nft }) => {
               </span>
             </div>
             <p
-              className={`${jetBrains.className} orange-gradient mt-6  ml-8 bg-clip-text font-normal text-transparent relative`}
+              className={`${jetBrains.className} orange-gradient relative  mt-6 ml-8 bg-clip-text font-normal text-transparent`}
             >
               MINUTES
             </p>
@@ -102,14 +107,18 @@ const CountDown: React.FC<CountdownProps & nft> = ({ duration, ...nft }) => {
             </div>
 
             <p
-              className={`${jetBrains.className} orange-gradient mt-6  ml-8 bg-clip-text font-normal text-transparent relative`}
+              className={`${jetBrains.className} orange-gradient relative  mt-6 ml-8 bg-clip-text font-normal text-transparent`}
             >
               SECONDS
             </p>
           </div>
-        </div>
-        <div
-          className={`${poppins.className} mt-20 flex items-center justify-center space-x-5 relative`}
+        </motion.div>
+        <motion.div
+          initial={{ y: 25, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.8 }}
+          transition={{ delay: 0.5 }}
+          className={`${poppins.className} relative mt-20 flex items-center justify-center space-x-5`}
         >
           {' '}
           <button
@@ -127,7 +136,7 @@ const CountDown: React.FC<CountdownProps & nft> = ({ duration, ...nft }) => {
           >
             Mint Now
           </label>
-        </div>
+        </motion.div>
       </div>
     </section>
   );

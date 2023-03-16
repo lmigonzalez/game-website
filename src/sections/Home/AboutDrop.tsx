@@ -1,14 +1,35 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const AboutDrop = () => {
   return (
-    <section className="py-24 bg-transparent">
-      <div className="mb-36 w-[1400px] max-w-full px-4 m-auto">
-        <h2 className="orange-gradient text-transparent bg-clip-text mb-12   text-center text-5xl font-bold ">
+    <section className="bg-transparent py-24">
+      <div className="m-auto mb-36 w-[1400px] max-w-full px-4">
+        <motion.h2
+          initial={{ y: -50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.8 }}
+          transition={{ delay: 0.2 }}
+          className="orange-gradient mb-12 bg-clip-text text-center   text-5xl font-bold text-transparent "
+        >
           About Drop
-        </h2>
-        <h3 className="font-bold mb-5 text-3xl">Own a Piece of the Legend</h3>
-        <p className="mb-10 leading-8">
+        </motion.h2>
+        <motion.h3
+          initial={{ y: -50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.8 }}
+          transition={{ delay: 0.3 }}
+          className="mb-5 text-3xl font-bold"
+        >
+          Own a Piece of the Legend
+        </motion.h3>
+        <motion.p
+          initial={{ x: -50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.8 }}
+          transition={{ delay: 0.4 }}
+          className="mb-10 leading-8"
+        >
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text ever
           since the 1500s, when an unknown printer took a galley of type and
@@ -18,60 +39,102 @@ const AboutDrop = () => {
           the release of Letraset sheets containing Lorem Ipsum passages, and
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum
-        </p>
+        </motion.p>
 
         <div className="flex items-center justify-between">
-          <div className="flex h-[214px] w-[326px] items-center justify-center rounded-lg bg-[#373737]">
+          <motion.div
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0.8 }}
+            transition={{ delay: 0.8 }}
+            className="flex h-[214px] w-[326px] items-center justify-center rounded-lg bg-[#373737]"
+          >
             <p className="orange-gradient bg-clip-text text-5xl font-bold text-transparent">
               250 <br /> NFT<span className="ml-0 text-2xl">s</span>
             </p>
-          </div>
+          </motion.div>
 
-          <div className="flex h-[214px] w-[326px] items-center justify-center rounded-lg bg-[#373737]">
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0.8 }}
+            transition={{ delay: 0.8 }}
+            className="flex h-[214px] w-[326px] items-center justify-center rounded-lg bg-[#373737]"
+          >
             <p className="orange-gradient bg-clip-text text-6xl font-bold text-transparent">
               49 €
             </p>
-          </div>
-          <div className="flex h-[214px] w-[326px] items-center justify-center rounded-lg bg-[#373737]">
+          </motion.div>
+          <motion.div
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0.8 }}
+            transition={{ delay: 0.8 }}
+            className="flex h-[214px] w-[326px] items-center justify-center rounded-lg bg-[#373737]"
+          >
             <p className="orange-gradient bg-clip-text text-center text-4xl font-bold text-transparent">
               1 <br /> oportunidad
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
 
-      <div className="w-[1400px] max-w-full px-4 uppercase text-white m-auto">
-        <h2 className="orange-gradient mb-12  bg-clip-text text-center text-5xl font-bold text-transparent">
+      <div className="m-auto w-[1400px] max-w-full px-4 uppercase text-white">
+        <motion.h2
+          initial={{ y: -50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true, amount: 0.8 }}
+          transition={{ delay: 0.2 }}
+          className="orange-gradient mb-12  bg-clip-text text-center text-5xl font-bold text-transparent"
+        >
           Perks of Owning NFT
-        </h2>
+        </motion.h2>
 
-        <div className='flex justify-between items-center'>
-          <div className="orange-gradient h-[214px] w-[326px] rounded-lg">
+        <div className="flex items-center justify-between">
+          <motion.div
+            initial={{ x: -50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0.8 }}
+            transition={{ delay: 0.5 }}
+            className="orange-gradient h-[214px] w-[326px] rounded-lg"
+          >
             <p className="flex h-[73px] items-center justify-center rounded-lg bg-white text-5xl font-bold text-black">
               DISCORD
             </p>
             <p className="text-center text-xl font-bold leading-[71px]">
               Special Discord group for <br /> nft holder
             </p>
-          </div>
+          </motion.div>
 
-          <div className="orange-gradient h-[214px] w-[326px] rounded-lg">
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0.8 }}
+            transition={{ delay: 0.5 }}
+            className="orange-gradient h-[214px] w-[326px] rounded-lg"
+          >
             <p className="flex h-[73px] items-center justify-center rounded-lg bg-white text-5xl font-bold text-black">
               ENS
             </p>
             <p className="text-center text-xl font-bold leading-[71px]">
               Ens domain for each <br /> holder
             </p>
-          </div>
+          </motion.div>
 
-          <div className="orange-gradient h-[214px] w-[326px] rounded-lg">
+          <motion.div
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}
+            viewport={{ once: true, amount: 0.8 }}
+            transition={{ delay: 0.5 }}
+            className="orange-gradient h-[214px] w-[326px] rounded-lg"
+          >
             <p className="flex h-[73px] items-center justify-center rounded-lg bg-white text-5xl font-bold text-black">
               ROYALITY
             </p>
             <p className="text-center text-xl font-bold leading-[71px]">
               5% ROYALTY ON EACH <br /> NFT
             </p>
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

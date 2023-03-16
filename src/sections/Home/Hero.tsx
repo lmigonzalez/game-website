@@ -1,12 +1,17 @@
 import React from 'react';
 import Image from 'next/image';
-import Link from 'next/link';
+import { motion} from 'framer-motion';
 type Props = {};
 
 const Hero = (props: Props) => {
   return (
-    <section className="m-auto flex w-[1400px] max-w-full items-center px-4 bg-transparent">
-      <div className="w-1/2 space-y-10">
+    <section className="m-auto flex w-[1400px] max-w-full items-center bg-transparent px-4">
+      <motion.div
+        initial={{ x: -100, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        transition={{ duration: 0.5, ease: 'easeOut' }}
+        className="w-1/2 space-y-10"
+      >
         <h2 className="text-6xl font-bold">NFT Drop</h2>
         <p className="leading-8">
           {' '}
@@ -25,10 +30,20 @@ const Hero = (props: Props) => {
         >
           Get more details
         </button>
-      </div>
-      <div className="-1/2">
-        <Image src="/hero-img.png" alt='gaming picture' width={500} height={600} />
-      </div>
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{  opacity: 1 }}
+        transition={{ duration: 1, ease: 'easeOut'}}
+        className="-1/2"
+      >
+        <Image
+          src="/hero-img.png"
+          alt="gaming picture"
+          width={500}
+          height={600}
+        />
+      </motion.div>
     </section>
   );
 };

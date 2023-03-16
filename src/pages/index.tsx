@@ -29,7 +29,7 @@ export default function Home() {
       <Modal {...nft} />
 
       <Layout>
-        <main className={`${poppins.className} relative text-black  -z-20`}>
+        <main className={`${poppins.className}  text-black`}>
           <Hero />
           <CountDown duration={120122545} {...nft} />
           <HowToMint />
