@@ -5,7 +5,7 @@ type Props = {};
 
 const Hero = (props: Props) => {
   return (
-    <section className="m-auto flex w-[1400px] max-w-full items-center px-4">
+    <section className="m-auto flex w-[1400px] max-w-full items-center px-4 bg-transparent">
       <div className="w-1/2 space-y-10">
         <h2 className="text-6xl font-bold">NFT Drop</h2>
         <p className="leading-8">

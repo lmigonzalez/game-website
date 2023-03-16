@@ -3,6 +3,99 @@
 @tailwind utilities;
 
 @layer {
+  .bg-gradient {
+    background: linear-gradient(
+      14.03deg,
+      #f5f5f5 0%,
+      #eae3f6 16.67%,
+      #9ed1f4 33.21%,
+      #f5f5f5 53.26%,
+      #ded0f6 77.6%,
+      #f5f5f5 100%
+    );
+  }
+
+  .background-gradient {
+    background-image: linear-gradient(
+      to right top,
+      #ffffff,
+      #f8f6fe,
+      #f1eefc,
+      #ebe5fb,
+      #e5dcf9,
+      #ded8f9,
+      #d7d4f9,
+      #cfd0f9,
+      #c3d0fa,
+      #b7d1f9,
+      #aad1f7,
+      #9ed1f4
+    );
+  }
+
+  .hero-background {
+    background-image: linear-gradient(
+      to right top,
+      #ded0f6,
+      #e1d7f6,
+      #e5def7,
+      #e9e5f6,
+      #eeecf6,
+      #f0eff6,
+      #f3f2f5,
+      #f5f5f5,
+      #f5f5f5,
+      #f5f5f5,
+      #f5f5f5,
+      #f5f5f5
+    );
+  }
+
+  .how-to-mint {
+    background-image: linear-gradient(
+      to right top,
+      #f5f5f5,
+      #f5f5f5,
+      #f5f5f5,
+      #f5f5f5,
+      #f5f5f5,
+      #f1f1f5,
+      #ededf5,
+      #e8eaf5,
+      #dae3f6,
+      #cadcf6,
+      #b6d6f6,
+      #9ed1f4
+    );
+  }
+
+  .about-drop {
+    background: linear-gradient(
+      203.78deg,
+      #f5f5f5 0.97%,
+      #9ed1f4 35.72%,
+      #f2f4f5 66.95%
+    );
+  }
+
+  .road-map-bg {
+    background: linear-gradient(
+      195.84deg,
+      #f5f5f5 26.55%,
+      #ded0f6 52.19%,
+      #f2f4f5 72.98%
+    );
+  }
+
+  .our-tem-bg {
+    background: linear-gradient(
+      190.87deg,
+      #f5f5f5 27.25%,
+      #ded0f6 49.25%,
+      #f2f4f5 99.15%
+    );
+  }
+
   .orange-gradient {
     background: linear-gradient(92.48deg, #d80027 2.08%, #fb9e3c 117.25%);
   }
@@ -18,26 +111,16 @@
     border-image: linear-gradient(to right, #f00, #0f0, #00f) 1;
   }
 
-  /* Define the Tailwind colors */
-  /* border-image-slice: 1; */
-  /* .border-gradient {
-    width: 10rem;
-    text-align: center;
-    border-image-source: url('/orange-gradient.png')!important;
-    border: solid 2px white;
-    border-radius: 100%;
-  } */
-
   .border-radium {
     border: solid 2px linear-gradient(92.48deg, #d80027 2.08%, #fb9e3c 117.25%);
     border-radius: 1rem;
   }
-    .border-gradient-orange {
-      background: transparent;
-        border: 2px solid transparent;
-        background-clip: padding-box;
-        border-image: linear-gradient(92.48deg, #d80027 2.08%, #fb9e3c 117.25%) 1;
-    }
+  .border-gradient-orange {
+    background: transparent;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    border-image: linear-gradient(92.48deg, #d80027 2.08%, #fb9e3c 117.25%) 1;
+  }
 
   .text-color {
     font-size: 1rem;

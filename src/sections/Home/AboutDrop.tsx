@@ -2,7 +2,7 @@ import React from 'react';
 
 const AboutDrop = () => {
   return (
-    <section className="py-20">
+    <section className="py-24 bg-transparent">
       <div className="mb-36 w-[1400px] max-w-full px-4 m-auto">
         <h2 className="orange-gradient text-transparent bg-clip-text mb-12   text-center text-5xl font-bold ">
           About Drop
@@ -47,7 +47,7 @@ const AboutDrop = () => {
 
         <div className='flex justify-between items-center'>
           <div className="orange-gradient h-[214px] w-[326px] rounded-lg">
-            <p className="flex h-[73px] items-center justify-center rounded-lg bg-slate-200 text-5xl font-bold text-black">
+            <p className="flex h-[73px] items-center justify-center rounded-lg bg-white text-5xl font-bold text-black">
               DISCORD
             </p>
             <p className="text-center text-xl font-bold leading-[71px]">
@@ -56,7 +56,7 @@ const AboutDrop = () => {
           </div>
 
           <div className="orange-gradient h-[214px] w-[326px] rounded-lg">
-            <p className="flex h-[73px] items-center justify-center rounded-lg bg-slate-200 text-5xl font-bold text-black">
+            <p className="flex h-[73px] items-center justify-center rounded-lg bg-white text-5xl font-bold text-black">
               ENS
             </p>
             <p className="text-center text-xl font-bold leading-[71px]">
@@ -65,7 +65,7 @@ const AboutDrop = () => {
           </div>
 
           <div className="orange-gradient h-[214px] w-[326px] rounded-lg">
-            <p className="flex h-[73px] items-center justify-center rounded-lg bg-slate-200 text-5xl font-bold text-black">
+            <p className="flex h-[73px] items-center justify-center rounded-lg bg-white text-5xl font-bold text-black">
               ROYALITY
             </p>
             <p className="text-center text-xl font-bold leading-[71px]">
