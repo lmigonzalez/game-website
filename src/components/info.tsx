@@ -1,29 +1,20 @@
-import React, { useState } from 'react';
-import classNames from 'classnames';
-import { Roboto } from 'next/font/google';
-import Link from 'next/link';
+/* eslint-disable react/no-unescaped-entities */
+import React, { useState } from "react";
+import classNames from "classnames";
+import { Roboto } from "next/font/google";
+import Link from "next/link";
+
 const roboto = Roboto({
-  weight: ['400', '700'],
-  subsets: ['latin'],
+  weight: ["400", "700"],
+  subsets: ["latin"],
 });
 
 export default function Info() {
   const [isChecked, setIsChecked] = useState(false);
-  const [emailValue, setEmailValue] = useState('');
+  const [emailValue, setEmailValue] = useState("");
 
   const handleCheckboxChange = () => {
     setIsChecked(!isChecked);
-  };
-
-  const handleEmailChange = (event: React.FormEvent<HTMLFormElement>) => {
-    setEmailValue(event.target.value);
-  };
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    console.log('Checkbox value:', isChecked);
-    console.log('Text value:', emailValue);
-    // Add your form submission logic here
   };
 
   return (
@@ -65,10 +56,13 @@ export default function Info() {
       <p className="mb-4">🗣 Token Gated Fan Club & Physical Merch</p>
       <p className="mb-4">🎗 Charity Donation</p>
       <p className="mb-4">
-        {' '}
-        <Link href='/' className="orange-gradient mb-4 bg-clip-text text-transparent">
+        {" "}
+        <Link
+          href="/"
+          className="orange-gradient mb-4 bg-clip-text text-transparent"
+        >
           CLICK HERE
-        </Link>{' '}
+        </Link>{" "}
         for full drop Terms & Conditions, including eligibility, snapshot, and
         selection specifics for additional features or perks that can be
         unlocked by holders of the NFT. Terms also include instructions on how
@@ -90,7 +84,7 @@ export default function Info() {
       <h3 className={`mb-6 mt-12 text-xl font-bold`}>About the creator</h3>
 
       <p className="mb-4">
-        THE MOST INNOVATIVE GLOBAL CONTENTS STUDIO,{' '}
+        THE MOST INNOVATIVE GLOBAL CONTENTS STUDIO,{" "}
         <span className="font-bold text-black">ASTORY</span>
       </p>
       <p>
@@ -110,21 +104,21 @@ export default function Info() {
           Subscribe and we’ll notify you when a drop is about to go live.
         </p>
 
-        <form onSubmit={handleSubmit}>
+        <form>
           <div className="flex h-12 w-[452px] max-w-full ">
             <input
               className="h-full w-3/4 rounded-l-md border-[1px] border-solid border-[#3C3939] bg-[#EFEFEF]  pl-4"
               type="email"
               placeholder="Email"
               value={emailValue}
-              onChange={handleEmailChange}
+              onChange={(e) => setEmailValue(e.target.value)}
             />
             <button
               type="submit"
               className="flex w-1/4 items-center justify-center rounded-r-md text-center text-white"
               style={{
                 background:
-                  'linear-gradient(92.48deg, #d80027 2.08%, #fb9e3c 117.25%)',
+                  "linear-gradient(92.48deg, #d80027 2.08%, #fb9e3c 117.25%)",
               }}
             >
               Subscribe
@@ -134,18 +128,18 @@ export default function Info() {
           <div className="mt-4 flex items-center">
             <input
               type="checkbox"
-              className="checkbox mr-3 rounded border-solid border-[#3C3939] bg-[#F1F1F1]"
+              className=" checkbox checkbox-sm mr-3 rounded border-solid border-[#3C3939] bg-[#F1F1F1]"
               checked={isChecked}
               onChange={handleCheckboxChange}
             />
             <label>
-              By subscribing, you agree to accept the terms of our{' '}
+              By subscribing, you agree to accept the terms of our{" "}
               <Link
                 href="/"
                 className="orange-gradient mb-4 bg-clip-text text-transparent"
               >
                 Privacy Notice.
-              </Link>{' '}
+              </Link>{" "}
             </label>
           </div>
         </form>

@@ -1,20 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import { Audiowide, Poppins, JetBrains_Mono } from 'next/font/google';
-import { nft } from '@/pages/api/testdb';
-import { timeUnits } from '@/utils/unitTime';
+import React, { useState, useEffect } from "react";
+import { Audiowide, Poppins, JetBrains_Mono } from "next/font/google";
+import { nft } from "@/pages/api/testdb";
+import { timeUnits } from "@/utils/unitTime";
 const audiowide = Audiowide({
-  weight: ['400'],
-  subsets: ['latin'],
+  weight: ["400"],
+  subsets: ["latin"],
 });
 
 const poppins = Poppins({
-  weight: ['500'],
-  subsets: ['latin'],
+  weight: ["500"],
+  subsets: ["latin"],
 });
 
 const jetBrains = JetBrains_Mono({
-  weight: ['400'],
-  subsets: ['latin'],
+  weight: ["400"],
+  subsets: ["latin"],
 });
 
 interface CountdownProps {
@@ -43,7 +43,7 @@ const CountDown: React.FC<CountdownProps & nft> = ({ duration, ...nft }) => {
                 <span
                   className={`${audiowide.className} text-gradient text-8xl font-bold`}
                   style={{
-                    ['--value' as string]:
+                    ["--value" as string]:
                       initialValue > 3600000
                         ? timeUnits(initialValue)?.hours
                         : 0,
@@ -64,7 +64,7 @@ const CountDown: React.FC<CountdownProps & nft> = ({ duration, ...nft }) => {
                 <span
                   className={`${audiowide.className} text-gradient text-8xl font-bold`}
                   style={{
-                    ['--value' as string]:
+                    ["--value" as string]:
                       initialValue > 60000
                         ? timeUnits(initialValue)?.minutes
                         : 0,
@@ -84,7 +84,7 @@ const CountDown: React.FC<CountdownProps & nft> = ({ duration, ...nft }) => {
                 <span
                   className={`${audiowide.className} text-gradient text-8xl font-bold`}
                   style={{
-                    ['--value' as string]:
+                    ["--value" as string]:
                       initialValue > 1000
                         ? timeUnits(initialValue)?.seconds
                         : 0,
@@ -103,15 +103,15 @@ const CountDown: React.FC<CountdownProps & nft> = ({ duration, ...nft }) => {
         <div
           className={`${poppins.className} mt-20 flex items-center justify-center space-x-5 `}
         >
-          {' '}
+          {" "}
           <button
             className=" w-48  rounded-full border-2
             border-[#DB0F29] 
             py-4 text-center"
-            onClick={() => location.replace('/nft')}
+            onClick={() => location.replace("/dropv")}
           >
-            {' '}
-            <p className="text-color">View Drop</p>{' '}
+            {" "}
+            <p className="text-color">View Drop</p>{" "}
           </button>
           <label
             htmlFor="my-modal"

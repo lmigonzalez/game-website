@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import Navbar from "@/components/Navbar";
 import { testNft } from "./api/testdb";
 import Footer from "@/components/Footer";
@@ -13,21 +14,19 @@ export default function dropv() {
   return (
     <>
       <Navbar />
-      <main className="bg-white text-black">
+      <main className="">
         <div className="tabs flex justify-center gap-4 ">
           <a
-            className={cn("tab tab-bordered", {
-              "orange-gradient tab-active bg-clip-text text-transparent":
-                showInfo,
+            className={cn("tab tab-bordered w-12 text-2xl text-[roboto]", {
+              " text-color border-gradient-orange  tab-active": showInfo,
             })}
             onClick={() => setShowInfo(true)}
           >
             Info
           </a>
           <a
-            className={cn("tab tab-bordered", {
-              "orange-gradient tab-active bg-clip-text text-transparent":
-                !showInfo,
+            className={cn("tab tab-bordered w-14 text-2xl text-[roboto]", {
+              "text-color border-gradient-orange tab-active": !showInfo,
             })}
             onClick={() => setShowInfo(false)}
           >
@@ -45,12 +44,7 @@ export default function dropv() {
             <NftCard {...item} key={i} />
           ))}
         </div>
-        <div
-          className={cn(
-            "m-10 grid grid-flow-col grid-rows-2 gap-10 whitespace-nowrap",
-            { "hidden ": !showInfo }
-          )}
-        >
+        <div className={cn({ "hidden ": !showInfo })}>
           <Info />
         </div>
       </main>

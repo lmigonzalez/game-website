@@ -32,6 +32,12 @@
     border: solid 2px linear-gradient(92.48deg, #d80027 2.08%, #fb9e3c 117.25%);
     border-radius: 1rem;
   }
+    .border-gradient-orange {
+      background: transparent;
+        border: 2px solid transparent;
+        background-clip: padding-box;
+        border-image: linear-gradient(92.48deg, #d80027 2.08%, #fb9e3c 117.25%) 1;
+    }
 
   .text-color {
     font-size: 1rem;
