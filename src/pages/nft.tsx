@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { Modal } from "@/components/Modal";
 import Navbar from "@/components/Navbar";
-import { NftDetail } from "@/components/NftDetail";
+import { NftDetail } from "@/pages/NftDetail";
 import { nft, testNft } from "./api/testdb";
 import Footer from "@/components/Footer";
 import { useState } from "react";

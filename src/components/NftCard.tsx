@@ -1,10 +1,23 @@
 import React, { FC } from "react";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { nft } from "@/pages/api/testdb";
+import { useStateContext } from "@/context/StateContext";
 
 export const NftCard: FC<nft> = (nft) => {
+  const router = useRouter()
+
+  const {globalNFT, setGlobalNFT} = useStateContext()
+
+
+  function setGlobalNFTDetails(){
+    setGlobalNFT(nft)
+    router.push('/NftDetail')
+
+  }
+
   return (
-    <div className="card flex flex-col rounded-none">
+    <div onClick={setGlobalNFTDetails} className="card flex flex-col rounded-none cursor-pointer">
       <Image
         className="px-0"
         src="/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg"
