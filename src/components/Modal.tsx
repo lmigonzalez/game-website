@@ -1,6 +1,12 @@
-import { nft } from "@/pages/api/testdb";
-import Image from "next/image";
-import { FC, useReducer, useState } from "react";
+import { nft } from '@/pages/api/testdb';
+import Image from 'next/image';
+import { FC, useReducer, useState } from 'react';
+import { Montserrat } from 'next/font/google';
+
+const montserrat = Montserrat({
+  weight: ['400', '500', '600', '700', "900"],
+  subsets: ['latin'],
+});
 
 export const Modal: FC<nft> = (nft) => {
   const [quantity, setQuantity] = useState(0);
@@ -9,7 +15,9 @@ export const Modal: FC<nft> = (nft) => {
       {/* Put this part before </body> tag */}
       <input type="checkbox" id="my-modal" className="modal-toggle" />
       <div className="modal modal-bottom sm:modal-middle">
-        <div className="modal-box">
+        <div
+          className={`${montserrat.className} modal-box bg-white text-black`}
+        >
           <div className="flex justify-end">
             <label
               htmlFor="my-modal"
@@ -32,12 +40,12 @@ export const Modal: FC<nft> = (nft) => {
             </label>
           </div>
           <div className=" flex flex-col items-center justify-center gap-6 text-center text-[16px]">
-            <span className="text-3xl">
+            <p className="orange-gradient bg-clip-text text-4xl font-black text-transparent leading-10">
               COLLECT YOUR NFT <br />
               BEFORE END
-            </span>
+            </p>
             <div className="flex flex-auto">
-              <Image src={"8Qz2gKJ2.svg"} alt={""} width={196} height={196} />
+              <Image src={'8Qz2gKJ2.svg'} alt={''} width={196} height={196} />
             </div>
             <div className="flex w-2/3 flex-col gap-6">
               <div className="flex flex-row justify-between border-b-2">
@@ -49,7 +57,7 @@ export const Modal: FC<nft> = (nft) => {
               <div className="flex flex-row justify-between border-b-2">
                 <span className="font-semibold">Price: </span>
                 <span className=" mb-3">
-                  {nft.price * quantity}{" "}
+                  {nft.price * quantity}{' '}
                   <span className="font-semibold"> ETH</span>
                 </span>
               </div>
@@ -77,13 +85,24 @@ export const Modal: FC<nft> = (nft) => {
               </div>
             </div>
 
-            <label
+            {/* <label
               htmlFor="my-modal"
               className="orange-gradient w-30 btn rounded-full border-none text-base normal-case "
               onClick={() => setQuantity(0)}
             >
               Mint Now
-            </label>
+            </label> */}
+
+            <button
+              onClick={() => setQuantity(0)}
+              className="orange-gradient rounded-full py-4 px-14 text-white"
+              style={{
+                background:
+                  'linear-gradient(92.48deg, #d80027 2.08%, #fb9e3c 117.25%)',
+              }}
+            >
+              Mint Now
+            </button>
           </div>
         </div>
       </div>
