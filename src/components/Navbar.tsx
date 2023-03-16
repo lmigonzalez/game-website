@@ -17,7 +17,7 @@ const Navbar = () => {
       <nav className="flex items-center">
         <ul className="mr-8 flex space-x-14">
           <li>
-            <Link href="/home">Home</Link>
+            <Link href="/">Home</Link>
           </li>
           <li>
             <Link href="/about">About us</Link>
