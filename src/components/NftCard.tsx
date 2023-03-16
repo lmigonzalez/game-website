@@ -8,7 +8,7 @@ export const NftCard: FC<nft> = (nft) => {
       <figure>
         <Image
           src="/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg"
-          alt="Shoes"
+          alt="nft"
           width={337}
           height={420}
         />
