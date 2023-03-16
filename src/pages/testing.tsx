@@ -11,6 +11,7 @@ import Navbar from "@/components/Navbar";
 import { JoinUs } from "@/components/JoinUs";
 import { timeUnits } from "@/utils/unitTime";
 import Image from "next/image";
+import Layout from "@/components/Layout";
 
 export default function asd() {
   const [timeLeft, setTimeLeft] = useState(1234234);
@@ -23,11 +24,11 @@ export default function asd() {
     return () => clearInterval(intervalId);
   }, []);
   return (
-    <>
-      <main className="justify center flex items-center p-3">
-        <div className="card flex h-[602] w-[622] gap-3 bg-base-100 font-[poppins] lg:card-side">
+    <Layout>
+      <main className="my-20  flex justify-center p-4">
+        <div className="card bg-base-100  lg:card-side ">
           <Image
-            className="rounded-3xl"
+            className="rounded-3xl lg:h-max"
             src="/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg"
             alt="Album"
             width={622}
@@ -35,8 +36,11 @@ export default function asd() {
           />
 
           <div className="card-body mt-2 ">
-            <strong className="font-semibold text-[21]"> NFT #{nft.id}</strong>
-            <h2 className="card-title whitespace-nowrap text-[40px]">
+            <strong className="text-[21px] font-semibold">
+              {" "}
+              NFT #{nft.id}
+            </strong>
+            <h2 className="card-title my-2 text-[40px] font-bold">
               Public Mint is{" "}
               <button
                 className={`rounded-xl bg-green-700 py-2 px-2 text-white ${
@@ -46,7 +50,7 @@ export default function asd() {
                 {nft.live ? `Live` : `Off`}
               </button>
             </h2>
-            <p>
+            <div className="mt-2 ">
               Mint end in:{" "}
               <strong className="font-semibold">
                 {timeUnits(timeLeft)?.days !== 0
@@ -62,15 +66,41 @@ export default function asd() {
               </strong>
               <br />
               <br />
-              Whitelist: {nft.whitelist}
-            </p>
-
+              Whitelist:{" "}
+              <strong className=" font-semibold">{nft.whitelist}</strong>
+              <br />
+              Presale: <strong className=" font-semibold">
+                {nft.presale}
+              </strong>{" "}
+              <br />
+              <br />
+              <span className=" rounded-full border border-solid px-3">
+                {nft.maxCount} MAX PER WALLET
+              </span>
+            </div>
+            <div className=" mb-16 mt-4 flex flex-row">
+              <p>
+                Price: <br />
+                <strong className=" text-[28px]">{nft.price} ETH</strong>
+              </p>{" "}
+              <p>
+                Remaining: <br />
+                <strong className=" text-[28px]">
+                  {nft.packsLeft}/{nft.packsCount}
+                </strong>
+              </p>
+            </div>
             <div className="card-actions ">
-              <button className="btn-primary btn">Listen</button>
+              <label
+                htmlFor="my-modal"
+                className="orange-gradient btn-circle btn h-14 w-[478px] border-none text-base normal-case text-white"
+              >
+                Mint Now
+              </label>
             </div>
           </div>
         </div>
       </main>
-    </>
+    </Layout>
   );
 }
