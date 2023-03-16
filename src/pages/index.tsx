@@ -1,7 +1,5 @@
 import Head from 'next/head';
 import { Poppins } from 'next/font/google';
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
 import CountDown from '@/sections/Home/CountDown';
 import Hero from '@/sections/Home/Hero';
 import HowToMint from '@/sections/Home/HowToMint';
@@ -31,7 +29,7 @@ export default function Home() {
       <Modal {...nft} />
 
       <Layout>
-        <main className={`${poppins.className} bg-white text-black`}>
+        <main className={`${poppins.className} relative text-black  -z-20`}>
           <Hero />
           <CountDown duration={120122545} {...nft} />
           <HowToMint />

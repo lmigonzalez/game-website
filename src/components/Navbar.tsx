@@ -10,7 +10,7 @@ const poppins = Poppins({
 const Navbar = () => {
   return (
     <div
-      className={`${poppins.className} flex items-center justify-between bg-white px-4 py-10 text-black`}
+      className={`${poppins.className} absolute top-0 left-0 w-full flex items-center justify-between bg-transparent px-4 py-10 text-black`}
     >
       <p className="font-bold">LOGO</p>
 
