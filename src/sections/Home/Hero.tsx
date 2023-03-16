@@ -5,7 +5,7 @@ type Props = {};
 
 const Hero = (props: Props) => {
   return (
-    <section className="m-auto flex w-[1400px] max-w-full items-center bg-transparent px-4">
+    <section className="m-auto flex w-[1400px] max-w-full items-center bg-transparent px-4 pt-24">
       <motion.div
         initial={{ x: -100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
