@@ -25,79 +25,36 @@ export default function asd() {
   }, []);
   return (
     <Layout>
-      <main className="my-20  flex justify-center p-4">
-        <div className="card bg-base-100  lg:card-side ">
-          <Image
-            className="rounded-3xl lg:h-max"
-            src="/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg"
-            alt="Album"
-            width={622}
-            height={580}
-          />
-
-          <div className="card-body mt-2 ">
-            <strong className="text-[21px] font-semibold">
+      <main className="m-20 flex w-1/4 justify-center bg-slate-300 p-4">
+        <div className="card rounded-none">
+          <figure>
+            <Image
+              src="/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg"
+              alt="nft"
+              width={337}
+              height={420}
+            />
+          </figure>
+          <div className="card-body">
+            <strong className="text-sm">{nft.packsCount} Packs</strong>
+            <strong className="card-title">{nft.name}</strong>
+            <p className="text-[15px] text-[#A0A0A0]">
               {" "}
-              NFT #{nft.id}
-            </strong>
-            <h2 className="card-title my-2 text-[40px] font-bold">
-              Public Mint is{" "}
-              <button
-                className={`rounded-xl bg-green-700 py-2 px-2 text-white ${
-                  nft.live ? `bg-green-700` : `bg-red-700`
-                })`}
-              >
-                {nft.live ? `Live` : `Off`}
-              </button>
-            </h2>
-            <div className="mt-2 ">
-              Mint end in:{" "}
-              <strong className="font-semibold">
-                {timeUnits(timeLeft)?.days !== 0
-                  ? `${timeUnits(timeLeft)?.days} hours: `
-                  : " "}
-                {timeUnits(timeLeft)?.hours !== 0
-                  ? `${timeUnits(timeLeft)?.hours} hours: `
-                  : " "}
-                {timeUnits(timeLeft)?.minutes !== 0
-                  ? `${timeUnits(timeLeft)?.minutes} hours: `
-                  : " "}
-                {`${timeUnits(timeLeft)?.seconds} sec`}.
-              </strong>
-              <br />
-              <br />
-              Whitelist:{" "}
-              <strong className=" font-semibold">{nft.whitelist}</strong>
-              <br />
-              Presale: <strong className=" font-semibold">
-                {nft.presale}
-              </strong>{" "}
-              <br />
-              <br />
-              <span className=" rounded-full border border-solid px-3">
-                {nft.maxCount} MAX PER WALLET
-              </span>
-            </div>
-            <div className=" mb-16 mt-4 flex flex-row">
+              Contains {nft.collectiblesCount}
+              {nft.collectiblesCount == 1 ? " collectible" : " collectibles"}
+            </p>
+            {nft.packsLeft !== 0 ? (
               <p>
-                Price: <br />
-                <strong className=" text-[28px]">{nft.price} ETH</strong>
-              </p>{" "}
-              <p>
-                Remaining: <br />
-                <strong className=" text-[28px]">
-                  {nft.packsLeft}/{nft.packsCount}
+                $<strong className="text-[19px]">{nft.price}</strong> <br />
+                <strong className="text-[#1199FA]">
+                  {nft.packsLeft} Packs Left
                 </strong>
               </p>
-            </div>
-            <div className="card-actions ">
-              <label
-                htmlFor="my-modal"
-                className="orange-gradient btn-circle btn h-14 w-[478px] border-none text-base normal-case text-white"
-              >
-                Mint Now
-              </label>
-            </div>
+            ) : (
+              <strong className="mt-4 text-xl font-semibold text-[#A0A0A0]">
+                Sold Out
+              </strong>
+            )}
           </div>
         </div>
       </main>

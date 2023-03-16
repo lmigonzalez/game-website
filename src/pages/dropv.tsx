@@ -12,7 +12,7 @@ export default function dropv() {
   let cols = testNft.length / 4;
   return (
     <Layout>
-      <main className="">
+      <main className="p-4">
         <div className="tabs flex justify-center gap-4 ">
           <a
             className={cn("tab tab-bordered w-12 text-2xl text-[roboto]", {
@@ -34,7 +34,7 @@ export default function dropv() {
 
         <div
           className={cn(
-            "grid auto-cols-max grid-flow-col auto-rows-max grid-cols-4 gap-10 p-10 ",
+            "grid  grid-flow-row grid-cols-1 gap-10 p-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 ",
             {
               "hidden ": showInfo,
             }
@@ -44,6 +44,7 @@ export default function dropv() {
             <NftCard {...item} key={i} />
           ))}
         </div>
+
         <div className={cn({ "hidden ": !showInfo })}>
           <Info />
         </div>
