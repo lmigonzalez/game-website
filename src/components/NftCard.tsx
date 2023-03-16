@@ -21,18 +21,18 @@ export const NftCard: FC<nft> = (nft) => {
           Contains {nft.collectiblesCount}
           {nft.collectiblesCount == 1 ? " collectible" : " collectibles"}
         </p>
-        <p>
-          {nft.packsLeft !== 0 ? (
-            <>
-              $<strong className="text-[19px]">{nft.price}</strong>
+        {nft.packsLeft !== 0 ? (
+          <p>
+            $<strong className="text-[19px]">{nft.price}</strong> <br />
+            <strong className="text-[#1199FA]">
               {nft.packsLeft} Packs Left
-            </>
-          ) : (
-            <strong className="mt-4 text-xl font-semibold text-[#A0A0A0]">
-              Sold Out
             </strong>
-          )}
-        </p>
+          </p>
+        ) : (
+          <strong className="mt-4 text-xl font-semibold text-[#A0A0A0]">
+            Sold Out
+          </strong>
+        )}
       </div>
     </div>
   );

@@ -9,8 +9,8 @@ const poppins = Poppins({
 
 const Navbar = () => {
   return (
-    <header
-      className={`${poppins.className} flex items-center justify-between px-4 py-10 bg-white text-black`}
+    <div
+      className={`${poppins.className} flex items-center justify-between bg-white px-4 py-10 text-black`}
     >
       <p className="font-bold">LOGO</p>
 
@@ -37,7 +37,7 @@ const Navbar = () => {
           Contact us
         </Link>
       </nav>
-    </header>
+    </div>
   );
 };
 
