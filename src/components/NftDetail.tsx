@@ -13,7 +13,7 @@ export const NftDetail: FC<nft> = (nft) => {
     return () => clearInterval(intervalId);
   }, []);
   return (
-    <div className="card bg-base-100  lg:card-side">
+    <div className="card lg:card-side">
       <Image
         className="rounded-3xl lg:h-max"
         src="/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg"
@@ -22,7 +22,7 @@ export const NftDetail: FC<nft> = (nft) => {
         height={580}
       />
 
-      <div className="card-body pt-10">
+      <div className="card-body  pt-10">
         <strong className="text-sm font-semibold xl:text-base">
           {" "}
           NFT #{nft.id}

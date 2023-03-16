@@ -4,7 +4,7 @@ import { nft } from "@/pages/api/testdb";
 
 export const NftCard: FC<nft> = (nft) => {
   return (
-    <div className="card w-96 bg-base-100">
+    <div className="card w-96 ">
       <figure>
         <Image
           src="/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg"
