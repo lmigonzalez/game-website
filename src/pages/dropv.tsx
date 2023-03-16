@@ -13,8 +13,8 @@ export default function dropv() {
   return (
     <>
       <Navbar />
-      <main>
-        <div className="tabs flex justify-center gap-4">
+      <main className="bg-white text-black">
+        <div className="tabs flex justify-center gap-4 ">
           <a
             className={cn("tab tab-bordered", {
               "orange-gradient tab-active bg-clip-text text-transparent":

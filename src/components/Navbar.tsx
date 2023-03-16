@@ -10,12 +10,12 @@ const poppins = Poppins({
 const Navbar = () => {
   return (
     <header
-      className={`${poppins.className} flex items-center justify-between px-4 py-10`}
+      className={`${poppins.className} flex items-center justify-between px-4 py-10 bg-white text-black`}
     >
       <p className="font-bold">LOGO</p>
 
       <nav className="flex items-center">
-        <ul className="mr-8 flex space-x-6">
+        <ul className="mr-8 flex space-x-14">
           <li>
             <Link href="/home">Home</Link>
           </li>
