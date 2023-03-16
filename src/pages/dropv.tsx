@@ -3,11 +3,11 @@ import { testNft } from "./api/testdb";
 import NftCard from "@/components/NftCard";
 import classNames from "classnames";
 import { useState } from "react";
-import Info from "@/components/info";
+import { Info } from "@/components/info";
 import Layout from "@/components/Layout";
 const cn = classNames;
 
-export default function dropv() {
+export const dropv = () => {
   const [showInfo, setShowInfo] = useState<boolean>(true);
   let cols = testNft.length / 4;
   return (
@@ -51,4 +51,5 @@ export default function dropv() {
       </main>
     </Layout>
   );
-}
+};
+export default dropv;

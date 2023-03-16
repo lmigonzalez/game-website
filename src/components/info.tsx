@@ -9,7 +9,7 @@ const roboto = Roboto({
   subsets: ["latin"],
 });
 
-export default function Info() {
+export const Info = () => {
   const [isChecked, setIsChecked] = useState(false);
   const [emailValue, setEmailValue] = useState("");
 
@@ -146,4 +146,4 @@ export default function Info() {
       </div>
     </div>
   );
-}
+};

@@ -1,12 +1,13 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { Modal } from "@/components/Modal";
 import Navbar from "@/components/Navbar";
-import NftDetail from "@/components/NftDetail";
+import { NftDetail } from "@/components/NftDetail";
 import { nft, testNft } from "./api/testdb";
 import Footer from "@/components/Footer";
 import { useState } from "react";
 import { JoinUs } from "@/components/JoinUs";
 
-export default function nftDetail() {
+const nftDetail = () => {
   const [nft, setNft] = useState<nft>(testNft[0]);
 
   return (
@@ -22,4 +23,6 @@ export default function nftDetail() {
       <Footer />
     </>
   );
-}
+};
+
+export default nftDetail;
