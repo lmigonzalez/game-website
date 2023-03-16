@@ -12,7 +12,7 @@ export default function dropv() {
   let cols = testNft.length / 4;
   return (
     <Layout>
-      <main className="p-4">
+      <main className=" p-4">
         <div className="tabs flex justify-center gap-4 ">
           <a
             className={cn("tab tab-bordered w-12 text-2xl text-[roboto]", {
@@ -34,7 +34,7 @@ export default function dropv() {
 
         <div
           className={cn(
-            "grid  grid-flow-row grid-cols-1 gap-10 p-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 ",
+            "grid  grid-flow-row grid-cols-1 gap-10 p-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 2xl:grid-cols-7 ",
             {
               "hidden ": showInfo,
             }
