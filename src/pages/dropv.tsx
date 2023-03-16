@@ -12,7 +12,7 @@ export default function dropv() {
   let cols = testNft.length / 4;
   return (
     <Layout>
-      <main className="bg-white">
+      <main className="">
         <div className="tabs flex justify-center gap-4 ">
           <a
             className={cn("tab tab-bordered w-12 text-2xl text-[roboto]", {
