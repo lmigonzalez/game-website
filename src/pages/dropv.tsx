@@ -13,8 +13,8 @@ export default function dropv() {
   return (
     <>
       <Navbar />
-      <main>
-        <div className="tabs flex justify-center gap-4">
+      <main className="bg-white text-black">
+        <div className="tabs flex justify-center gap-4 ">
           <a
             className={cn("tab-bordered tab", { "tab-active": showInfo })}
             onClick={() => setShowInfo(true)}
@@ -39,7 +39,7 @@ export default function dropv() {
             <NftCard {...item} key={i} />
           ))}
         </div>
-        <div className="flex w-2/3 items-center justify-center">
+        <div className="flex items-center justify-center">
           <Info />
         </div>
       </main>
