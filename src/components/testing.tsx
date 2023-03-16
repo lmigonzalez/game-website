@@ -1,10 +1,21 @@
-import React, { FC, useEffect, useState } from "react";
-import Image from "next/image";
-import { timeUnits } from "../utils/unitTime";
-import { nft } from "@/pages/api/testdb";
+/* eslint-disable react-hooks/rules-of-hooks */
+/* eslint-disable react/jsx-no-comment-textnodes */
+import { Modal } from "@/components/Modal";
+import { NftCard } from "@/components/NftCard";
+import { NftDetail } from "@/components/NftDetail";
+import { testNft } from "../pages/api/testdb";
 
-export const NftDetail: FC<nft> = (nft) => {
+import React, { useEffect, useState } from "react";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import { JoinUs } from "@/components/JoinUs";
+import { timeUnits } from "@/utils/unitTime";
+import Image from "next/image";
+import Layout from "@/components/Layout";
+
+export default function asd() {
   const [timeLeft, setTimeLeft] = useState(1234234);
+  const nft = testNft[0];
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -13,7 +24,7 @@ export const NftDetail: FC<nft> = (nft) => {
     return () => clearInterval(intervalId);
   }, []);
   return (
-    <div className="card lg:card-side">
+    <div className="card bg-base-100  lg:card-side ">
       <Image
         className="rounded-3xl lg:h-max"
         src="/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg"
@@ -22,22 +33,19 @@ export const NftDetail: FC<nft> = (nft) => {
         height={580}
       />
 
-      <div className="card-body  pt-10">
-        <strong className="text-sm font-semibold xl:text-base">
-          {" "}
-          NFT #{nft.id}
-        </strong>
-        <h2 className="card-title my-2 whitespace-nowrap text-3xl font-bold xl:text-4xl">
+      <div className="card-body mt-2 ">
+        <strong className="text-[21px] font-semibold"> NFT #{nft.id}</strong>
+        <h2 className="card-title my-2 text-[40px] font-bold">
           Public Mint is{" "}
-          <span
-            className={`rounded-xl bg-green-700 py-1 px-2 text-white ${
+          <button
+            className={`rounded-xl bg-green-700 py-2 px-2 text-white ${
               nft.live ? `bg-green-700` : `bg-red-700`
             })`}
           >
             {nft.live ? `Live` : `Off`}
-          </span>
+          </button>
         </h2>
-        <div className="mt-2">
+        <div className="mt-2 ">
           Mint end in:{" "}
           <strong className="font-semibold">
             {timeUnits(timeLeft)?.days !== 0
@@ -64,14 +72,14 @@ export const NftDetail: FC<nft> = (nft) => {
             {nft.maxCount} MAX PER WALLET
           </span>
         </div>
-        <div className=" mb-16 mt-4 flex flex-row text-base xl:text-lg">
+        <div className=" mb-16 mt-4 flex flex-row">
           <p>
             Price: <br />
-            <strong className="">{nft.price} ETH</strong>
+            <strong className=" text-[28px]">{nft.price} ETH</strong>
           </p>{" "}
           <p>
             Remaining: <br />
-            <strong className=" ">
+            <strong className=" text-[28px]">
               {nft.packsLeft}/{nft.packsCount}
             </strong>
           </p>
@@ -79,7 +87,7 @@ export const NftDetail: FC<nft> = (nft) => {
         <div className="card-actions ">
           <label
             htmlFor="my-modal"
-            className="orange-gradient btn-circle btn h-14 w-[400px] border-none text-lg normal-case text-white lg:w-[300px] xl:w-[478px]"
+            className="orange-gradient btn-circle btn h-14 w-[478px] border-none text-base normal-case text-white"
           >
             Mint Now
           </label>
@@ -87,5 +95,4 @@ export const NftDetail: FC<nft> = (nft) => {
       </div>
     </div>
   );
-};
-export default NftDetail;
+}
