@@ -4,41 +4,35 @@ import { nft } from "@/pages/api/testdb";
 
 export const NftCard: FC<nft> = (nft) => {
   return (
-    <div className="flex flex-col  font-[roboto]">
-      <div className="flex h-auto ">
+    <div className="card w-96 bg-base-100">
+      <figure>
         <Image
-          className=" rounded-sm"
-          src={nft.img}
-          alt=""
-          height={420}
+          src="/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg"
+          alt="Shoes"
           width={337}
+          height={420}
         />
-      </div>
-      <div className="mt-1 flex flex-col text-[7px] sm:text-sm">
-        <div className="flex flex-col text-[7px] sm:text-sm">
-          <span>{nft.packsCount} Packs</span>
-          <span className=" text-xs font-semibold md:text-2xl">{nft.name}</span>
-          <span className=" text-gray-400 ">
-            Contains {nft.collectiblesCount}
-            {nft.collectiblesCount == 1 ? " collectible" : " collectibles"}
-          </span>
-        </div>
-        <div className="mt-2 flex flex-col text-[8px] sm:text-sm">
+      </figure>
+      <div className="card-body">
+        <strong className="text-sm">{nft.packsCount} Packs</strong>
+        <strong className="card-title">{nft.name}</strong>
+        <p className="text-[15px] text-[#A0A0A0]">
+          {" "}
+          Contains {nft.collectiblesCount}
+          {nft.collectiblesCount == 1 ? " collectible" : " collectibles"}
+        </p>
+        <p>
           {nft.packsLeft !== 0 ? (
             <>
-              <span className="text-xs font-semibold md:text-2xl">
-                ${nft.price}{" "}
-              </span>
-              <span className="  text-blue-400">
-                {nft.packsLeft} Packs Left
-              </span>
+              $<strong className="text-[19px]">{nft.price}</strong>
+              {nft.packsLeft} Packs Left
             </>
           ) : (
-            <span className="font-semibold text-gray-400 md:text-xl">
+            <strong className="mt-4 text-xl font-semibold text-[#A0A0A0]">
               Sold Out
-            </span>
+            </strong>
           )}
-        </div>
+        </p>
       </div>
     </div>
   );

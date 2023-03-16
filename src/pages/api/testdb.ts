@@ -91,19 +91,6 @@ export const testNft: nft[]  = [{
   whitelist: "Soldout",
   presale: "Soldout",
   collectiblesCount: 6
-},{
-  id: "1234",
-  name: "Alberto",
-  img: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
-  packsCount: 100,
-  maxCount: 5,
-  price: 200,
-  packsLeft: 1,
-  live: true,
-  timeRemain: 6000000,
-  whitelist: "Soldout",
-  presale: "Soldout",
-  collectiblesCount: 10
 }];
 
 
