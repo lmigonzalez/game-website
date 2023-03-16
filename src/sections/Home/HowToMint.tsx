@@ -98,6 +98,33 @@ const HowToMint = () => {
           />
           <Image src="/vaRnk3D.svg" alt="" width={338} height={320} />
           <Image src="/D4Q9FxU 2.svg" alt="" width={338} height={320} />
+          <Image src="/8Qz2gKJ2.svg" alt="" width={338} height={320} />
+          <Image
+            src="/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg"
+            alt=""
+            width={338}
+            height={320}
+          />
+          <Image src="/vaRnk3D.svg" alt="" width={338} height={320} />
+          <Image src="/D4Q9FxU 2.svg" alt="" width={338} height={320} />
+          <Image src="/8Qz2gKJ2.svg" alt="" width={338} height={320} />
+          <Image
+            src="/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg"
+            alt=""
+            width={338}
+            height={320}
+          />
+          <Image src="/vaRnk3D.svg" alt="" width={338} height={320} />
+          <Image src="/D4Q9FxU 2.svg" alt="" width={338} height={320} />
+          <Image src="/8Qz2gKJ2.svg" alt="" width={338} height={320} />
+          <Image
+            src="/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg"
+            alt=""
+            width={338}
+            height={320}
+          />
+          <Image src="/vaRnk3D.svg" alt="" width={338} height={320} />
+          <Image src="/D4Q9FxU 2.svg" alt="" width={338} height={320} />
         </div>
       </motion.div>
     </section>
