@@ -80,7 +80,7 @@ export const NftDetail: FC<Inft> = (nft) => {
             {nft.maxCount} MAX PER WALLET
           </span>
         </div>
-        <div className=" mb-16 mt-4 flex flex-row text-base xl:text-lg">
+        <div className=" mb-16 mt-4 flex max-w-sm flex-row text-base xl:text-lg">
           <p>
             Price: <br />
             <strong className="">{nft.price} ETH</strong>

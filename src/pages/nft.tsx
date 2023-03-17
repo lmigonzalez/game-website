@@ -3,7 +3,7 @@ import { Modal } from "@/components/Modal";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useState } from "react";
-import { JoinUs } from "@/components/JoinUs";
+import { JoinUs2 } from "@/components/JoinUs2";
 import { useStateContext } from "@/context/StateContext";
 import NftDetail from "@/components/NftDetail";
 import Layout from "@/components/Layout";
@@ -15,9 +15,9 @@ const nftDetail = () => {
     <>
       <Modal {...globalNFT} />
       <Layout>
-        <div className="px-4 pt-32 pb-6 ">
+        <div className="flex flex-col items-center justify-center gap-[114px]  px-4 pt-32 pb-[148px]">
           <NftDetail {...globalNFT} />
-          <JoinUs />
+          <JoinUs2 />
         </div>
       </Layout>
     </>
