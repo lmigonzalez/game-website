@@ -14,7 +14,7 @@ export const NftDetail: FC<Inft> = (nft) => {
   }, []);
 
   return (
-    <main className="card px-4 pt-48 text-black lg:card-side">
+    <div className="card  lg:card-side">
       <Image
         className="rounded-3xl lg:h-max"
         src="/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg"
@@ -28,7 +28,7 @@ export const NftDetail: FC<Inft> = (nft) => {
           {" "}
           NFT #{nft.id}
         </strong>
-        <h2 className="card-title my-2 whitespace-nowrap text-3xl font-bold xl:text-4xl">
+        <h2 className="card-title my-2 text-3xl font-bold sm:whitespace-nowrap xl:text-4xl">
           Public Mint is{" "}
           <span
             className={`rounded-xl bg-green-700 py-1 px-2 text-white ${
@@ -54,15 +54,29 @@ export const NftDetail: FC<Inft> = (nft) => {
           </strong>
           <br />
           <br />
-          Whitelist:{" "}
-          <strong className="font-semibold">{"nft.whitelist"} </strong>
+          <div className="flex flex-row gap-1">
+            Whitelist:
+            <strong className=" font-semibold">{` ${nft.whitelist}`} </strong>
+            <Image
+              src={"check-circle-svgrepo-com.svg"}
+              alt={""}
+              width={20}
+              height={20}
+            />
+          </div>
+          <div className="flex flex-row gap-1">
+            Presale:
+            <strong className=" font-semibold">{` ${nft.presale}`} </strong>
+            <Image
+              src={"check-circle-svgrepo-com.svg"}
+              alt={""}
+              width={20}
+              height={20}
+            />
+          </div>
           <br />
-          Presale: <strong className=" font-semibold">
-            {nft.presale}
-          </strong>{" "}
           <br />
-          <br />
-          <span className=" rounded-full border border-solid px-3">
+          <span className="rounded-xl border border-solid border-slate-600 px-3">
             {nft.maxCount} MAX PER WALLET
           </span>
         </div>
@@ -81,13 +95,13 @@ export const NftDetail: FC<Inft> = (nft) => {
         <div className="card-actions ">
           <label
             htmlFor="my-modal"
-            className="orange-gradient btn-circle btn h-14 w-[400px] border-none text-lg normal-case text-white lg:w-[300px] xl:w-[478px]"
+            className="orange-gradient btn-circle btn h-14 w-[200px] border-none text-lg normal-case text-white lg:w-[300px] xl:w-[478px]"
           >
             Mint Now
           </label>
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 export default NftDetail;
