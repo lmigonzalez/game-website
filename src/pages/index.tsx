@@ -1,23 +1,22 @@
-import Head from 'next/head';
-import { Poppins } from 'next/font/google';
-import CountDown from '@/sections/Home/CountDown';
-import Hero from '@/sections/Home/Hero';
-import HowToMint from '@/sections/Home/HowToMint';
-import AboutDrop from '@/sections/Home/AboutDrop';
-import RoadMap from '@/sections/Home/RoadMap';
-import OurTeam from '@/sections/Home/OurTeam';
-import Layout from '@/components/Layout';
-import { useState } from 'react';
-import { testNft, nft } from './api/testdb';
-import { Modal } from '@/components/Modal';
+import Head from "next/head";
+import { Poppins } from "next/font/google";
+import CountDown from "@/sections/Home/CountDown";
+import Hero from "@/sections/Home/Hero";
+import HowToMint from "@/sections/Home/HowToMint";
+import AboutDrop from "@/sections/Home/AboutDrop";
+import RoadMap from "@/sections/Home/RoadMap";
+import OurTeam from "@/sections/Home/OurTeam";
+import Layout from "@/components/Layout";
+import { Modal } from "@/components/Modal";
+import { useStateContext } from "@/context/StateContext";
 
 const poppins = Poppins({
-  weight: ['400', '500', '700'],
-  subsets: ['latin'],
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
 });
 
 export default function Home() {
-  const [nft, setNft] = useState<nft>(testNft[0]);
+  const { globalNFT, setGlobalNFT } = useStateContext();
   return (
     <>
       <Head>
@@ -26,12 +25,12 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Modal {...nft} />
+      <Modal {...globalNFT} />
 
       <Layout>
         <main className={`${poppins.className}  text-black`}>
           <Hero />
-          <CountDown duration={120122545} {...nft} />
+          <CountDown duration={120122545} {...globalNFT} />
           <HowToMint />
           <AboutDrop />
           <RoadMap />
