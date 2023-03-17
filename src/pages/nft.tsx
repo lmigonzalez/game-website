@@ -6,6 +6,7 @@ import { useState } from "react";
 import { JoinUs } from "@/components/JoinUs";
 import { useStateContext } from "@/context/StateContext";
 import NftDetail from "@/components/NftDetail";
+import Layout from "@/components/Layout";
 
 const nftDetail = () => {
   const { globalNFT } = useStateContext();
@@ -13,14 +14,12 @@ const nftDetail = () => {
   return (
     <>
       <Modal {...globalNFT} />
-      <Navbar />
-      <main className="m-20">
-        <div className=" flex items-center justify-center">
+      <Layout>
+        <div className="px-4 pt-32 pb-6 ">
           <NftDetail {...globalNFT} />
+          <JoinUs />
         </div>
-        <JoinUs />
-      </main>
-      <Footer />
+      </Layout>
     </>
   );
 };
