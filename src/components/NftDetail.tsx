@@ -23,7 +23,7 @@ export const NftDetail: FC<Inft> = (nft) => {
         height={580}
       />
 
-      <div className="card-body  pt-10">
+      <div className="card-body pl-2 pt-10 md:pl-4">
         <strong className="text-sm font-semibold xl:text-base">
           {" "}
           NFT #{nft.id}
@@ -95,7 +95,7 @@ export const NftDetail: FC<Inft> = (nft) => {
         <div className="card-actions ">
           <label
             htmlFor="my-modal"
-            className="orange-gradient btn-circle btn h-14 w-[200px] border-none text-lg normal-case text-white lg:w-[300px] xl:w-[478px]"
+            className="orange-gradient btn-circle btn h-14 w-[320px] border-none text-lg normal-case text-white lg:w-[300px] xl:w-[478px]"
           >
             Mint Now
           </label>

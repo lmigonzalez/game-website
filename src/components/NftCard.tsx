@@ -28,24 +28,26 @@ export const NftCard: FC<Inft> = (nft) => {
       />
 
       <div className="card-body w-fit px-0">
-        <strong className="text-sm">{nft.packsCount} Packs</strong>
+        <strong className="text-sm ">{nft.packsCount} Packs</strong>
         <strong className="card-title">{nft.name}</strong>
-        <p className="text-[15px] text-[#A0A0A0]">
+        <div className="text-[15px] text-[#A0A0A0]">
           {" "}
           Contains {nft.collectiblesCount}
           {nft.collectiblesCount == 1 ? " collectible" : " collectibles"}
-        </p>
+        </div>
         {nft.packsLeft !== 0 ? (
           <p>
-            $<strong className="text-[19px]">{nft.price}</strong> <br />
+            $<strong className="mt-3 text-[19px]">{nft.price}</strong> <br />
             <strong className="text-[#1199FA]">
               {nft.packsLeft} Packs Left
             </strong>
           </p>
         ) : (
-          <strong className="text-xl font-semibold text-[#A0A0A0]">
-            Sold Out
-          </strong>
+          <p>
+            <strong className=" text-xl font-semibold text-[#A0A0A0]">
+              Sold Out
+            </strong>
+          </p>
         )}
       </div>
     </div>
