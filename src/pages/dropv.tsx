@@ -16,12 +16,12 @@ const poppins = Poppins({
 
 export const dropv = () => {
   const [showInfo, setShowInfo] = useState<boolean>(true);
-  let cols = testNft.length / 4;
+
   return (
     <Layout>
       <main className="">
         <div className="relative">
-          <div className="absolute w-full h-full text-2xl md:text-6xl font-extrabold md:leading-[87px] text-white flex flex-col items-start justify-center px-4 py-8">
+          <div className="absolute flex h-full w-full flex-col items-start justify-center px-4 py-8 text-2xl font-extrabold text-white md:text-6xl md:leading-[87px]">
             <h2>Drop Name Here</h2>
             <h3>Subtitle</h3>
           </div>
