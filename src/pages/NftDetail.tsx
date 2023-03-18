@@ -1,11 +1,11 @@
 import React, { FC, useEffect, useState } from 'react';
 import Image from 'next/image';
 import { timeUnits } from '../utils/unitTime';
-import { nft } from '@/pages/api/testdb';
+import { Inft } from '@/pages/api/testdb';
 import Layout from '@/components/Layout';
 import { useStateContext } from '@/context/StateContext';
 
-export const NftDetail: FC<nft> = (nft) => {
+export const NftDetail: FC<Inft> = (nft) => {
   
   const [timeLeft, setTimeLeft] = useState(1234234);
 

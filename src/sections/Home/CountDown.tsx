@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Audiowide, Poppins, JetBrains_Mono } from 'next/font/google';
-import { nft } from '@/pages/api/testdb';
+import { Inft } from '@/pages/api/testdb';
 import { timeUnits } from '@/utils/unitTime';
 import { motion } from 'framer-motion';
 const audiowide = Audiowide({
@@ -22,7 +22,7 @@ interface CountdownProps {
   duration: number;
 }
 
-const CountDown: React.FC<CountdownProps & nft> = ({ duration, ...nft }) => {
+const CountDown: React.FC<CountdownProps & Inft> = ({ duration, ...nft }) => {
   const [initialValue, setInitialValue] = useState(duration);
 
   useEffect(() => {

@@ -18,7 +18,7 @@ const Hero = (props: Props) => {
             {' '}
             <b>Nft Name</b> first NFT collection will be available Friday,
             November 18 as part of an exclusive, multi-year partnership with{' '}
-            <b>Company Name,</b> the world's leading blockchain ecosystem and
+            <b>Company Name,</b> the worlds leading blockchain ecosystem and
             cryptocurrency infrastructure provider.
           </p>
 
@@ -82,7 +82,7 @@ const Hero = (props: Props) => {
             {' '}
             <b>Nft Name</b> first NFT collection will be available Friday,
             November 18 as part of an exclusive, multi-year partnership with{' '}
-            <b>Company Name,</b> the world's leading blockchain ecosystem and
+            <b>Company Name,</b> the worlds leading blockchain ecosystem and
             cryptocurrency infrastructure provider.
           </motion.p>
           <motion.button

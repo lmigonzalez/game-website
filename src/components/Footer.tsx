@@ -82,7 +82,7 @@ const Footer = () => {
               </Link>{" "}
             </li>
             <li className="h-10 w-10">
-              {" "}
+     
               <Link href="/">
                 <Image
                   src="/linkedin-round-svgrepo-com.svg"
