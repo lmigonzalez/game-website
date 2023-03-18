@@ -48,7 +48,7 @@ const Footer = () => {
 
         <div>
           <ul className="mr-4 flex h-full items-end gap-4">
-            <li>
+            <li className="h-10 w-10">
               {" "}
               <Link href="/">
                 <Image
@@ -59,7 +59,7 @@ const Footer = () => {
                 />
               </Link>{" "}
             </li>
-            <li>
+            <li className="h-10 w-10">
               {" "}
               <Link href="/">
                 <Image
@@ -70,7 +70,7 @@ const Footer = () => {
                 />
               </Link>{" "}
             </li>
-            <li>
+            <li className="h-10 w-10">
               {" "}
               <Link href="/">
                 <Image
@@ -81,7 +81,7 @@ const Footer = () => {
                 />
               </Link>{" "}
             </li>
-            <li>
+            <li className="h-10 w-10">
               {" "}
               <Link href="/">
                 <Image
