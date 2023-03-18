@@ -21,7 +21,7 @@ export const dropv = () => {
     <Layout>
       <main className="">
         <div className="relative">
-          <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 transform text-6xl font-extrabold leading-[87px] text-white">
+          <div className="absolute w-full h-full text-2xl md:text-6xl font-extrabold md:leading-[87px] text-white flex flex-col items-start justify-center px-4 py-8">
             <h2>Drop Name Here</h2>
             <h3>Subtitle</h3>
           </div>
