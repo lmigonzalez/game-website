@@ -1,12 +1,12 @@
 import React from 'react';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 type Props = {};
 
 const Hero = (props: Props) => {
   return (
     <section className="">
-      <div className="hidden  m-auto md:flex w-[1400px] max-w-full items-center bg-transparent px-4 pt-24">
+      <div className="m-auto  hidden w-[1400px] max-w-full items-center bg-transparent px-4 pt-24 md:flex">
         <motion.div
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -36,7 +36,7 @@ const Hero = (props: Props) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1, ease: 'easeOut' }}
-          className="-1/2"
+          className="w-1/2"
         >
           <Image
             src="/hero-img.png"
@@ -47,14 +47,21 @@ const Hero = (props: Props) => {
         </motion.div>
       </div>
 
-      <div className='flex flex-col items-center justify-center md:hidden pt-32 pb-24 px-4'>
-        <div className='flex items-center'>
-          <h2 className="text-4xl font-bold">NFT Drop</h2>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+      <div className="flex flex-col items-center justify-center px-4 pt-32 pb-24 md:hidden">
+        <div className="flex items-center">
+          <motion.h2
+            initial={{ x: -50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 1, ease: 'easeOut' }}
-            className="-1/2"
+            className="text-4xl font-bold"
+          >
+            NFT Drop
+          </motion.h2>
+          <motion.div
+            initial={{ x: 50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: 'easeOut' }}
+            className=""
           >
             <Image
               src="/hero-img.png"
@@ -65,23 +72,31 @@ const Hero = (props: Props) => {
           </motion.div>
         </div>
 
-        <div className='mt-4'>
-          <p className="leading-8">
+        <div className="mt-4">
+          <motion.p
+            initial={{ y: -50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: 'easeOut' }}
+            className="leading-8"
+          >
             {' '}
             <b>Nft Name</b> first NFT collection will be available Friday,
             November 18 as part of an exclusive, multi-year partnership with{' '}
             <b>Company Name,</b> the world's leading blockchain ecosystem and
             cryptocurrency infrastructure provider.
-          </p>
-          <button
-            className="orange-gradient rounded-full py-3 px-7 text-white mt-4"
+          </motion.p>
+          <motion.button
+            initial={{ y: 50, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 1, ease: 'easeOut' }}
+            className="orange-gradient mt-4 rounded-full py-3 px-7 text-white"
             style={{
               background:
                 'linear-gradient(92.48deg, #d80027 2.08%, #fb9e3c 117.25%)',
             }}
           >
             Get more details
-          </button>
+          </motion.button>
         </div>
       </div>
     </section>

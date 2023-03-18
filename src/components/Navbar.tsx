@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Poppins } from 'next/font/google';
-
+import { motion, AnimatePresence } from 'framer-motion';
 const poppins = Poppins({
   weight: ['400', '500', '700'],
   subsets: ['latin'],
@@ -84,24 +84,34 @@ const Navbar = () => {
           )}
         </button>
       </nav>
-      {showMenu && (
-        <div className= {`absolute left-0 top-0 z-10 block w-full ${router.asPath === '/dropv' ? 'bg-black' : 'bg-white'}  pb-8 pt-32 shadow-xl md:hidden`}>
-          <ul className="flex flex-col items-center justify-center space-y-6">
-            <li>
-              <Link href="/">Home</Link>
-            </li>
-            <li>
-              <Link href="/about">About us</Link>
-            </li>
-            <li>
-              <Link href="/portfolio">Portfolio</Link>
-            </li>
-            <li className="">
-              <Link href="/news">News</Link>
-            </li>
-          </ul>
-        </div>
-      )}
+
+      <AnimatePresence>
+        {showMenu && (
+          <motion.div
+            initial={{ y: -200, opacity: 0.8 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ damping: 10, stiffness: 100, duration: 0.1 }}
+            className={`absolute left-0 top-0 z-10 block w-full ${
+              router.asPath === '/dropv' ? 'bg-black' : 'bg-white'
+            }  pb-8 pt-32 shadow-xl md:hidden`}
+          >
+            <ul className="flex flex-col items-center justify-center space-y-6">
+              <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li>
+                <Link href="/about">About us</Link>
+              </li>
+              <li>
+                <Link href="/portfolio">Portfolio</Link>
+              </li>
+              <li className="">
+                <Link href="/news">News</Link>
+              </li>
+            </ul>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 };
