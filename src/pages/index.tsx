@@ -1,18 +1,18 @@
-import Head from "next/head";
-import { Poppins } from "next/font/google";
-import CountDown from "@/sections/Home/CountDown";
-import Hero from "@/sections/Home/Hero";
-import HowToMint from "@/sections/Home/HowToMint";
-import AboutDrop from "@/sections/Home/AboutDrop";
-import RoadMap from "@/sections/Home/RoadMap";
-import OurTeam from "@/sections/Home/OurTeam";
-import Layout from "@/components/Layout";
-import { Modal } from "@/components/Modal";
-import { useStateContext } from "@/context/StateContext";
+import Head from 'next/head';
+import { Poppins } from 'next/font/google';
+import CountDown from '@/sections/Home/CountDown';
+import Hero from '@/sections/Home/Hero';
+import HowToMint from '@/sections/Home/HowToMint';
+import AboutDrop from '@/sections/Home/AboutDrop';
+import RoadMap from '@/sections/Home/RoadMap';
+import OurTeam from '@/sections/Home/OurTeam';
+import Layout from '@/components/Layout';
+import { Modal } from '@/components/Modal';
+import { useStateContext } from '@/context/StateContext';
 
 const poppins = Poppins({
-  weight: ["400", "500", "700"],
-  subsets: ["latin"],
+  weight: ['400', '500', '700'],
+  subsets: ['latin'],
 });
 
 export default function Home() {
@@ -28,15 +28,15 @@ export default function Home() {
       <Modal {...globalNFT} />
 
       <Layout>
-        <main className={`${poppins.className}  text-black`}>
+        <div className={`${poppins.className}  text-black`}>
           <Hero />
           <CountDown duration={120122545} {...globalNFT} />
           <HowToMint />
           <AboutDrop />
           <RoadMap />
           <OurTeam />
-        </main>
+        </div>
       </Layout>
     </>
-  );
+  )
 }

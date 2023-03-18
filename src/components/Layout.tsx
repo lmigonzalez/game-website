@@ -8,7 +8,7 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div>
+    <div className=''>
       <Navbar />
       <main>{children}</main>
       <Footer />

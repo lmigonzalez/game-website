@@ -128,7 +128,7 @@ const Footer = () => {
       </div>
       <p className="text-center w-full py-8">Copyright ® 2022 All rights Reserved</p>
     </footer>
-  );
-};
+  )
+}
 
 export default Footer;

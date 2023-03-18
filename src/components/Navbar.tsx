@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { Poppins } from 'next/font/google';
 
 const poppins = Poppins({
@@ -8,11 +9,16 @@ const poppins = Poppins({
 });
 
 const Navbar = () => {
+  const router = useRouter();
   const [showMenu, setShowMenu] = useState(false);
 
   return (
     <header
-      className={`${poppins.className} absolute top-0 left-0 z-50 flex w-full items-center justify-between bg-transparent px-4 py-10 text-black`}
+      className={`${
+        poppins.className
+      } absolute top-0 left-0 z-50 flex w-full items-center justify-between bg-transparent px-4 py-10 text-black ${
+        router.asPath === '/dropv' ? 'text-white' : 'text-black'
+      }`}
     >
       <p className="font-bold">LOGO</p>
 
@@ -43,7 +49,7 @@ const Navbar = () => {
           onClick={() => {
             setShowMenu(!showMenu);
           }}
-          className="ml-6 block md:hidden relative z-20"
+          className="relative z-20 ml-6 block md:hidden"
         >
           {!showMenu ? (
             <svg

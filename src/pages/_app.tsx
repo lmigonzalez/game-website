@@ -4,7 +4,7 @@ import { StateContext } from '@/context/StateContext';
 export default function App({ Component, pageProps }: AppProps) {
   return (
     <StateContext>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </StateContext>
-  );
+  )
 }
