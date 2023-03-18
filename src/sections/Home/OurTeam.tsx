@@ -1,7 +1,7 @@
-import React from 'react';
-import Image from 'next/image';
-import { motion } from 'framer-motion';
-import { JoinUs } from '@/components/JoinUs';
+import React from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { JoinUs } from "@/components/JoinUs";
 const OurTeam = () => {
   return (
     <section className="py-24 px-1">
@@ -15,25 +15,27 @@ const OurTeam = () => {
         Our Team
       </motion.h2>
 
-      <div className="grid bg-red-400 content-center grid-cols-2 md:grid-cols-4 md:gap-4">
+      <div className="grid grid-cols-2 content-center gap-2 px-2 md:grid-cols-4 md:gap-4">
         <motion.div
           initial={{ y: -50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.8 }}
           transition={{ delay: 0.4 }}
-          className="w-max text-center"
+          className=" flex w-auto flex-col items-center justify-center"
         >
           <div className="w-max rounded-full bg-[#86FFFB]">
             <Image
-              src={'/Mask group.svg'}
+              src={"/Mask group.svg"}
               alt=""
-              width={195}
-              height={195}
-              className=""
+              width={149.53}
+              height={145.19}
+              className="sm:h-[195px] sm:w-[195px]"
             />
           </div>
-          <p className="mt-5 mb-2 font-bold">Martín Agudo</p>
-          <p className="font-medium">Designation</p>
+          <p className="mt-5 mb-2 text-xs font-bold sm:text-base">
+            Martín Agudo
+          </p>
+          <p className="text-xs font-medium md:text-base">Designation</p>
         </motion.div>
 
         <motion.div
@@ -41,18 +43,21 @@ const OurTeam = () => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.8 }}
           transition={{ delay: 0.4 }}
-          className="w-max text-center"
+          className="flex w-auto flex-col items-center justify-center"
         >
-          <div className="w-max rounded-full bg-[#86FFFB]">
+          <div className=" w-max  rounded-full bg-[#86FFFB]">
             <Image
-              src={'/Mask group (1).svg'}
+              src={"/Mask group (1).svg"}
               alt=""
-              width={195}
-              height={195}
+              width={149.53}
+              height={145.19}
+              className="sm:h-[195px] sm:w-[195px]"
             />
           </div>
-          <p className="mt-5 mb-2 font-bold">Mario Fueyo</p>
-          <p className="font-medium">Designation</p>
+          <p className="mt-5 mb-2 text-xs font-bold sm:text-base">
+            Mario Fueyo
+          </p>
+          <p className="text-xs font-medium md:text-base">Designation</p>
         </motion.div>
 
         <motion.div
@@ -60,18 +65,21 @@ const OurTeam = () => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.8 }}
           transition={{ delay: 0.4 }}
-          className="w-max text-center"
+          className="flex w-auto flex-col items-center justify-center"
         >
-          <div className="w-max rounded-full bg-[#86FFFB]">
+          <div className="  w-max rounded-full bg-[#86FFFB]">
             <Image
-              src={'/Mask group (2).svg'}
+              src={"/Mask group (2).svg"}
               alt=""
-              width={195}
-              height={195}
+              width={149.53}
+              height={145.19}
+              className="sm:h-[195px] sm:w-[195px]"
             />
           </div>
-          <p className="mt-5 mb-2 font-bold">Gonzalo Ladreda</p>
-          <p className="font-medium">Designation</p>
+          <p className="mt-5 mb-2 text-xs font-bold sm:text-base">
+            Gonzalo Ladreda
+          </p>
+          <p className="text-xs font-medium md:text-base">Designation</p>
         </motion.div>
 
         <motion.div
@@ -79,13 +87,21 @@ const OurTeam = () => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.8 }}
           transition={{ delay: 0.4 }}
-          className="w-max text-center"
+          className="flex w-auto flex-col items-center justify-center"
         >
-          <div className="w-max rounded-full bg-[#86FFFB]">
-            <Image src={'/Mask group.svg'} alt="" width={195} height={195} />
+          <div className="w-max  rounded-full bg-[#86FFFB]">
+            <Image
+              src={"/Mask group.svg"}
+              alt=""
+              width={149.53}
+              height={145.19}
+              className="sm:h-[195px] sm:w-[195px]"
+            />
           </div>
-          <p className="mt-5 mb-2 font-bold">Ana Montalbán</p>
-          <p className="font-medium">Designation</p>
+          <p className="mt-5 mb-2  text-xs font-bold sm:text-base">
+            Ana Montalbán
+          </p>
+          <p className="text-xs font-medium md:text-base">Designation</p>
         </motion.div>
       </div>
       <JoinUs />
