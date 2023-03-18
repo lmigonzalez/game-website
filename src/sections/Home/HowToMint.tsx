@@ -25,11 +25,11 @@ const HowToMint = () => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.8 }}
           transition={{ delay: 0.4 }}
-          className={`text-6xl font-bold`}
+          className={`text-5xl md:text-6xl font-bold`}
         >
           HOW TO MINT
         </motion.h2>
-        <div className="flex items-center justify-between">
+        <div className=" grid grid-cols-2 md:grid-cols-4 gap-y-4 m-auto">
           <motion.div
             initial={{ y: -50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}

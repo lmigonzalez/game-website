@@ -5,17 +5,17 @@ import Link from 'next/link';
 const Footer = () => {
   return (
     <footer className={`mt-auto bg-black text-white font-light`}>
-      <div className="flex justify-between space-x-8 mb-8 border-solid border-b-2  px-4 py-10">
+      <div className="flex flex-col md:flex-row justify-between space-x-0 space-y-6 md:space-y-0 md:space-x-16 mb-8 border-solid border-b-2  px-4 py-10">
         <div className="space-y-4 ">
           <p className='font-extrabold'>LOGO</p>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.{' '}
           </p>
-          <p>@Lorem</p>
+          <p className='hidden md:block'>@Lorem</p>
         </div>
-        <div className="h-full flex flex-col justify-between ">
-          <h3 className="whitespace-nowrap">About us</h3>
+        <div className="h-full w-full flex flex-col justify-between items-start">
+          <h3 className="whitespace-nowrap mb-4 font-medium">About us</h3>
           <ul className="space-y-4">
             <li>
               {' '}
@@ -37,7 +37,7 @@ const Footer = () => {
         </div>
 
         <div className="space-y-4">
-          <h3>Contact us</h3>
+          <h3 className='font-medium'>Contact us</h3>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.{' '}
