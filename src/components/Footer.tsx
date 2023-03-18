@@ -1,134 +1,105 @@
-import React from 'react';
-import Link from 'next/link';
-
+/* eslint-disable react/jsx-no-undef */
+import React from "react";
+import Link from "next/link";
+import Image from "next/image";
 
 const Footer = () => {
   return (
-    <footer className={`mt-auto bg-black text-white font-light`}>
-      <div className="flex flex-col md:flex-row justify-between space-x-0 space-y-6 md:space-y-0 md:space-x-16 mb-8 border-solid border-b-2  px-4 py-10">
+    <footer className={`mt-auto bg-black font-light text-white`}>
+      <div className="mb-8 flex flex-col justify-between space-x-0 space-y-6 border-b-2 border-solid px-4 py-10 md:flex-row  md:space-y-0 md:space-x-16">
         <div className="space-y-4 ">
-          <p className='font-extrabold'>LOGO</p>
+          <p className="font-extrabold">LOGO</p>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.{' '}
+            industry.{" "}
           </p>
-          <p className='hidden md:block'>@Lorem</p>
+          <p className="hidden md:block">@Lorem</p>
         </div>
-        <div className="h-full w-full flex flex-col justify-between items-start">
-          <h3 className="whitespace-nowrap mb-4 font-medium">About us</h3>
+        <div className="flex h-full w-full flex-col items-start justify-between">
+          <h3 className="mb-4 whitespace-nowrap font-medium">About us</h3>
           <ul className="space-y-4">
             <li>
-              {' '}
-              <Link href="/">Zeux</Link>{' '}
+              {" "}
+              <Link href="/">Zeux</Link>{" "}
             </li>
             <li>
-              {' '}
-              <Link href="/">Portfolio</Link>{' '}
+              {" "}
+              <Link href="/">Portfolio</Link>{" "}
             </li>
             <li>
-              {' '}
-              <Link href="/">Careers</Link>{' '}
+              {" "}
+              <Link href="/">Careers</Link>{" "}
             </li>
             <li>
-              {' '}
-              <Link href="/">Contact us</Link>{' '}
+              {" "}
+              <Link href="/">Contact us</Link>{" "}
             </li>
           </ul>
         </div>
 
         <div className="space-y-4">
-          <h3 className='font-medium'>Contact us</h3>
+          <h3 className="font-medium">Contact us</h3>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.{' '}
+            industry.{" "}
           </p>
           <p>+123 89097 890</p>
         </div>
 
         <div>
-          <ul className="flex items-end h-full mr-4">
+          <ul className="mr-4 flex h-full items-end gap-4">
             <li>
-              {' '}
+              {" "}
               <Link href="/">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </Link>{' '}
+                <Image
+                  src="/facebook-round-svgrepo-com.svg"
+                  alt=""
+                  width={75}
+                  height={75}
+                />
+              </Link>{" "}
             </li>
             <li>
-              {' '}
+              {" "}
               <Link href="/">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </Link>{' '}
+                <Image
+                  src="/instagram-svgrepo-com.svg"
+                  alt="asd"
+                  width={75}
+                  height={75}
+                />
+              </Link>{" "}
             </li>
             <li>
-              {' '}
+              {" "}
               <Link href="/">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </Link>{' '}
+                <Image
+                  src="/twitter-2-svgrepo-com.svg"
+                  alt=""
+                  width={75}
+                  height={75}
+                />
+              </Link>{" "}
             </li>
             <li>
-              {' '}
+              {" "}
               <Link href="/">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="w-6 h-6"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M15 11.25l-3-3m0 0l-3 3m3-3v7.5M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-              </Link>{' '}
+                <Image
+                  src="/linkedin-round-svgrepo-com.svg"
+                  alt=""
+                  width={75}
+                  height={75}
+                />
+              </Link>{" "}
             </li>
           </ul>
         </div>
       </div>
-      <p className="text-center w-full py-8">Copyright ® 2022 All rights Reserved</p>
+      <p className="w-full py-8 text-center">
+        Copyright ® 2022 All rights Reserved
+      </p>
     </footer>
-  )
-}
+  );
+};
 
 export default Footer;
