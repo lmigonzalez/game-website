@@ -15,7 +15,7 @@ const OurTeam = () => {
         Our Team
       </motion.h2>
 
-      <div className="m-auto flex w-[1400px] max-w-full items-center justify-between px-4">
+      <div className="grid bg-red-400 content-center grid-cols-2 md:grid-cols-4 md:gap-4">
         <motion.div
           initial={{ y: -50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}

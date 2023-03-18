@@ -41,13 +41,13 @@ const AboutDrop = () => {
           including versions of Lorem Ipsum
         </motion.p>
 
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col items-center justify-between space-y-4 space-x-0 lg:flex-row lg:space-y-0 lg:space-x-4">
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.8 }}
             transition={{ delay: 0.8 }}
-            className="flex h-[214px] w-[326px] items-center justify-center rounded-lg bg-[#373737]"
+            className="flex h-[214px] w-full items-center justify-center rounded-lg bg-[#373737] lg:w-[326px]"
           >
             <p className="orange-gradient bg-clip-text text-5xl font-bold text-transparent">
               250 <br /> NFT<span className="ml-0 text-2xl">s</span>
@@ -59,7 +59,7 @@ const AboutDrop = () => {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.8 }}
             transition={{ delay: 0.8 }}
-            className="flex h-[214px] w-[326px] items-center justify-center rounded-lg bg-[#373737]"
+            className="flex h-[214px] w-full items-center justify-center rounded-lg bg-[#373737] lg:w-[326px]"
           >
             <p className="orange-gradient bg-clip-text text-6xl font-bold text-transparent">
               49 €
@@ -70,7 +70,7 @@ const AboutDrop = () => {
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.8 }}
             transition={{ delay: 0.8 }}
-            className="flex h-[214px] w-[326px] items-center justify-center rounded-lg bg-[#373737]"
+            className="flex h-[214px] w-full items-center justify-center rounded-lg bg-[#373737] lg:w-[326px]"
           >
             <p className="orange-gradient bg-clip-text text-center text-4xl font-bold text-transparent">
               1 <br /> oportunidad
@@ -85,12 +85,12 @@ const AboutDrop = () => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.8 }}
           transition={{ delay: 0.2 }}
-          className="orange-gradient mb-12  bg-clip-text text-center text-5xl font-bold text-transparent"
+          className="orange-gradient mb-12  bg-clip-text text-center text-4xl md:text-5xl font-bold text-transparent"
         >
           Perks of Owning NFT
         </motion.h2>
 
-        <div className="flex items-center justify-between">
+        <div className="flex flex-wrap gap-4 items-center justify-center">
           <motion.div
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
