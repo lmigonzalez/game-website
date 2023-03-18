@@ -85,7 +85,7 @@ const Navbar = () => {
         </button>
       </nav>
       {showMenu && (
-        <div className="absolute left-0 top-0 z-10 block w-full bg-white pb-8 pt-32 shadow-xl md:hidden">
+        <div className= {`absolute left-0 top-0 z-10 block w-full ${router.asPath === '/dropv' ? 'bg-black' : 'bg-white'}  pb-8 pt-32 shadow-xl md:hidden`}>
           <ul className="flex flex-col items-center justify-center space-y-6">
             <li>
               <Link href="/">Home</Link>
