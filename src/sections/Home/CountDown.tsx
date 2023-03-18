@@ -48,13 +48,13 @@ const CountDown: React.FC<CountdownProps & nft> = ({ duration, ...nft }) => {
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.8 }}
           transition={{ delay: 0.5 }}
-          className={`flex w-full items-center justify-center space-x-24 text-center`}
+          className={`flex w-full items-center justify-center space-x-2 px-4 text-center md:space-x-24`}
         >
-          <div className="text-start">
-            <div className="space-x-4">
-              <span className="countdown font-mono text-8xl  ">
+          <div className="">
+            <div className="">
+              <span className="countdown font-mono">
                 <span
-                  className={`${audiowide.className} text-gradient text-8xl font-bold`}
+                  className={`${audiowide.className} text-gradient text-7xl font-bold md:text-8xl`}
                   style={{
                     ['--value' as string]:
                       initialValue > 3600000
@@ -65,17 +65,17 @@ const CountDown: React.FC<CountdownProps & nft> = ({ duration, ...nft }) => {
               </span>
             </div>
             <p
-              className={`${jetBrains.className} orange-gradient relative  mt-6 ml-8 bg-clip-text font-normal text-transparent`}
+              className={`${jetBrains.className} orange-gradient relative  mt-6 ml-8 bg-clip-text text-xs font-normal text-transparent md:text-base`}
             >
               HOURS
             </p>
           </div>
 
-          <div className="text-start">
-            <div className="space-x-4">
-              <span className="countdown font-mono text-8xl  ">
+          <div className="">
+            <div className="">
+              <span className="countdown font-mono">
                 <span
-                  className={`${audiowide.className} text-gradient text-8xl font-bold`}
+                  className={`${audiowide.className} text-gradient text-7xl font-bold  md:text-8xl`}
                   style={{
                     ['--value' as string]:
                       initialValue > 60000
@@ -86,16 +86,16 @@ const CountDown: React.FC<CountdownProps & nft> = ({ duration, ...nft }) => {
               </span>
             </div>
             <p
-              className={`${jetBrains.className} orange-gradient relative  mt-6 ml-8 bg-clip-text font-normal text-transparent`}
+              className={`${jetBrains.className} orange-gradient relative  mt-6 ml-8 bg-clip-text text-xs font-normal text-transparent md:text-base`}
             >
               MINUTES
             </p>
           </div>
           <div className="">
-            <div className="space-x-4">
-              <span className="countdown font-mono text-8xl  ">
+            <div className="">
+              <span className="countdown font-mono">
                 <span
-                  className={`${audiowide.className} text-gradient text-8xl font-bold`}
+                  className={`${audiowide.className} text-gradient text-7xl font-bold md:text-8xl`}
                   style={{
                     ['--value' as string]:
                       initialValue > 1000
@@ -107,7 +107,7 @@ const CountDown: React.FC<CountdownProps & nft> = ({ duration, ...nft }) => {
             </div>
 
             <p
-              className={`${jetBrains.className} orange-gradient relative  mt-6 ml-8 bg-clip-text font-normal text-transparent`}
+              className={`${jetBrains.className} orange-gradient relative  mt-6 ml-8 bg-clip-text text-xs font-normal text-transparent md:text-base`}
             >
               SECONDS
             </p>
