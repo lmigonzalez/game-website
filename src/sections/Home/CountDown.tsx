@@ -122,7 +122,7 @@ const CountDown: React.FC<CountdownProps & Inft> = ({ duration, ...nft }) => {
         >
           {' '}
           <button
-            className=" w-48  rounded-full border-2
+            className=" w-1/2 md:w-48  rounded-full border-2
             border-[#DB0F29] 
             py-4 text-center"
             onClick={() => location.replace('/dropv')}
@@ -132,7 +132,7 @@ const CountDown: React.FC<CountdownProps & Inft> = ({ duration, ...nft }) => {
           </button>
           <label
             htmlFor="my-modal"
-            className="orange-gradient btn-circle btn h-14 w-48 border-none text-base normal-case text-white"
+            className="orange-gradient btn-circle btn h-14 w-1/2 md:w-48 border-none text-base normal-case text-white"
           >
             Mint Now
           </label>
