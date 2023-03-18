@@ -3,6 +3,13 @@
 @tailwind utilities;
 
 @layer {
+  html {
+    @apply overflow-x-hidden scroll-smooth !important;
+  }
+  body {
+    @apply overflow-x-hidden;
+  }
+
   .bg-gradient {
     background: linear-gradient(
       14.03deg,
