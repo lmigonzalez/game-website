@@ -40,26 +40,39 @@ export const dropv = () => {
             />
           </div>
 
-        <div className="tabs flex justify-center gap-4 ">
-          <a
-            className={cn("tab w-11 text-2xl text-[roboto] text-black", {
-              " text-color border-gradient-orange tab-bordered tab-active tab-border-2":
-                showInfo,
-            })}
-            onClick={() => setShowInfo(true)}
+          <div className="tabs flex justify-center gap-4 ">
+            <a
+              className={cn('tab w-11 text-2xl text-[roboto] text-black', {
+                ' text-color border-gradient-orange tab-bordered tab-active tab-border-2':
+                  showInfo,
+              })}
+              onClick={() => setShowInfo(true)}
+            >
+              Info
+            </a>
+            <a
+              className={cn('tab  w-14 text-2xl text-[roboto] text-black', {
+                'text-color border-gradient-orange tab-bordered tab-active tab-border-2':
+                  !showInfo,
+              })}
+              onClick={() => setShowInfo(false)}
+            >
+              Shop
+            </a>
+          </div>
+
+          <div
+            className={cn(
+              'grid  grid-flow-row grid-cols-2 gap-10 p-10 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 2xl:grid-cols-7 ',
+              {
+                'hidden ': showInfo,
+              }
+            )}
           >
-            Info
-          </a>
-          <a
-            className={cn("tab  w-14 text-2xl text-[roboto] text-black", {
-              "text-color border-gradient-orange tab-bordered tab-active tab-border-2":
-                !showInfo,
-            })}
-            onClick={() => setShowInfo(false)}
-          >
-            Shop
-          </a>
-        </div>
+            {testNft.map((item, i) => (
+              <NftCard {...item} key={i} />
+            ))}
+          </div>
 
           <div className={cn({ 'hidden ': !showInfo })}>
             <Info />
