@@ -122,9 +122,9 @@ const CountDown: React.FC<CountdownProps & Inft> = ({ duration, ...nft }) => {
           className={`${poppins.className} relative mt-20 flex items-center justify-center space-x-5`}
         >
           {' '}
-          <Link href="/dropv">
+          <Link href="/dropv" className=' w-1/2 '>
             <button
-              className=" w-1/2 rounded-full  border-2 border-[#DB0F29]
+              className="rounded-full  border-2 border-[#DB0F29]
             py-4 
             text-center md:w-48"
             >
