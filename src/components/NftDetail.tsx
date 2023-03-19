@@ -14,7 +14,7 @@ export const NftDetail: FC<Inft> = (nft) => {
   }, []);
 
   return (
-    <div className="card  lg:card-side">
+    <div className="card  gap-6 lg:card-side">
       <Image
         className="rounded-3xl lg:h-max"
         src="/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg"
@@ -80,14 +80,16 @@ export const NftDetail: FC<Inft> = (nft) => {
             {nft.maxCount} MAX PER WALLET
           </span>
         </div>
-        <div className=" mb-16 mt-4 flex max-w-sm flex-row text-base xl:text-lg">
+        <div className=" mb-16 mt-4 flex max-w-sm flex-row text-base xl:text-[16px]">
           <p>
             Price: <br />
-            <strong className="">{nft.price} ETH</strong>
+            <strong className="text-xl font-bold xl:text-[28px]">
+              {nft.price} ETH
+            </strong>
           </p>{" "}
           <p>
             Remaining: <br />
-            <strong className=" ">
+            <strong className="text-xl font-bold xl:text-[28px]">
               {nft.packsLeft}/{nft.packsCount}
             </strong>
           </p>
