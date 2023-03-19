@@ -8,10 +8,10 @@ export const JoinUs2 = () => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.8 }}
       transition={{ delay: 0.3 }}
-      className="orange-gradient m-auto  flex h-[164px] w-[1400px] max-w-full flex-col items-center justify-center gap-2 rounded-lg py-16 text-white md:h-[289.78px]"
+      className="orange-gradient m-auto flex w-full max-w-[1296px] flex-col items-center justify-center gap-4 rounded-lg  py-12 text-white"
     >
       <Image
-        className=""
+        className="sm:h-[61px] sm:w-[75px]"
         src={"/discord-icon-svgrepo-com.svg"}
         alt={""}
         width={46}
@@ -22,7 +22,7 @@ export const JoinUs2 = () => {
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0.8 }}
         transition={{ delay: 0.6 }}
-        className=" text-2xl font-bold sm:text-5xl"
+        className=" mb-4 text-2xl font-bold sm:text-[44px]"
       >
         Join Our Comunity
       </motion.h3>
@@ -31,7 +31,7 @@ export const JoinUs2 = () => {
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true, amount: 0.8 }}
         transition={{ delay: 0.6 }}
-        className="rounded-3xl bg-white px-6 py-1 text-base text-black md:px-12 md:py-3"
+        className=" rounded-3xl bg-white px-10 py-3 text-base text-black md:px-12 md:py-3"
       >
         Join Discord
       </motion.button>

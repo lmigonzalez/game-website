@@ -31,14 +31,14 @@ export const NftDetail: FC<Inft> = (nft) => {
         <h2 className="card-title my-2 text-3xl font-bold sm:whitespace-nowrap xl:text-4xl">
           Public Mint is{" "}
           <span
-            className={`rounded-xl bg-green-700 py-1 px-2 text-white ${
+            className={`rounded-2xl bg-green-700 py-1 px-[16px] text-white ${
               nft.live ? `bg-green-700` : `bg-red-700`
             })`}
           >
             {nft.live ? `Live` : `Off`}
           </span>
         </h2>
-        <div className="mt-2">
+        <div className="">
           Mint end in:{" "}
           <strong className="font-semibold">
             {timeUnits(timeLeft)?.days !== 0
