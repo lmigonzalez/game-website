@@ -36,7 +36,7 @@ export const dropv = () => {
 
         <div className="tabs flex justify-center gap-4 ">
           <a
-            className={cn("tab w-12 text-2xl text-[roboto]", {
+            className={cn("tab w-11 text-2xl text-[roboto] text-black", {
               " text-color border-gradient-orange tab-bordered tab-active tab-border-2":
                 showInfo,
             })}
@@ -45,7 +45,7 @@ export const dropv = () => {
             Info
           </a>
           <a
-            className={cn("tab  w-14 text-2xl text-[roboto] ", {
+            className={cn("tab  w-14 text-2xl text-[roboto] text-black", {
               "text-color border-gradient-orange tab-bordered tab-active tab-border-2":
                 !showInfo,
             })}
