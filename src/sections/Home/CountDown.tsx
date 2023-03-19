@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Audiowide, Poppins, JetBrains_Mono } from 'next/font/google';
+import Link from 'next/link';
 import { Inft } from '@/pages/api/testdb';
 import { timeUnits } from '@/utils/unitTime';
 import { motion } from 'framer-motion';
@@ -121,18 +122,19 @@ const CountDown: React.FC<CountdownProps & Inft> = ({ duration, ...nft }) => {
           className={`${poppins.className} relative mt-20 flex items-center justify-center space-x-5`}
         >
           {' '}
-          <button
-            className=" w-1/2 md:w-48  rounded-full border-2
-            border-[#DB0F29] 
-            py-4 text-center"
-            onClick={() => location.replace('/dropv')}
-          >
-            {' '}
-            <p className="text-color">View Drop</p>{' '}
-          </button>
+          <Link href="/dropv">
+            <button
+              className=" w-1/2 rounded-full  border-2 border-[#DB0F29]
+            py-4 
+            text-center md:w-48"
+            >
+              {' '}
+              <p className="text-color">View Drop</p>{' '}
+            </button>
+          </Link>
           <label
             htmlFor="my-modal"
-            className="orange-gradient btn-circle btn h-14 w-1/2 md:w-48 border-none text-base normal-case text-white"
+            className="orange-gradient btn-circle btn h-14 w-1/2 border-none text-base normal-case text-white md:w-48"
           >
             Mint Now
           </label>

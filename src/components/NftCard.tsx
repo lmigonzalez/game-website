@@ -1,8 +1,14 @@
-import React, { FC } from "react";
-import Image from "next/image";
-import { useRouter } from "next/router";
-import { Inft } from "@/pages/api/testdb";
-import { useStateContext } from "@/context/StateContext";
+import React, { FC } from 'react';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+import { Inft } from '@/pages/api/testdb';
+import { useStateContext } from '@/context/StateContext';
+import { Roboto } from 'next/font/google';
+
+const roboto = Roboto({
+  weight: ['400', '500', '700'],
+  subsets: ['latin'],
+});
 
 export const NftCard: FC<Inft> = (nft) => {
   const router = useRouter();
@@ -11,13 +17,13 @@ export const NftCard: FC<Inft> = (nft) => {
 
   function setGlobalNFTDetails() {
     setGlobalNFT(nft);
-    router.push("/nft");
+    router.push('/nft');
   }
 
   return (
     <div
       onClick={setGlobalNFTDetails}
-      className="card flex cursor-pointer flex-col rounded-none"
+      className={`${roboto.className} card flex cursor-pointer flex-col rounded-none`}
     >
       <Image
         className="px-0"
@@ -27,18 +33,19 @@ export const NftCard: FC<Inft> = (nft) => {
         height={420}
       />
 
-      <div className="card-body w-fit px-0">
-        <strong className="text-sm ">{nft.packsCount} Packs</strong>
-        <strong className="card-title">{nft.name}</strong>
+      <div className={`card-body w-fit px-0`}>
+        <strong className={`text-sm font-bold`}>{nft.packsCount} Packs</strong>
+        <strong className="card-title text-xl">{nft.name}</strong>
         <div className="text-[15px] text-[#A0A0A0]">
-          {" "}
+          {' '}
           Contains {nft.collectiblesCount}
-          {nft.collectiblesCount == 1 ? " collectible" : " collectibles"}
+          {nft.collectiblesCount == 1 ? ' collectible' : ' collectibles'}
         </div>
         {nft.packsLeft !== 0 ? (
           <p>
-            $<strong className="mt-3 text-[19px]">{nft.price}</strong> <br />
-            <strong className="text-[#1199FA]">
+            <strong className="mt-3 text-xl font-bold">{`$${nft.price}`}</strong>{' '}
+            <br />
+            <strong className="text-sm font-bold text-[#1199FA]">
               {nft.packsLeft} Packs Left
             </strong>
           </p>

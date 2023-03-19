@@ -26,7 +26,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Modal {...globalNFT} />
-
       <Layout>
         <div className={`${poppins.className}  text-black`}>
           <Hero />
