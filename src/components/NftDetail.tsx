@@ -14,7 +14,7 @@ export const NftDetail: FC<Inft> = (nft) => {
   }, []);
 
   return (
-    <div className="card  gap-6 lg:card-side">
+    <div className="card  gap-6 text-[#292929] lg:card-side">
       <Image
         className="rounded-3xl lg:h-max"
         src="/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg"
@@ -76,7 +76,7 @@ export const NftDetail: FC<Inft> = (nft) => {
           </div>
           <br />
           <br />
-          <span className="rounded-xl border border-solid border-slate-600 px-3">
+          <span className="text- rounded-xl border border-solid border-slate-600 px-3">
             {nft.maxCount} MAX PER WALLET
           </span>
         </div>
@@ -99,7 +99,7 @@ export const NftDetail: FC<Inft> = (nft) => {
             htmlFor="my-modal"
             className="orange-gradient btn-circle btn h-14 w-[320px] border-none text-lg normal-case text-white lg:w-[300px] xl:w-[478px]"
           >
-            Mint Now
+            Mint Nowas
           </label>
         </div>
       </div>
