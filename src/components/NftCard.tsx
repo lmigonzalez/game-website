@@ -23,7 +23,7 @@ export const NftCard: FC<Inft> = (nft) => {
   return (
     <div
       onClick={setGlobalNFTDetails}
-      className={`${roboto.className} card flex cursor-pointer flex-col rounded-none`}
+      className="card flex cursor-pointer flex-col rounded-none text-black"
     >
       <Image
         className="px-0"

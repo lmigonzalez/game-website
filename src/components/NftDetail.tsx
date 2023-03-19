@@ -14,7 +14,7 @@ export const NftDetail: FC<Inft> = (nft) => {
   }, []);
 
   return (
-    <div className="card  gap-6 lg:card-side">
+    <div className="card  gap-6 text-[#292929] lg:card-side">
       <Image
         className="rounded-3xl lg:h-max"
         src="/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg"
@@ -31,14 +31,14 @@ export const NftDetail: FC<Inft> = (nft) => {
         <h2 className="card-title my-2 text-3xl font-bold sm:whitespace-nowrap xl:text-4xl">
           Public Mint is{" "}
           <span
-            className={`rounded-xl bg-green-700 py-1 px-2 text-white ${
+            className={`rounded-2xl bg-green-700 py-1 px-[16px] text-white ${
               nft.live ? `bg-green-700` : `bg-red-700`
             })`}
           >
             {nft.live ? `Live` : `Off`}
           </span>
         </h2>
-        <div className="mt-2">
+        <div className="">
           Mint end in:{" "}
           <strong className="font-semibold">
             {timeUnits(timeLeft)?.days !== 0
@@ -76,7 +76,7 @@ export const NftDetail: FC<Inft> = (nft) => {
           </div>
           <br />
           <br />
-          <span className="rounded-xl border border-solid border-slate-600 px-3">
+          <span className="text- rounded-xl border border-solid border-slate-600 px-3">
             {nft.maxCount} MAX PER WALLET
           </span>
         </div>
@@ -99,7 +99,7 @@ export const NftDetail: FC<Inft> = (nft) => {
             htmlFor="my-modal"
             className="orange-gradient btn-circle btn h-14 w-[320px] border-none text-lg normal-case text-white lg:w-[300px] xl:w-[478px]"
           >
-            Mint Now
+            Mint Nowas
           </label>
         </div>
       </div>
