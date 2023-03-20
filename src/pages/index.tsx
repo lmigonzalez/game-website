@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from 'react';
 import Head from 'next/head';
 import { Poppins } from 'next/font/google';
 import CountDown from '@/sections/Home/CountDown';
@@ -17,6 +18,25 @@ const poppins = Poppins({
 
 export default function Home() {
   const { globalNFT, setGlobalNFT } = useStateContext();
+  const [screenWidth, setScreenWidth] = useState(null);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Set initial width
+    setScreenWidth(window.innerWidth);
+
+    // console.log(screenWidth);
+    // Clean up
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, [screenWidth]);
+
   return (
     <>
       <Head>
@@ -28,14 +48,18 @@ export default function Home() {
       <Modal {...globalNFT} />
       <Layout>
         <div className={`${poppins.className}  text-black`}>
-          <Hero />
-          <CountDown duration={120122545} {...globalNFT} />
-          <HowToMint />
-          <AboutDrop />
-          <RoadMap />
-          <OurTeam />
+          <Hero screenWidth={screenWidth} />
+          <CountDown
+            screenWidth={screenWidth}
+            duration={120122545}
+            {...globalNFT}
+          />
+          <HowToMint screenWidth={screenWidth} />
+          <AboutDrop screenWidth={screenWidth} />
+          <RoadMap screenWidth={screenWidth} />
+          <OurTeam screenWidth={screenWidth} />
         </div>
       </Layout>
     </>
-  )
+  );
 }

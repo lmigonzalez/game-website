@@ -1,7 +1,11 @@
-import { motion } from "framer-motion";
+import { motion } from 'framer-motion';
 
-export const JoinUs = () => {
-  return (
+type Props = {
+  screenWidth: number;
+};
+
+export const JoinUs: React.FC<Props> = ({ screenWidth }) => {
+  return screenWidth > 768 ? (
     <motion.div
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
@@ -28,5 +32,20 @@ export const JoinUs = () => {
         Join Now
       </motion.button>
     </motion.div>
+  ) : (
+    <div
+      className="orange-gradient m-auto mt-48 flex w-[1400px] max-w-full flex-col items-center justify-center rounded-lg py-8 text-white"
+    >
+      <h3
+        className=" mb-8 text-xl font-bold md:text-6xl"
+      >
+        Join Our Discord Group
+      </h3>
+      <button
+        className="rounded-lg bg-black py-3 px-5"
+      >
+        Join Now
+      </button>
+    </div>
   );
 };

@@ -1,9 +1,14 @@
-import React from "react";
-import Image from "next/image";
-import { motion } from "framer-motion";
-import { JoinUs } from "@/components/JoinUs";
-const OurTeam = () => {
-  return (
+import React from 'react';
+import Image from 'next/image';
+import { motion } from 'framer-motion';
+import { JoinUs } from '@/components/JoinUs';
+
+type Props = {
+  screenWidth: number;
+};
+
+const OurTeam: React.FC<Props> = ({ screenWidth }) => {
+  return screenWidth > 768 ? (
     <section className="py-24 px-1">
       <motion.h2
         initial={{ y: -50, opacity: 0 }}
@@ -25,7 +30,7 @@ const OurTeam = () => {
         >
           <div className="w-max rounded-full bg-[#86FFFB]">
             <Image
-              src={"/Mask group.svg"}
+              src={'/Mask group.svg'}
               alt=""
               width={149.53}
               height={145.19}
@@ -47,7 +52,7 @@ const OurTeam = () => {
         >
           <div className=" w-max  rounded-full bg-[#86FFFB]">
             <Image
-              src={"/Mask group (1).svg"}
+              src={'/Mask group (1).svg'}
               alt=""
               width={149.53}
               height={145.19}
@@ -69,7 +74,7 @@ const OurTeam = () => {
         >
           <div className="  w-max rounded-full bg-[#86FFFB]">
             <Image
-              src={"/Mask group (2).svg"}
+              src={'/Mask group (2).svg'}
               alt=""
               width={149.53}
               height={145.19}
@@ -91,7 +96,7 @@ const OurTeam = () => {
         >
           <div className="w-max  rounded-full bg-[#86FFFB]">
             <Image
-              src={"/Mask group.svg"}
+              src={'/Mask group.svg'}
               alt=""
               width={149.53}
               height={145.19}
@@ -105,6 +110,79 @@ const OurTeam = () => {
         </motion.div>
       </div>
       <JoinUs />
+    </section>
+  ) : (
+    <section className="py-24 px-1">
+      <h2 className="orange-gradient mb-12  bg-clip-text text-center text-5xl font-bold text-transparent">
+        Our Team
+      </h2>
+
+      <div className="grid grid-cols-2 content-center gap-2 px-2 md:grid-cols-4 md:gap-4">
+        <div className=" flex w-auto flex-col items-center justify-center">
+          <div className="w-max rounded-full bg-[#86FFFB]">
+            <Image
+              src={'/Mask group.svg'}
+              alt=""
+              width={149.53}
+              height={145.19}
+              className="sm:h-[195px] sm:w-[195px]"
+            />
+          </div>
+          <p className="mt-5 mb-2 text-xs font-bold sm:text-base">
+            Martín Agudo
+          </p>
+          <p className="text-xs font-medium md:text-base">Designation</p>
+        </div>
+
+        <div className="flex w-auto flex-col items-center justify-center">
+          <div className=" w-max  rounded-full bg-[#86FFFB]">
+            <Image
+              src={'/Mask group (1).svg'}
+              alt=""
+              width={149.53}
+              height={145.19}
+              className="sm:h-[195px] sm:w-[195px]"
+            />
+          </div>
+          <p className="mt-5 mb-2 text-xs font-bold sm:text-base">
+            Mario Fueyo
+          </p>
+          <p className="text-xs font-medium md:text-base">Designation</p>
+        </div>
+
+        <div className="flex w-auto flex-col items-center justify-center">
+          <div className="  w-max rounded-full bg-[#86FFFB]">
+            <Image
+              src={'/Mask group (2).svg'}
+              alt=""
+              width={149.53}
+              height={145.19}
+              className="sm:h-[195px] sm:w-[195px]"
+            />
+          </div>
+          <p className="mt-5 mb-2 text-xs font-bold sm:text-base">
+            Gonzalo Ladreda
+          </p>
+          <p className="text-xs font-medium md:text-base">Designation</p>
+        </div>
+
+        <div className="flex w-auto flex-col items-center justify-center">
+          <div className="w-max  rounded-full bg-[#86FFFB]">
+            <Image
+              src={'/Mask group.svg'}
+              alt=""
+              width={149.53}
+              height={145.19}
+              className="sm:h-[195px] sm:w-[195px]"
+            />
+          </div>
+          <p className="mt-5 mb-2  text-xs font-bold sm:text-base">
+            Ana Montalbán
+          </p>
+          <p className="text-xs font-medium md:text-base">Designation</p>
+        </div>
+      </div>
+      <JoinUs screenWidth = {screenWidth}/>
     </section>
   );
 };
