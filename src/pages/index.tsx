@@ -18,7 +18,7 @@ const poppins = Poppins({
 
 export default function Home() {
   const { globalNFT, setGlobalNFT } = useStateContext();
-  const [screenWidth, setScreenWidth] = useState(null);
+  const [screenWidth, setScreenWidth] = useState<number>(0);
 
   useEffect(() => {
     const handleResize = () => {

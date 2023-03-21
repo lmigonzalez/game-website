@@ -109,7 +109,7 @@ const OurTeam: React.FC<Props> = ({ screenWidth }) => {
           <p className="text-xs font-medium md:text-base">Designation</p>
         </motion.div>
       </div>
-      <JoinUs />
+      <JoinUs screenWidth = {screenWidth}/>
     </section>
   ) : (
     <section className="py-24 px-1">
