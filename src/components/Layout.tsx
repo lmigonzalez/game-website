@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
-import Navbar from './Navbar';
-import Footer from './Footer';
+import { ReactNode } from "react";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
 
 type LayoutProps = {
   children: ReactNode;
@@ -8,12 +8,12 @@ type LayoutProps = {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className=''>
+    <div className="flex flex-col pt-36">
       <Navbar />
       <main>{children}</main>
       <Footer />
     </div>
-  )
+  );
 };
 
 export default Layout;

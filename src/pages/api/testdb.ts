@@ -1,3 +1,5 @@
+import { ImageLoaderProps } from "next/image";
+
 export type Inft = INftDetail & INftCard;
 
 export const defaultNFT:Inft = {
@@ -211,3 +213,130 @@ export interface INftDetail {
   whitelist: number | string;
   presale: number | string;
 }
+
+export interface ITopLeaderCard {
+  pos: number;
+  name: string;
+  userName: string;
+  img: ImageLoaderProps;
+}
+
+export const leaderBoard:ITopLeaderCard[] = [{
+        pos: 1,
+        name:"fulano",
+        userName:"@username",
+        img:{
+        src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+        width: 100,
+        quality: undefined,
+      }
+},{
+        pos: 2,
+        name:"fulano",
+        userName:"@username",
+        img:{
+        src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+        width: 100,
+        quality: undefined,
+      }
+},{
+        pos: 3,
+        name:"fulano",
+        userName:"@username",
+        img:{
+        src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+        width: 100,
+        quality: undefined,
+      }
+},{
+        pos: 4,
+        name:"fulano",
+        userName:"@username",
+        img:{
+        src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+        width: 100,
+        quality: undefined,
+      }
+},{
+        pos: 5,
+        name:"fulano",
+        userName:"@username",
+        img:{
+        src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+        width: 100,
+        quality: undefined,
+      }
+},{
+        pos: 6,
+        name:"fulano",
+        userName:"@username",
+        img:{
+        src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+        width: 100,
+        quality: undefined,
+      }
+},{
+        pos: 7,
+        name:"fulano",
+        userName:"@username",
+        img:{
+        src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+        width: 100,
+        quality: undefined,
+      }
+},{
+        pos: 8,
+        name:"fulano",
+        userName:"@username",
+        img:{
+        src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+        width: 100,
+        quality: undefined,
+      }
+},{
+        pos: 9,
+        name:"fulano",
+        userName:"@username",
+        img:{
+        src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+        width: 100,
+        quality: undefined,
+      }
+},{
+        pos: 10,
+        name:"fulano",
+        userName:"@username",
+        img:{
+        src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+        width: 100,
+        quality: undefined,
+      }
+},{
+        pos: 11,
+        name:"fulano",
+        userName:"@username",
+        img:{
+        src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+        width: 100,
+        quality: undefined,
+      }
+},
+]
+
+export const prizes: { pos: number, prize: string }[] = [{ pos: 1, prize: "$100k" },
+  { pos: 2, prize: "$50k" },
+  { pos: 3, prize: "$10k" },
+  { pos: 4, prize: "$100" },
+  { pos: 5, prize: "$100" },
+  { pos: 6, prize: "$100" },
+  { pos: 7, prize: "$100" },
+  { pos: 8, prize: "$100" },
+  { pos: 9, prize: "$100" },
+  { pos: 10, prize: "$100" },
+  { pos: 11, prize: "$100" },
+  { pos: 12, prize: "$100" },
+  { pos: 13, prize: "$100" },
+  { pos: 14, prize: "$100" },
+  { pos: 15, prize: "$100" },
+]
+
