@@ -18,21 +18,13 @@ const gamesListing = () => {
         each game.
       </p>
       <div className="hide-scroll-bar relative mt-24 h-[282px] w-full overflow-y-hidden overflow-x-scroll">
-        <div className="absolute flex space-x-5">
-          <div className=" h-[282px] w-[226px]">
-            <div className="h-[164px] w-full bg-[url('/Rectangle-20.svg')] bg-cover bg-top bg-no-repeat ">
-              {/* <Image
-              src="/Rectangle-20.svg"
-              alt=""
-              fill
-            /> */}
-            </div>
-
-            <div className="orange-gradient relative h-[118px] w-full space-y-2 p-2 text-white">
+        <div className="absolute flex space-x-5 ">
+          <div className=" flex h-[282.2px] w-[226px] items-end bg-[url('/Rectangle-20.svg')]">
+            <div className="orange-gradient h-[118px] w-full p-4 text-white">
               <p className="text-sm font-normal">The Witcher 3: Wild Hunt </p>
               <p className="text-xs opacity-75">Fighting, Action</p>
 
-              <div className="absolute bottom-3 left-0 w-full  px-2">
+              <div className=" mt-6 w-full">
                 <button className="h-8  w-24 rounded-full bg-white">
                   <p className="orange-gradient bg-clip-text text-transparent">
                     Play Now
@@ -44,22 +36,12 @@ const gamesListing = () => {
 
           {/* 2 */}
 
-          <div className=" h-[282px] w-[226px]">
-            <div className="h-[164px] w-full bg-[url('/COD-MW.svg')] bg-cover bg-top bg-no-repeat ">
-              {/* <Image
-              src="/Rectangle-20.svg"
-              alt=""
-              fill
-            /> */}
-            </div>
-
-            <div className="orange-gradient relative h-[118px] w-full space-y-2 p-2 text-white">
-              <p className="text-sm font-normal">
-                Call of Duty Modern warfare II{' '}
-              </p>
+		  <div className=" flex h-[282.2px] w-[226px] items-end bg-[url('/COD-MW.svg')]">
+            <div className="orange-gradient h-[118px] w-full p-4 text-white">
+              <p className="text-sm font-normal">The Witcher 3: Wild Hunt </p>
               <p className="text-xs opacity-75">Fighting, Action</p>
 
-              <div className="absolute bottom-3 left-0 w-full  px-2">
+              <div className=" mt-6 w-full">
                 <button className="h-8  w-24 rounded-full bg-white">
                   <p className="orange-gradient bg-clip-text text-transparent">
                     Play Now
@@ -71,20 +53,12 @@ const gamesListing = () => {
 
           {/* 3 */}
 
-          <div className=" h-[282px] w-[226px]">
-            <div className="h-[164px] w-full bg-[url('/NBA.svg')] bg-cover bg-top bg-no-repeat ">
-              {/* <Image
-              src="/Rectangle-20.svg"
-              alt=""
-              fill
-            /> */}
-            </div>
+		  <div className=" flex h-[282.2px] w-[226px] items-end bg-[url('/NBA.svg')]">
+            <div className="orange-gradient h-[118px] w-full p-4 text-white">
+              <p className="text-sm font-normal">The Witcher 3: Wild Hunt </p>
+              <p className="text-xs opacity-75">Fighting, Action</p>
 
-            <div className="orange-gradient relative h-[118px] w-full space-y-2 p-2 text-white">
-              <p className="text-sm font-normal">NBA 2K23 </p>
-              <p className="text-xs opacity-75">Sport</p>
-
-              <div className="absolute bottom-3 left-0 w-full  px-2">
+              <div className=" mt-6 w-full">
                 <button className="h-8  w-24 rounded-full bg-white">
                   <p className="orange-gradient bg-clip-text text-transparent">
                     Play Now
@@ -95,20 +69,12 @@ const gamesListing = () => {
           </div>
 
           {/* 4 */}
-          <div className=" h-[282px] w-[226px]">
-            <div className="h-[164px] w-full bg-[url('/Pes-2023.svg')] bg-cover bg-top bg-no-repeat ">
-              {/* <Image
-              src="/Rectangle-20.svg"
-              alt=""
-              fill
-            /> */}
-            </div>
+		  <div className=" flex h-[282.2px] w-[226px] items-end bg-[url('/Pes-2023.svg')]">
+            <div className="orange-gradient h-[118px] w-full p-4 text-white">
+              <p className="text-sm font-normal">The Witcher 3: Wild Hunt </p>
+              <p className="text-xs opacity-75">Fighting, Action</p>
 
-            <div className="orange-gradient relative h-[118px] w-full space-y-2 p-2 text-white">
-              <p className="text-sm font-normal">Pes 2023 </p>
-              <p className="text-xs opacity-75">Sport</p>
-
-              <div className="absolute bottom-3 left-0 w-full  px-2">
+              <div className=" mt-6 w-full">
                 <button className="h-8  w-24 rounded-full bg-white">
                   <p className="orange-gradient bg-clip-text text-transparent">
                     Play Now
@@ -117,23 +83,14 @@ const gamesListing = () => {
               </div>
             </div>
           </div>
-
           {/* 5 */}
 
-          <div className=" h-[282px] w-[226px]">
-            <div className="h-[164px] w-full bg-[url('/Rectangle-20.svg')] bg-cover bg-top bg-no-repeat ">
-              {/* <Image
-              src="/Rectangle-20.svg"
-              alt=""
-              fill
-            /> */}
-            </div>
-
-            <div className="orange-gradient relative h-[118px] w-full space-y-2 p-2 text-white">
-              <p className="text-sm font-normal">GTA VI </p>
+		  <div className=" flex h-[282.2px] w-[226px] items-end bg-[url('/Rectangle-20.svg')]">
+            <div className="orange-gradient h-[118px] w-full p-4 text-white">
+              <p className="text-sm font-normal">The Witcher 3: Wild Hunt </p>
               <p className="text-xs opacity-75">Fighting, Action</p>
 
-              <div className="absolute bottom-3 left-0 w-full  px-2">
+              <div className=" mt-6 w-full">
                 <button className="h-8  w-24 rounded-full bg-white">
                   <p className="orange-gradient bg-clip-text text-transparent">
                     Play Now
@@ -145,22 +102,12 @@ const gamesListing = () => {
 
           {/* 6 */}
 
-          <div className=" h-[282px] w-[226px]">
-            <div className="h-[164px] w-full bg-[url('/Rectangle-20.svg')] bg-cover bg-top bg-no-repeat ">
-              {/* <Image
-              src="/Rectangle-20.svg"
-              alt=""
-              fill
-            /> */}
-            </div>
-
-            <div className="orange-gradient relative h-[118px] w-full space-y-2 p-2 text-white">
-              <p className="text-sm font-normal">
-                Call of Duty Modern warfare II{' '}
-              </p>
+		  <div className=" flex h-[282.2px] w-[226px] items-end bg-[url('/COD-MW.svg')]">
+            <div className="orange-gradient h-[118px] w-full p-4 text-white">
+              <p className="text-sm font-normal">The Witcher 3: Wild Hunt </p>
               <p className="text-xs opacity-75">Fighting, Action</p>
 
-              <div className="absolute bottom-3 left-0 w-full  px-2">
+              <div className=" mt-6 w-full">
                 <button className="h-8  w-24 rounded-full bg-white">
                   <p className="orange-gradient bg-clip-text text-transparent">
                     Play Now
