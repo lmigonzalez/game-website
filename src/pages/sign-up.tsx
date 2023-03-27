@@ -60,7 +60,7 @@ const signUp = () => {
         {/* <ChooseBundle/> */}
         {/* <ConnectToWallet2/> */}
         {/* <SuccessStat/> */}
-        <EnterCardDetails/>
+        {/* <EnterCardDetails/> */}
         {showConnectWallet && <ConnectToWallet handleDisplayWallet = {handleDisplayWallet}/>}
         <div className="flex items-center justify-start w-1/2 bg-[url('/hot-air-balloons.jpg')] bg-cover bg-center bg-no-repeat">
           <strong className='absolute top-0 left-0  py-16 px-11 text-black'>Logo Here</strong>

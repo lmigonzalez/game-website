@@ -93,7 +93,7 @@ const ConnectToWallet: React.FC<Props> = ({ handleDisplayWallet }) => {
 
             <Image
               className="mr-2"
-              src={'/fox.png'}
+              src={'/coinbase-icon.svg'}
               alt="google icon"
               width={40}
               height={40}
