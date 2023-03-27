@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+
 const gamesListing = () => {
   return (
     <section className="m-auto w-[1400px] max-w-full  px-4 py-24 text-black">
@@ -16,7 +17,6 @@ const gamesListing = () => {
         category, popularity, or price, and view screenshots and trailers for
         each game.
       </p>
-
       <div className="hide-scroll-bar relative mt-24 h-[282px] w-full overflow-y-hidden overflow-x-scroll">
         <div className="absolute flex space-x-5">
           <div className=" h-[282px] w-[226px]">
