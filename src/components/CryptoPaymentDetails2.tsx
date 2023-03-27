@@ -27,16 +27,42 @@ const CryptoPaymentDetails2 = () => {
           </button>
         </div>
         <div className="py-8">
-          <div className="flex items-center justify-between space-x-3 px-8">
-            <div className="custom-shadow flex w-1/2 flex-col items-center justify-center rounded border-[2px] border-solid border-[#DB0F29] py-4">
+        <div className="flex items-center justify-between space-x-3 px-8">
+            <div className="custom-shadow flex w-1/2 flex-col items-center justify-center space-y-2 rounded border-[2px] border-solid border-[#DB0F29] py-4">
+              <Image
+                src="/image 35.svg"
+                alt="visa"
+                width={35}
+                height={35}
+                className="mx-2 rounded bg-[#F0F2F5] p-1"
+              />
               <strong>Crypto</strong>
               <p>Payment with Matic</p>
             </div>
-            <div className="custom-shadow flex w-1/2 flex-col items-center justify-center rounded py-4">
+            <div className="custom-shadow flex w-1/2 flex-col items-center justify-center space-y-2 rounded py-4">
+              <Image
+                src="/Vector.svg"
+                alt="visa"
+                width={35}
+                height={35}
+                className="mx-2 rounded bg-[#F0F2F5] p-1"
+              />
               <strong>Credit Card</strong>
               <p className="flex items-center">
                 Payment with{' '}
-                <Image src="/visa.png" alt="visa" width={35} height={35} />{' '}
+                <Image
+                  src="/visa.png"
+                  alt="visa"
+                  width={35}
+                  height={35}
+                  className="mx-2"
+                />{' '}
+                <Image
+                  src="/Mastercard.svg"
+                  alt="visa"
+                  width={35}
+                  height={35}
+                />{' '}
               </p>
             </div>
           </div>
