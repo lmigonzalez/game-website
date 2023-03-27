@@ -19,7 +19,15 @@ export default function asd() {
           <div className="grid grid-flow-row"></div>
         </div>
         <div className="grid grid-flow-col grid-rows-1 gap-14">
-          <MatchingCard ocuppied={true} />
+          <MatchingCard
+            ocuppied={true}
+            img={{
+              src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+              width: 251,
+              quality: undefined,
+            }}
+            name={"Bal. $700"}
+          />
           <MatchingCard ocuppied={false} />
           <MatchingCard ocuppied={false} />
           <MatchingCard ocuppied={false} />
