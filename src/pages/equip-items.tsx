@@ -14,14 +14,16 @@ const EquipItems: FC<{
   avatars: ImageLoaderProps[];
   preview: ImageLoaderProps;
 }> = ({ inventory, equippedItems, preview, games, avatars }) => {
-  const [dropDown, setDropDown] = useState(false);
   const [whereEver, setWhereEver] = useState(false);
+  const [dropDown, setDropDown] = useState(false);
   const [active, setActive] = useState(false);
 
   useEffect(() => {
-    if (!dropDown) setActive(whereEver && dropDown);
-    console.log(`${whereEver + "   " + dropDown + "   " + active}`);
-    setDropDown(false);
+    if (whereEver) {
+      setActive(dropDown);
+      setDropDown(false);
+    }
+    setWhereEver(false);
   }, [whereEver]);
 
   return (
@@ -47,24 +49,39 @@ const EquipItems: FC<{
           height={337}
           className="w-fill mt-6 rounded-2xl"
         />
-
+        <div className="orange-gradient h-12 w-[338px] rounded-xl text-[#FCDDEC]">
+          <select className="h-12 w-[316px] justify-between bg-transparent  pl-4 ">
+            <option disabled selected className="w-[338px]">
+              Select Game
+            </option>
+            {games.map((item, idx) => (
+              <option className="w-[338px]" key={`game-${idx}`}>
+                {item.name}
+              </option>
+            ))}
+          </select>
+        </div>
         <div
           className="dropdown-bottom dropdown w-[338px]"
-          onFocus={() => setDropDown(true)}
+          onClick={() => setDropDown(true)}
         >
           <button tabIndex={0} className="h-12 w-full">
-            <div className="orange-gradient flex h-full w-full items-center justify-between rounded-xl px-5 text-justify text-[#FCDDEC]">
-              <span>select </span>
-              {active ? (
+            <div
+              className={`orange-gradient flex h-full w-full items-center justify-between ${
+                active ? "rounded-t-xl" : "rounded-xl"
+              } px-5 text-justify text-[#FCDDEC]`}
+            >
+              <span>Select Avatar </span>
+              {!active ? (
                 <Image
-                  src={"/down-svgrepo-com.svg"}
+                  src={"/down-svgrepo-com (2).svg"}
                   alt={"down"}
                   width={20}
                   height={20}
                 />
               ) : (
                 <Image
-                  src={"/down-svgrepo-com (1).svg"}
+                  src={"/down-svgrepo-com (3).svg"}
                   alt={"down"}
                   width={20}
                   height={20}
@@ -74,7 +91,7 @@ const EquipItems: FC<{
           </button>
           <div
             tabIndex={0}
-            className="dropd hide-scroll-bar dropdown-content flex max-w-[338px] flex-row overflow-hidden  overflow-x-scroll rounded-b-xl"
+            className="hide-scroll-bar dropdown-content flex max-w-[338px] flex-row overflow-hidden  overflow-x-scroll rounded-b-xl"
           >
             {avatars?.map((item, idx) => (
               <Image
@@ -83,30 +100,10 @@ const EquipItems: FC<{
                 alt={"no img"}
                 width={59}
                 height={59}
+                onClick={() => {}}
               />
             ))}
-          </div>
-        </div>
-        <div className="dropdown-bottom dropdown w-[338px]">
-          <button tabIndex={0} className="h-12 w-full">
-            <div className="orange-gradient flex h-full w-full items-center justify-center rounded-xl text-[#FCDDEC]">
-              Equiped
-            </div>
-          </button>
-          <div
-            tabIndex={0}
-            className="dropd hide-scroll-bar dropdown-content flex max-w-[338px] flex-row overflow-hidden  overflow-x-scroll rounded-b-xl"
-          >
-            {avatars?.map((item, idx) => (
-              <Image
-                key={`avatar-${idx}`}
-                src={item.src}
-                alt={"no img"}
-                width={59}
-                height={59}
-              />
-            ))}
-          </div>
+          </div>{" "}
         </div>
       </div>
 
