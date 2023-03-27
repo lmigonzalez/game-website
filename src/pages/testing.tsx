@@ -1,17 +1,19 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable react/jsx-no-comment-textnodes */
-import { leaderBoard, prizes, testNft } from "../pages/api/testdb";
+import { Modal } from "@/components/Modal";
+import { NftCard } from "@/components/NftCard";
+import { NftDetail } from "@/pages/NftDetail";
+import { testNft } from "../pages/api/testdb";
+
 import React, { useEffect, useState } from "react";
+import Footer from "@/components/Footer";
+import Navbar from "@/components/Navbar";
+import { JoinUs } from "@/components/JoinUs";
+import { timeUnits } from "@/utils/unitTime";
 import Image from "next/image";
 import Layout from "@/components/Layout";
-import Medal from "@/components/Medal";
-import TopLeaderBoard from "@/components/TopLeaderBoard";
-import LeaderBoard from "@/components/LeaderBoard";
+import MatchingCard from "@/components/MatchingCard";
 
 export default function asd() {
-  return (
-    <Layout>
-      <LeaderBoard leaders={leaderBoard} prizes={prizes} />
-    </Layout>
-  );
+  return <Layout></Layout>;
 }

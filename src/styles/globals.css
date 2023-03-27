@@ -132,7 +132,7 @@
   }
   .border-gradient-orange {
     background: transparent;
-    border: 2px solid transparent;
+    border: 2px solid ;
     background-clip: padding-box;
     border-image: linear-gradient(92.48deg, #d80027 2.08%, #fb9e3c 117.25%) 1;
   }
