@@ -81,6 +81,7 @@ const signUp = () => {
           <div className='flex flex-col justify-center items-center'>
             <strong className='text-2xl '>Get Started</strong>
             <p className='text-[#7E7E7E]'>Getting started is easy</p>
+            
             <div className='flex justify-between items-center space-x-3 mt-11 mb-3'>
               <button className='bg-white h-11 w-32 border-[#D80027] border-[1px] border-solid rounded flex items-center justify-center'> <Image className='mr-2' src={'/google.png'} alt='google icon' width={25} height={25}/> Google</button>
 
@@ -139,6 +140,8 @@ const signUp = () => {
             By continuing you indicate that you read and agreed to the Terms of
             Use
           </p>
+
+
         </div>
       </section>
     </>
