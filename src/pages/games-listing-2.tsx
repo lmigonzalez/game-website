@@ -1,5 +1,5 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 const gamesListing2 = () => {
   return (
     <section className="m-auto w-[1400px] max-w-full  px-4 py-24 text-black">
@@ -17,7 +17,7 @@ const gamesListing2 = () => {
         each game.
       </p>
 
-      <div className="my-grid mt-14 grid grid-cols-2 gap-x-24 gap-y-12">
+      <div className="my-grid mt-14 grid grid-cols-1 gap-x-24 gap-y-12 lg:grid-cols-2">
         <div className="w-fit">
           <div>
             <Image src="/1048227 1.svg" alt="" width={505} height={285} />
