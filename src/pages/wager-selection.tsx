@@ -1,9 +1,10 @@
-import React from 'react';
+/* eslint-disable react/no-unescaped-entities */
+import React from "react";
 
 const wagerSelection = () => {
   return (
     <section className="m-auto w-[1400px] max-w-full  px-4 py-24 text-black">
-      <h1 className="orange-gradient mb-4 bg-clip-text text-6xl font-bold text-transparent">
+      <h1 className="orange-gradient h-20 bg-clip-text text-6xl font-bold text-transparent">
         Select Wager
       </h1>
       <p>
@@ -13,16 +14,16 @@ const wagerSelection = () => {
         willing to bet on the game. Make sure to enter a wager that you are
         comfortable with.
       </p>
-      <div className="my-grid mt-14 grid grid-cols-3 items-center justify-items-center gap-4">
-        <div className="h-[450px] rounded-lg bg-white">
-          <div className="orange-gradient relative h-36 rounded-t-lg pt-3 text-center text-white">
-            <strong className="text-3xl">Small</strong>
-            <p>Normal</p>
-            <div className="orange-gradient absolute -bottom-32 left-1/2 flex h-32 w-32 -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-full border-[4px] border-solid border-white text-4xl font-bold custom-shadow-bottom">
+      <div className="my-grid mt-14 grid grid-cols-2   gap-4 lg:grid-cols-3">
+        <div className="container h-[216px] w-[185.83px] rounded-lg bg-white lg:h-[450px] lg:w-[384.2px]">
+          <div className="orange-gradient relative h-[65.59px] w-full rounded-t-lg pt-1 text-center text-white lg:h-36 lg:pt-3">
+            <strong className="text-[13.12px] lg:text-3xl">Small</strong>
+            <p className="text-[7.87px] lg:text-base">Normal</p>
+            <div className="orange-gradient custom-shadow-bottom absolute top-[73px] left-1/2 flex h-[61.21px] w-[61.21px] -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-full border-[2px] border-solid border-white text-[17.62px] font-bold lg:top-[145px] lg:h-32 lg:w-32 lg:border-[4px] lg:text-4xl">
               ¥1k
             </div>
           </div>
-          <div className="space-y-5 px-4 pt-24">
+          <div className="space-y-2 px-4 pt-[56px] text-[6.12px] lg:space-y-5 lg:pt-24 lg:text-base">
             <div className="flex items-center space-x-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +31,7 @@ const wagerSelection = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={4}
                 stroke="currentColor"
-                className="h-6 w-6 rounded-full bg-[#1AA260] p-1 text-white"
+                className="h-[18.08px] w-[18.08px] rounded-full bg-[#1AA260] p-1 text-white lg:h-6 lg:w-6"
               >
                 <path
                   strokeLinecap="round"
@@ -48,7 +49,7 @@ const wagerSelection = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={4}
                 stroke="currentColor"
-                className="h-6 w-6 rounded-full bg-[#1AA260] p-1 text-white"
+                className="h-[18.08px]  w-[18.08px] rounded-full bg-[#1AA260] p-1 text-white lg:h-6 lg:w-6"
               >
                 <path
                   strokeLinecap="round"
@@ -60,7 +61,7 @@ const wagerSelection = () => {
             </div>
 
             <button className=" h-full">
-              <p className="orange-gradient flex h-14 w-[315px] items-center justify-center rounded-full text-white">
+              <p className="orange-gradient flex h-[26.23px] w-[152.16px] items-center justify-center rounded-full text-white lg:h-14 lg:w-[315px]">
                 Select this Wager
               </p>
             </button>
@@ -69,15 +70,15 @@ const wagerSelection = () => {
 
         {/* 2 */}
 
-        <div className="h-[450px] rounded-lg bg-white">
-          <div className="orange-gradient relative h-36 rounded-t-lg pt-3 text-center text-white">
-            <strong className="text-3xl">Medium</strong>
-            <p>Gold</p>
-            <div className="orange-gradient absolute -bottom-32 left-1/2 flex h-32 w-32 -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-full border-[4px] border-solid border-white text-4xl font-bold custom-shadow-bottom">
+        <div className="container h-[216px] w-[185.83px] rounded-lg bg-white lg:h-[450px] lg:w-[384.2px]">
+          <div className="orange-gradient relative h-[65.59px] w-full rounded-t-lg pt-1 text-center text-white lg:h-36 lg:pt-3">
+            <strong className="text-[13.12px] lg:text-3xl">Medium</strong>
+            <p className="text-[7.87px] lg:text-base">Gold</p>
+            <div className="orange-gradient custom-shadow-bottom absolute top-[73px] left-1/2 flex h-[61.21px] w-[61.21px] -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-full border-[2px] border-solid border-white text-[17.62px] font-bold lg:top-[145px] lg:h-32 lg:w-32 lg:border-[4px] lg:text-4xl">
               ¥10k
             </div>
           </div>
-          <div className="space-y-5 px-4 pt-24">
+          <div className="space-y-2 px-4 pt-[56px] text-[6.12px] lg:space-y-5 lg:pt-24 lg:text-base">
             <div className="flex items-center space-x-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -85,7 +86,7 @@ const wagerSelection = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={4}
                 stroke="currentColor"
-                className="h-6 w-6 rounded-full bg-[#1AA260] p-1 text-white"
+                className="h-[18.08px] w-[18.08px] rounded-full bg-[#1AA260] p-1 text-white lg:h-6 lg:w-6"
               >
                 <path
                   strokeLinecap="round"
@@ -103,7 +104,7 @@ const wagerSelection = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={4}
                 stroke="currentColor"
-                className="h-6 w-6 rounded-full bg-[#1AA260] p-1 text-white"
+                className="h-[18.08px] w-[18.08px] rounded-full bg-[#1AA260] p-1 text-white lg:h-6 lg:w-6"
               >
                 <path
                   strokeLinecap="round"
@@ -114,26 +115,29 @@ const wagerSelection = () => {
               <p>Lorem ipsum dolor sit amet, consectetur</p>
             </div>
             <button
-              className="h-14 w-[315px]  rounded-full border-2
-            			border-[#DB0F29] text-center"
+              className="h-[26.23px] w-[152.16px] rounded-full border-2 border-[#DB0F29] text-center
+            			lg:h-14 lg:w-[315px]"
             >
-              {' '}
-              <p className="text-color font-medium"> Select this Wager</p>{' '}
+              {" "}
+              <p className="text-color text-[7.87px] font-medium lg:text-base">
+                {" "}
+                Select this Wager
+              </p>{" "}
             </button>
           </div>
         </div>
 
         {/* 3 */}
 
-        <div className="h-[450px] rounded-lg bg-white">
-          <div className="orange-gradient relative h-36 rounded-t-lg pt-3 text-center text-white">
-            <strong className="text-3xl">Large</strong>
-            <p>Platinum</p>
-            <div className="orange-gradient absolute -bottom-32 left-1/2 flex h-32 w-32 -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-full border-[4px] border-solid border-white text-4xl font-bold custom-shadow-bottom">
+        <div className="container h-[216px] w-[185.83px] rounded-lg bg-white lg:h-[450px] lg:w-[384.2px]">
+          <div className="orange-gradient relative h-[65.59px] w-full rounded-t-lg pt-1 text-center text-white lg:h-36 lg:pt-3">
+            <strong className="text-[13.12px] lg:text-3xl">Large</strong>
+            <p className="text-[7.87px] lg:text-base">Platinum</p>
+            <div className="orange-gradient custom-shadow-bottom absolute top-[73px] left-1/2 flex h-[61.21px] w-[61.21px] -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-full border-[2px] border-solid border-white text-[17.62px] font-bold lg:top-[145px] lg:h-32 lg:w-32 lg:border-[4px] lg:text-4xl">
               ¥100k
             </div>
           </div>
-          <div className="space-y-5 px-4 pt-24">
+          <div className="space-y-2 px-4 pt-[56px] text-[6.12px] lg:space-y-5 lg:pt-24 lg:text-base">
             <div className="flex items-center space-x-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -141,7 +145,7 @@ const wagerSelection = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={4}
                 stroke="currentColor"
-                className="h-6 w-6 rounded-full bg-[#1AA260] p-1 text-white"
+                className="h-[18.08px] w-[18.08px] rounded-full bg-[#1AA260] p-1 text-white lg:h-6 lg:w-6"
               >
                 <path
                   strokeLinecap="round"
@@ -159,7 +163,7 @@ const wagerSelection = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={4}
                 stroke="currentColor"
-                className="h-6 w-6 rounded-full bg-[#1AA260] p-1 text-white"
+                className="h-[18.08px] w-[18.08px] rounded-full bg-[#1AA260] p-1 text-white lg:h-6 lg:w-6"
               >
                 <path
                   strokeLinecap="round"
@@ -170,26 +174,29 @@ const wagerSelection = () => {
               <p>Lorem ipsum dolor sit amet, consectetur</p>
             </div>
             <button
-              className="h-14 w-[315px]  rounded-full border-2
-            			border-[#DB0F29] text-center"
+              className="h-[26.23px] w-[152.16px] rounded-full border-2 border-[#DB0F29] text-center
+            			lg:h-14 lg:w-[315px]"
             >
-              {' '}
-              <p className="text-color font-medium"> Select this Wager</p>{' '}
+              {" "}
+              <p className="text-color text-[7.87px] font-medium lg:text-base">
+                {" "}
+                Select this Wager
+              </p>{" "}
             </button>
           </div>
         </div>
 
         {/* 4 */}
 
-        <div className="h-[450px] rounded-lg bg-white">
-          <div className="orange-gradient relative h-36 rounded-t-lg pt-3 text-center text-white">
-            <strong className="text-3xl">Free</strong>
-            <p>BASIC</p>
-            <div className="orange-gradient absolute -bottom-32 left-1/2 flex h-32 w-32 -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-full border-[4px] border-solid border-white text-4xl font-bold custom-shadow-bottom">
-             Free
+        <div className="container h-[216px] w-[185.83px] rounded-lg bg-white lg:h-[450px] lg:w-[384.2px]">
+          <div className="orange-gradient relative h-[65.59px] w-full rounded-t-lg pt-1 text-center text-white lg:h-36 lg:pt-3">
+            <strong className="text-[13.12px] lg:text-3xl">Free</strong>
+            <p className="text-[7.87px] lg:text-base">Basic</p>
+            <div className="orange-gradient custom-shadow-bottom absolute top-[73px] left-1/2 flex h-[61.21px] w-[61.21px] -translate-x-1/2 -translate-y-1/2 transform items-center justify-center rounded-full border-[2px] border-solid border-white text-[17.62px] font-bold lg:top-[145px] lg:h-32 lg:w-32 lg:border-[4px] lg:text-4xl">
+              Free
             </div>
           </div>
-          <div className="space-y-5 px-4 pt-24">
+          <div className="space-y-2 px-4 pt-[56px] text-[6.12px] lg:space-y-5 lg:pt-24 lg:text-base">
             <div className="flex items-center space-x-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -197,7 +204,7 @@ const wagerSelection = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={4}
                 stroke="currentColor"
-                className="h-6 w-6 rounded-full bg-[#1AA260] p-1 text-white"
+                className="h-[18.08px] w-[18.08px] rounded-full bg-[#1AA260] p-1 text-white lg:h-6 lg:w-6"
               >
                 <path
                   strokeLinecap="round"
@@ -215,7 +222,7 @@ const wagerSelection = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={4}
                 stroke="currentColor"
-                className="h-6 w-6 rounded-full bg-[#1AA260] p-1 text-white"
+                className="h-[18.08px] w-[18.08px] rounded-full bg-[#1AA260] p-1 text-white lg:h-6 lg:w-6"
               >
                 <path
                   strokeLinecap="round"
@@ -226,11 +233,14 @@ const wagerSelection = () => {
               <p>Lorem ipsum dolor sit amet, consectetur</p>
             </div>
             <button
-              className="h-14 w-[315px]  rounded-full border-2
-            			border-[#DB0F29] text-center"
+              className="h-[26.23px] w-[152.16px] rounded-full border-2 border-[#DB0F29] text-center
+            			lg:h-14 lg:w-[315px]"
             >
-              {' '}
-              <p className="text-color font-medium"> Select this Wager</p>{' '}
+              {" "}
+              <p className="text-color text-[7.87px] font-medium lg:text-base">
+                {" "}
+                Select this Wager
+              </p>{" "}
             </button>
           </div>
         </div>
