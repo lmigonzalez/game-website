@@ -42,7 +42,7 @@ const Navbar = () => {
         </ul>
 
         {user ? (
-          <div className="mr-5 flex h-[20px] flex-row items-center gap-2">
+          <div className="mr-5 hidden h-[20px] flex-row items-center gap-2 md:flex ">
             <Image
               src={user.avatar}
               alt={"no img"}
@@ -59,14 +59,14 @@ const Navbar = () => {
         {user ? (
           <Link
             href="buy-currency"
-            className="orange-gradient rounded py-3 px-7 text-white"
+            className="orange-gradient hidden rounded py-3 px-7 text-white md:flex"
           >
             Buy Currency
           </Link>
         ) : (
           <Link
             href="contact"
-            className="orange-gradient rounded py-3 px-7 text-white"
+            className="orange-gradient hidden rounded py-3 px-7 text-white md:flex"
           >
             Contact us
           </Link>
