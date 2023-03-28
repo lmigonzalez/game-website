@@ -2,14 +2,14 @@ import React from 'react';
 import Image from 'next/image';
 const AboutGame = () => {
   return (
-    <section className="m-auto w-[1400px] max-w-full  px-4 py-24">
+    <section className="m-auto w-[1400px] max-w-full  px-4 py-12 md:py-24">
       <div className=" mb-14 flex items-center justify-between">
         <strong className="text-3xl">About Game</strong>
         <button className="h-14 w-36 rounded bg-zinc-300 text-xl font-medium">
           SEE ALL
         </button>
       </div>
-      <div className="mb-14 flex items-center justify-between">
+      <div className="mb-14 grid grid-cols-2  md:grid-cols-4 gap-4">
         <Image src="Rectangle 23.svg" alt="" width={250} height={275} />
         <Image src="Rectangle 24.svg" alt="" width={250} height={275} />
         <Image src="Rectangle 25.svg" alt="" width={250} height={275} />
@@ -24,12 +24,12 @@ const AboutGame = () => {
         </button>
       </div>
 
-      <p className="mb-28 text-center text-3xl font-semibold leading-[65px]">
+      <p className="mb-28 text-center text-3xl font-semibold leading-[65px] ">
         Lorem Ipsum is simply dummy text of the <br /> printing and typesetting
         industry.
       </p>
 
-      <div className="mb-12 w-1/2">
+      <div className="mb-12 w-full md:w-1/2">
         <strong className="text-3xl ">Lorem Ipsum</strong>
         <p className="mt-8">
           Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -44,13 +44,13 @@ const AboutGame = () => {
           alt=""
           width={180}
           height={140}
-          className="absolute top-[-60px] right-40"
+          className="hidden  md:block absolute top-[-60px] right-40"
         />
         <Image src="/Rectangle 4.svg" alt="" width={1400} height={500} />
       </div>
 
 
-      <div className='flex justify-between items-center'>
+      <div className='hidden md:flex justify-between items-center'>
         <div className='bg-[#F5F5F5] rounded-2xl w-[310px] h-[350px] flex flex-col items-center px-4'>
           <div className='py-7 w-full text-center border-b-[2px] border-[#D4D4D4] mb-7'>
             <strong className='font-semibold text-3xl'>Personal</strong>
