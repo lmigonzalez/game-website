@@ -1,23 +1,26 @@
-import React, { useState } from 'react';
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { Poppins } from 'next/font/google';
-import { motion, AnimatePresence } from 'framer-motion';
+import React, { useContext, useState } from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { Poppins } from "next/font/google";
+import { motion, AnimatePresence } from "framer-motion";
+import { useStateContext } from "@/context/StateContext";
+import Image from "next/image";
 const poppins = Poppins({
-  weight: ['400', '500', '700'],
-  subsets: ['latin'],
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
 });
 
 const Navbar = () => {
   const router = useRouter();
   const [showMenu, setShowMenu] = useState(false);
+  const { user, setUser } = useStateContext();
 
   return (
     <header
       className={`${
         poppins.className
       } absolute top-0 left-0 z-50 flex w-full items-center justify-between bg-transparent px-4 py-10 text-black ${
-        router.asPath === '/dropv' ? 'text-white' : 'text-black'
+        router.asPath === "/dropv" ? "text-white" : "text-black"
       }`}
     >
       <p className="font-bold">LOGO</p>
@@ -38,12 +41,36 @@ const Navbar = () => {
           </li>
         </ul>
 
-        <Link
-          href="contact"
-          className="orange-gradient rounded py-3 px-7 text-white"
-        >
-          Contact us
-        </Link>
+        {user ? (
+          <div className="mr-5 flex h-[20px] flex-row items-center gap-2">
+            <Image
+              src={user.avatar}
+              alt={"no img"}
+              width={20}
+              height={20}
+              className="rounded-full"
+            />
+            <span>${user.money}</span>
+          </div>
+        ) : (
+          ""
+        )}
+
+        {user ? (
+          <Link
+            href="buy-currency"
+            className="orange-gradient rounded py-3 px-7 text-white"
+          >
+            Buy Currency
+          </Link>
+        ) : (
+          <Link
+            href="contact"
+            className="orange-gradient rounded py-3 px-7 text-white"
+          >
+            Contact us
+          </Link>
+        )}
 
         <button
           onClick={() => {
@@ -92,7 +119,7 @@ const Navbar = () => {
             animate={{ y: 0, opacity: 1 }}
             transition={{ damping: 10, stiffness: 100, duration: 0.1 }}
             className={`absolute left-0 top-0 z-10 block w-full ${
-              router.asPath === '/dropv' ? 'bg-black' : 'bg-white'
+              router.asPath === "/dropv" ? "bg-black" : "bg-white"
             }  pb-8 pt-32 shadow-xl md:hidden`}
           >
             <ul className="flex flex-col items-center justify-center space-y-6">

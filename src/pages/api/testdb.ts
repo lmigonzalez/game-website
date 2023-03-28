@@ -1,5 +1,11 @@
 import { ImageLoaderProps } from "next/image";
 
+export const defaultUser = {
+  userId: "fulano",
+  avatar: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+  money: 532,
+}
+
 export type Inft = INftDetail & INftCard;
 
 export const defaultNFT:Inft = {
