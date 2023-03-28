@@ -1,85 +1,85 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-const currencyPage = () => {
+const CurrencyPage = () => {
   const [selectedRow, setSelectedRow] = useState(0);
 
   const table = [
     {
       id: 1,
-      Player: 'Sample',
-      Amount: '¥ 500k',
-      Game: 'Call of Duty',
-      Status: 'win',
-      Wallet: '0x2C396bcB8...Bb85',
-      PurchaseDate: '22/03/2023  11:00AM',
-      ReceivedDate: '22/03/2023  11:00AM',
+      Player: "Sample",
+      Amount: "¥ 500k",
+      Game: "Call of Duty",
+      Status: "win",
+      Wallet: "0x2C396bcB8...Bb85",
+      PurchaseDate: "22/03/2023  11:00AM",
+      ReceivedDate: "22/03/2023  11:00AM",
     },
     {
       id: 2,
-      Player: 'Sample',
-      Amount: '¥ 500k',
-      Game: 'Call of Duty',
-      Status: 'win',
-      Wallet: '0x2C396bcB8...Bb85',
-      PurchaseDate: '22/03/2023  11:00AM',
-      ReceivedDate: '22/03/2023  11:00AM',
+      Player: "Sample",
+      Amount: "¥ 500k",
+      Game: "Call of Duty",
+      Status: "win",
+      Wallet: "0x2C396bcB8...Bb85",
+      PurchaseDate: "22/03/2023  11:00AM",
+      ReceivedDate: "22/03/2023  11:00AM",
     },
     {
       id: 3,
-      Player: 'Sample',
-      Amount: '¥ 500k',
-      Game: 'Call of Duty',
-      Status: 'win',
-      Wallet: '0x2C396bcB8...Bb85',
-      PurchaseDate: '22/03/2023  11:00AM',
-      ReceivedDate: '22/03/2023  11:00AM',
+      Player: "Sample",
+      Amount: "¥ 500k",
+      Game: "Call of Duty",
+      Status: "win",
+      Wallet: "0x2C396bcB8...Bb85",
+      PurchaseDate: "22/03/2023  11:00AM",
+      ReceivedDate: "22/03/2023  11:00AM",
     },
     {
       id: 4,
-      Player: 'Sample',
-      Amount: '¥ 500k',
-      Game: 'Call of Duty',
-      Status: 'win',
-      Wallet: '0x2C396bcB8...Bb85',
-      PurchaseDate: '22/03/2023  11:00AM',
-      ReceivedDate: '22/03/2023  11:00AM',
+      Player: "Sample",
+      Amount: "¥ 500k",
+      Game: "Call of Duty",
+      Status: "win",
+      Wallet: "0x2C396bcB8...Bb85",
+      PurchaseDate: "22/03/2023  11:00AM",
+      ReceivedDate: "22/03/2023  11:00AM",
     },
     {
       id: 5,
-      Player: 'Sample',
-      Amount: '¥ 500k',
-      Game: 'Call of Duty',
-      Status: 'win',
-      Wallet: '0x2C396bcB8...Bb85',
-      PurchaseDate: '22/03/2023  11:00AM',
-      ReceivedDate: '22/03/2023  11:00AM',
+      Player: "Sample",
+      Amount: "¥ 500k",
+      Game: "Call of Duty",
+      Status: "win",
+      Wallet: "0x2C396bcB8...Bb85",
+      PurchaseDate: "22/03/2023  11:00AM",
+      ReceivedDate: "22/03/2023  11:00AM",
     },
     {
       id: 6,
-      Player: 'Sample',
-      Amount: '¥ 500k',
-      Game: 'Call of Duty',
-      Status: 'win',
-      Wallet: '0x2C396bcB8...Bb85',
-      PurchaseDate: '22/03/2023  11:00AM',
-      ReceivedDate: '22/03/2023  11:00AM',
+      Player: "Sample",
+      Amount: "¥ 500k",
+      Game: "Call of Duty",
+      Status: "win",
+      Wallet: "0x2C396bcB8...Bb85",
+      PurchaseDate: "22/03/2023  11:00AM",
+      ReceivedDate: "22/03/2023  11:00AM",
     },
     {
       id: 7,
-      Player: 'Sample',
-      Amount: '¥ 500k',
-      Game: 'Call of Duty',
-      Status: 'win',
-      Wallet: '0x2C396bcB8...Bb85',
-      PurchaseDate: '22/03/2023  11:00AM',
-      ReceivedDate: '22/03/2023  11:00AM',
+      Player: "Sample",
+      Amount: "¥ 500k",
+      Game: "Call of Duty",
+      Status: "win",
+      Wallet: "0x2C396bcB8...Bb85",
+      PurchaseDate: "22/03/2023  11:00AM",
+      ReceivedDate: "22/03/2023  11:00AM",
     },
   ];
 
   function handleSelectedRow(id: number) {
     if (id === selectedRow) {
       setSelectedRow(0);
-	  return
+      return;
     }
     setSelectedRow(id);
 
@@ -130,7 +130,11 @@ const currencyPage = () => {
                 <tr
                   onClick={() => handleSelectedRow(item.id)}
                   key={item.id}
-                  className= {`h-16 border-[1px] border-b-[#C0C0C0] ${selectedRow === item.id ? 'bg-[#0ECF2D] bg-opacity-50 text-black': 'bg-transparent'}`} 
+                  className={`h-16 border-[1px] border-b-[#C0C0C0] ${
+                    selectedRow === item.id
+                      ? "bg-[#0ECF2D] bg-opacity-50 text-black"
+                      : "bg-transparent"
+                  }`}
                 >
                   <td>{item.Player}</td>
                   <td>{item.Amount}</td>
@@ -149,4 +153,4 @@ const currencyPage = () => {
   );
 };
 
-export default currencyPage;
+export default CurrencyPage;
