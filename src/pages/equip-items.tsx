@@ -49,18 +49,41 @@ const EquipItems: FC<{
           height={337}
           className="w-fill mt-6 rounded-2xl"
         />
-        <div className="orange-gradient h-12 w-[338px] rounded-xl text-[#FCDDEC]">
-          <select className="h-12 w-[316px] justify-between bg-transparent  pl-4 ">
-            <option disabled selected className="w-[338px]">
-              Select Game
-            </option>
-            {games.map((item, idx) => (
-              <option className="w-[338px]" key={`game-${idx}`}>
-                {item.name}
-              </option>
+
+        <div className="dropdown dropdown-hover">
+          <label
+            tabIndex={0}
+            className="orange-gradient btn m-1 flex h-12 w-[338px] flex-row items-center justify-between rounded-xl border-none px-5 text-[#FCDDEC]"
+          >
+            <span id="dropDownBox">Select Game</span>
+            <Image
+              src={"/down-svgrepo-com (2).svg"}
+              alt={"down"}
+              width={20}
+              height={20}
+            />
+          </label>
+          <ul
+            tabIndex={0}
+            className="dropdown-content menu rounded-box w-[338px] bg-base-100 p-2 shadow"
+          >
+            {games.map((item) => (
+              <li
+                key={`game-${item.name}`}
+                onClick={() => {
+                  let a: HTMLLabelElement = document.getElementById(
+                    "dropDownBox"
+                  ) as HTMLLabelElement;
+                  a.textContent = item.name;
+                }}
+              >
+                {" "}
+                <a>{item.name}</a>
+              </li>
             ))}
-          </select>
+          </ul>
         </div>
+
         <div
           className="dropdown-bottom dropdown w-[338px]"
           onClick={() => setDropDown(true)}
@@ -72,21 +95,18 @@ const EquipItems: FC<{
               } px-5 text-justify text-[#FCDDEC]`}
             >
               <span>Select Avatar </span>
-              {!active ? (
+              {
                 <Image
-                  src={"/down-svgrepo-com (2).svg"}
+                  src={
+                    !active
+                      ? "/down-svgrepo-com (2).svg"
+                      : "/down-svgrepo-com (3).svg"
+                  }
                   alt={"down"}
                   width={20}
                   height={20}
                 />
-              ) : (
-                <Image
-                  src={"/down-svgrepo-com (3).svg"}
-                  alt={"down"}
-                  width={20}
-                  height={20}
-                />
-              )}
+              }
             </div>
           </button>
           <div
