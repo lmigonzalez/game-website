@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 import Layout from "@/components/Layout";
 import MatchingCard from "@/components/MatchingCard";
 
-export default function asd() {
+const PlayersWaiting = () => {
   return (
     <Layout>
       <div className="container m-auto w-[1440] p-8">
-        <div className="flex flex-col gap-8">
-          <p className=" font-semibold">
-            <strong className="text-color text-6xl">
+        <div className="flex flex-col gap-20">
+          <p className=" text-xs font-semibold md:text-base">
+            <strong className="text-color whitespace-nowrap text-3xl md:text-6xl">
               Searching for opponent
             </strong>
             <br />
@@ -18,7 +18,7 @@ export default function asd() {
           </p>
           <div className="grid grid-flow-row"></div>
         </div>
-        <div className="grid grid-flow-col grid-rows-1 gap-14">
+        <div className="mb-[138px] grid grid-flow-col grid-rows-2 gap-14 md:grid-rows-1">
           <MatchingCard
             ocuppied={true}
             img={{
@@ -35,4 +35,5 @@ export default function asd() {
       </div>
     </Layout>
   );
-}
+};
+export default PlayersWaiting;
