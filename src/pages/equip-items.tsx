@@ -27,10 +27,12 @@ const EquipItems: FC<{
   }, [whereEver]);
 
   return (
-    <div className="grid grid-cols-2" onClick={() => setWhereEver(true)}>
+    <div className="grid grid-cols-1" onClick={() => setWhereEver(true)}>
       <div className="flex flex-col gap-10">
-        <strong className="text-color text-[58px]">Inventory</strong>
-        <div className="grid grid-flow-row grid-cols-2 gap-4">
+        <strong className="text-color text-[32px] lg:text-[58px]">
+          Inventory
+        </strong>
+        <div className="grid w-fit grid-flow-row grid-cols-2 gap-8">
           {inventory?.map((item, idx) => (
             <ItemCard
               key={`inventory-item-${idx}`}
@@ -40,7 +42,7 @@ const EquipItems: FC<{
           ))}
         </div>
       </div>
-      <div className=" flex flex-col items-center gap-4">
+      <div className=" hidden items-center gap-4 lg:flex lg:flex-col">
         <strong className="text-color text-[58px]">Preview</strong>
         <Image
           src={preview?.src}
@@ -127,9 +129,11 @@ const EquipItems: FC<{
         </div>
       </div>
 
-      <div className=" col-span-2 mr-[340px]">
-        <strong className="text-color text-[58px]">Equipped Items</strong>
-        <div className="grid  grid-cols-3 gap-10">
+      <div className="col-span-2 flex flex-col gap-6 py-16 lg:mr-[140px]">
+        <strong className="text-color text-[32px] lg:text-[58px]">
+          Equipped Items
+        </strong>
+        <div className="grid grid-cols-2  gap-10 lg:grid-cols-3 lg:gap-[19.08px]">
           {equippedItems?.map((item, idx) => (
             <ItemCard
               key={`equipped-item-${idx}`}
