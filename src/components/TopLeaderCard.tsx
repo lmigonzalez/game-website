@@ -6,7 +6,7 @@ import { ITopLeaderCard } from "@/pages/api/testdb";
 const TopLeaderCard: FC<ITopLeaderCard> = ({ pos, name, userName, img }) => {
   return (
     <div className="flex flex-col items-center justify-center">
-      <div className="indicator h-[162px] w-[162px]">
+      <div className="indicator h-[97px] w-[97px] md:h-[162px] md:w-[162px]">
         <div className="indicator-start indicator-item translate-y-0 translate-x-0">
           <Medal pos={pos} />
         </div>
@@ -18,7 +18,7 @@ const TopLeaderCard: FC<ITopLeaderCard> = ({ pos, name, userName, img }) => {
           height={img?.width}
         />
       </div>
-      <div className="flex flex-col gap-0 text-center">
+      <div className="flex flex-col gap-0 text-center text-[14.47px] md:text-2xl">
         <strong>{pos}</strong>
         <strong className="font-semibold">{name}</strong>
         <span className="text-[#B7B3B3]">{userName}</span>

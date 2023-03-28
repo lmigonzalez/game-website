@@ -10,11 +10,15 @@ const LeaderBoard: FC<{
 }> = ({ leaders, prizes }) => {
   return (
     <div className="container m-auto w-[1400px] max-w-full text-black">
-      <strong className="text-color  text-[58px]">Leaderboard</strong>
+      <strong className="text-color text-[32px] md:text-[58px]">
+        Leaderboard
+      </strong>
       <div className="flex flex-row justify-between">
         <div className="flex flex-col gap-8 p-20 px-10">
           <div className="flex flex-col gap-10 text-center">
-            <strong className="text-5xl">Freefire Leaderboard</strong>
+            <strong className="text-[28.95px] md:text-5xl ">
+              Freefire Leaderboard
+            </strong>
             <TopLeaderBoard
               leaders={leaders.filter(
                 (card) => card.pos === 1 || card.pos === 2 || card.pos === 3
@@ -75,8 +79,8 @@ const LeaderBoard: FC<{
           </div>
         </div>
         <div className="flex flex-col gap-16 p-20">
-          <strong className=" text-center text-5xl ">Prize</strong>
-          <div className="flex flex-col gap-[75px] text-[54px] normal-case">
+          <strong className=" text-center text-base md:text-5xl ">Prize</strong>
+          <div className="flex flex-col gap-[75px] normal-case text-[18.86] md:text-[54px]">
             <div className="mb-0 flex flex-row gap-12">
               <strong className=" font-extrabold">1.</strong>
               <Image
@@ -85,7 +89,7 @@ const LeaderBoard: FC<{
                 width={100.31}
                 height={80.25}
               />
-              <strong className="text-color text-[54px]">
+              <strong className="text-color text-[18.86px] md:text-[54px]">
                 {prizes.find((item) => item.pos === 1)?.prize}
               </strong>
             </div>
