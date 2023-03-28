@@ -42,15 +42,15 @@ const Navbar = () => {
         </ul>
 
         {user ? (
-          <div className="mr-5 hidden h-[20px] flex-row items-center gap-2 md:flex ">
+          <div className="mr-5 hidden h-[48px] flex-row items-center gap-2 text-[20px] md:flex ">
             <Image
               src={user.avatar}
               alt={"no img"}
-              width={20}
-              height={20}
+              width={48}
+              height={48}
               className="rounded-full"
             />
-            <span>${user.money}</span>
+            <strong>${user.money}k</strong>
           </div>
         ) : (
           ""
