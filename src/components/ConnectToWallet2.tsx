@@ -1,8 +1,8 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 const ConnectToWallet2 = () => {
   return (
-    <div className="absolute top-0 left-0 z-20 flex h-full w-full items-center justify-center bg-black bg-opacity-70">
+    <div className="absolute top-0 left-0 z-20 flex h-full w-full items-end justify-center bg-black bg-opacity-70 lg:items-center">
       <div className="w-[470px] max-w-full rounded-lg bg-white text-black">
         <div className="relative w-full border-b-[2px] border-solid px-10  py-4 text-center">
           <strong className="text-2xl">Connect to wallet</strong>
@@ -29,9 +29,9 @@ const ConnectToWallet2 = () => {
             <div className="flex space-x-4">
               <strong>Metamask</strong>
               <div className="flex">
-                Networks{' '}
+                Networks{" "}
                 <span className="ml-1 rounded-full bg-slate-400 text-white">
-                  {' '}
+                  {" "}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -52,7 +52,7 @@ const ConnectToWallet2 = () => {
 
             <Image
               className="mr-2"
-              src={'/fox.png'}
+              src={"/fox.png"}
               alt="google icon"
               width={40}
               height={40}
@@ -63,9 +63,9 @@ const ConnectToWallet2 = () => {
             <div className="flex space-x-4">
               <strong>Metamask</strong>
               <div className="flex">
-                Networks{' '}
+                Networks{" "}
                 <span className="ml-1 rounded-full bg-slate-400 text-white">
-                  {' '}
+                  {" "}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -86,7 +86,7 @@ const ConnectToWallet2 = () => {
 
             <Image
               className="mr-2"
-              src={'/fox.png'}
+              src={"/fox.png"}
               alt="google icon"
               width={40}
               height={40}
@@ -99,8 +99,8 @@ const ConnectToWallet2 = () => {
             className=" flex h-12 w-32 items-center
 				  justify-center rounded-full border-2 border-[#DB0F29] py-4"
           >
-            {' '}
-            <p className="text-color">Back</p>{' '}
+            {" "}
+            <p className="text-color">Back</p>{" "}
           </button>
 
           <button type="submit">

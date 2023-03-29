@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 const ChooseBundle = () => {
   return (
-    <div className="absolute top-0 left-0 z-20 flex h-full w-full items-center justify-center bg-black bg-opacity-70 px-4">
+    <div className="absolute top-0 left-0 z-20 flex h-full w-full items-end justify-center bg-black bg-opacity-70 px-4 lg:items-center">
       <div className="w-[750px] max-w-full rounded-lg bg-white text-black">
         <div className="relative w-full border-b-[2px] border-solid px-10  py-4 text-center">
           <strong className="text-2xl ">Check out Summary</strong>
@@ -38,7 +38,7 @@ const ChooseBundle = () => {
               <b>Number of Coins: </b> 20
             </p>
             <p>
-              {' '}
+              {" "}
               <b>Transaction Fee:</b>2%
             </p>
             <p>
@@ -52,13 +52,13 @@ const ChooseBundle = () => {
           <p>$12</p>
         </div>
 
-        <div className="flex justify-end border-t-[2px] border-solid border-[#CDD6D7] py-7 px-8 space-x-3 ">
+        <div className="flex justify-end space-x-3 border-t-[2px] border-solid border-[#CDD6D7] py-7 px-8 ">
           <button
             className=" flex h-12 w-32 items-center
 				  justify-center rounded-full border-2 border-[#DB0F29] py-4"
           >
-            {' '}
-            <p className="text-color">Back</p>{' '}
+            {" "}
+            <p className="text-color">Back</p>{" "}
           </button>
 
           <button type="submit">

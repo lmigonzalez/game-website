@@ -1,8 +1,8 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 const CryptoPaymentUpdated = () => {
   return (
-    <div className="absolute top-0 left-0 z-20 flex h-full w-full items-center justify-center bg-black bg-opacity-70 px-4">
+    <div className="absolute top-0 left-0 z-20 flex h-full w-full items-end justify-center bg-black bg-opacity-70 px-4 lg:items-center">
       <div className="w-[750px] max-w-full rounded-lg bg-white text-black">
         <div className="relative w-full border-b-[2px] border-solid px-10  py-4 text-center">
           <strong className="text-2xl ">Check out</strong>
@@ -35,8 +35,8 @@ const CryptoPaymentUpdated = () => {
             <div className="custom-shadow flex w-1/2 flex-col items-center justify-center rounded py-4">
               <strong>Credit Card</strong>
               <p className="flex items-center">
-                Payment with{' '}
-                <Image src="/visa.png" alt="visa" width={35} height={35} />{' '}
+                Payment with{" "}
+                <Image src="/visa.png" alt="visa" width={35} height={35} />{" "}
               </p>
             </div>
           </div>
@@ -99,8 +99,8 @@ const CryptoPaymentUpdated = () => {
                 className=" flex h-8 w-24 items-center
 					justify-center rounded-full border-2 border-[#DB0F29] py-4"
               >
-                {' '}
-                <p className="text-color">Select</p>{' '}
+                {" "}
+                <p className="text-color">Select</p>{" "}
               </button>
             </div>
             <div className="custom-shadow flex h-32 w-56 flex-col items-center justify-center rounded-md">
@@ -113,8 +113,8 @@ const CryptoPaymentUpdated = () => {
                 className=" flex h-8 w-24 items-center
 					justify-center rounded-full border-2 border-[#DB0F29] py-4"
               >
-                {' '}
-                <p className="text-color">Select</p>{' '}
+                {" "}
+                <p className="text-color">Select</p>{" "}
               </button>
             </div>
             <div className="custom-shadow flex h-32 w-56 flex-col items-center justify-center rounded-md">
@@ -127,8 +127,8 @@ const CryptoPaymentUpdated = () => {
                 className=" flex h-8 w-24 items-center
 					justify-center rounded-full border-2 border-[#DB0F29] py-4"
               >
-                {' '}
-                <p className="text-color">Select</p>{' '}
+                {" "}
+                <p className="text-color">Select</p>{" "}
               </button>
             </div>
           </div>
@@ -139,8 +139,8 @@ const CryptoPaymentUpdated = () => {
                 <strong className="text-xl">Summary</strong>
               </div>
               <div className="flex space-x-2">
-                <div className='flex flex-col justify-end items-end'>
-                  <strong className="">Number of Coins:</strong> 
+                <div className="flex flex-col items-end justify-end">
+                  <strong className="">Number of Coins:</strong>
                   <strong>Transaction Fee:</strong>
                   <strong>Price of Coin:</strong>
                 </div>
