@@ -6,10 +6,12 @@ interface Props {
 }
 const ConnectToWallet: React.FC<Props> = ({ handleDisplayWallet }) => {
   return (
-    <div className="absolute top-0 left-0 z-20 flex h-full w-full items-center justify-center bg-black bg-opacity-70">
-      <div className="w-[470px] max-w-full rounded-lg bg-white text-black">
+    <div className="absolute top-0 left-0 z-20 flex h-full w-full items-end justify-center bg-black bg-opacity-70 md:items-center">
+      <div className="w-full rounded-lg bg-white text-black md:w-[470px] md:max-w-full">
         <div className="relative w-full border-b-[2px] border-solid px-10  py-4 text-center">
-          <strong className="text-2xl">Connect to wallet</strong>
+          <div className='text-start md:text-center'>
+            <strong className=" text-2xl">Connect to wallet</strong>
+          </div>
           <button
             onClick={handleDisplayWallet}
             className="absolute right-4 top-4"
@@ -98,6 +100,12 @@ const ConnectToWallet: React.FC<Props> = ({ handleDisplayWallet }) => {
               width={40}
               height={40}
             />
+          </button>
+
+          <button type="submit" className="w-full md:hidden">
+            <p className="orange-gradient flex h-16 items-center justify-center rounded-lg text-white">
+              Connect Wallet
+            </p>
           </button>
         </div>
       </div>

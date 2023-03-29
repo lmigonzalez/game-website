@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -13,35 +13,33 @@ import ConnectToWallet2 from '@/components/ConnectToWallet2';
 import SuccessStat from '@/components/SuccessStat';
 import EnterCardDetails from '@/components/EnterCardDetails';
 
-
-
 const signUp = () => {
-
   const initialValue = {
     fullName: '',
     email: '',
     password: '',
-    confirmPassword: ''
+    confirmPassword: '',
+  };
+
+  const [formValues, setFormValues] = useState(initialValue);
+  const [showConnectWallet, setShowConnectWallet] = useState(false);
+
+  function handleDisplayWallet() {
+    setShowConnectWallet(!showConnectWallet);
   }
 
-  const [formValues, setFormValues] = useState(initialValue)
-  const [showConnectWallet, setShowConnectWallet] = useState(false)
-
-  function handleDisplayWallet(){
-    setShowConnectWallet(!showConnectWallet)
-  }
-
-  function handleChange(e:React.ChangeEvent<HTMLInputElement>){
-    console.log(e.target.name)
+  function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+    console.log(e.target.name);
     setFormValues({
-      ...formValues, [e.target.name]: e.target.value
-    })
+      ...formValues,
+      [e.target.name]: e.target.value,
+    });
   }
 
-  function handleSubmit(e: React.FormEvent<HTMLFormElement>){
-    e.preventDefault()
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
 
-    console.log(formValues)
+    console.log(formValues);
   }
 
   return (
@@ -52,7 +50,7 @@ const signUp = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <section className="flex min-h-screen relative">
+      <section className="relative flex min-h-screen">
         {/* <Tutorial/> */}
         {/* <CryptoPaymentDetails/> */}
         {/* <CryptoPaymentDetails2/> */}
@@ -61,87 +59,198 @@ const signUp = () => {
         {/* <ConnectToWallet2/> */}
         {/* <SuccessStat/> */}
         {/* <EnterCardDetails/> */}
-        {showConnectWallet && <ConnectToWallet handleDisplayWallet = {handleDisplayWallet}/>}
-        <div className="flex items-center justify-start w-1/2 bg-[url('/hot-air-balloons.jpg')] bg-cover bg-center bg-no-repeat">
-          <strong className='absolute top-0 left-0  py-16 px-11 text-black'>Logo Here</strong>
-          <div className='w-60 bg-black bg-opacity-20 backdrop-blur-lg rounded-xl p-4 ml-11 text-white'>
-            <p className='p-2 rounded-lg mb-3 bg-black w-fit'>Logo</p>
+        {showConnectWallet && (
+          <ConnectToWallet handleDisplayWallet={handleDisplayWallet} />
+        )}
+        <div className="flex w-full flex-col md:justify-center justify-start bg-[url('/hot-air-balloons.jpg')] bg-cover bg-center bg-no-repeat md:w-1/2 md:items-start">
+          <div className="absolute top-0 left-0 flex w-full  justify-between py-16 px-11 md:w-1/2">
+            <strong className="text-2xl text-black">Logo Here</strong>
+            <Link className="text-color block md:hidden" href="/">
+              Sign in!
+            </Link>
+          </div>
+          <div className="mx-4 mt-36 h-fit w-72 rounded-xl bg-black bg-opacity-20 p-4 text-white backdrop-blur-lg md:ml-11">
+            <p className="mb-3 w-fit rounded-lg bg-black p-2">Logo</p>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry.
             </p>
           </div>
-        </div>
 
-        <div className="relative flex w-1/2 flex-col items-center justify-center text-black px-4">
-          <div className='flex items-center justify-end space-x-4  w-full mr-4 absolute top-0 left-0  py-16 px-11'>
-            <p>have an account?</p>
-            <Link className='text-color' href="/">Sign in!</Link>
-          </div>
-          <div className='flex flex-col justify-center items-center'>
-            <strong className='text-2xl '>Get Started</strong>
-            <p className='text-[#7E7E7E]'>Getting started is easy</p>
-            
-            <div className='flex justify-between items-center space-x-3 mt-11 mb-3'>
-              <button className='bg-white h-11 w-32 border-[#D80027] border-[1px] border-solid rounded flex items-center justify-center'> <Image className='mr-2' src={'/google.png'} alt='google icon' width={25} height={25}/> Google</button>
+          <div className="item-center max-w-[600px]  flex md:hidden flex-col justify-center px-4">
+            <strong className="my-9 text-center text-2xl text-white">
+              Get Started
+            </strong>
+            <form
+              className="mb-12 flex w-full flex-col space-y-5 text-base text-[#5A5A5A]"
+              autoComplete="false"
+              onSubmit={handleSubmit}
+            >
+              <input
+                className="h-16 rounded-lg border-[1px] border-solid border-[#D9D9D9] bg-white px-6"
+                type="text"
+                name="fullName"
+                value={formValues.fullName}
+                onChange={handleChange}
+                placeholder="Full Name"
+              />
+              <input
+                className="h-16 rounded-lg border-[1px] border-solid border-[#D9D9D9] bg-white px-6 "
+                type="email"
+                name="email"
+                value={formValues.email}
+                onChange={handleChange}
+                placeholder="Enter Email"
+              />
+              <input
+                className="h-16 rounded-lg border-[1px] border-solid border-[#D9D9D9] bg-white px-6"
+                type="password"
+                name="password"
+                value={formValues.password}
+                onChange={handleChange}
+                placeholder="Password"
+              />
+              <input
+                className="h-16 rounded-lg border-[1px] border-solid border-[#D9D9D9] bg-white px-6"
+                type="password"
+                name="confirmPassword"
+                value={formValues.confirmPassword}
+                onChange={handleChange}
+                placeholder="Confirm Password"
+              />
+              <button type="submit">
+                <p className="orange-gradient flex h-16 items-center justify-center rounded-lg text-white">
+                  Create Account
+                </p>
+              </button>
+            </form>
 
+            <p className="text-center text-white">Or continue with</p>
 
-              <button onClick={handleDisplayWallet} className='bg-white h-11 w-32 border-[#DEDEDE] border-[1px] border-solid rounded flex items-center justify-center'> <Image className='mr-2' src={'/fox.png'} alt='google icon' width={25} height={25}/> MetaMask</button>
+            <div className="mt-11 mb-3 flex items-center justify-center space-x-3">
+              <button className="flex h-11 w-32 items-center justify-center rounded border-[1px] border-solid border-[#D80027] bg-white">
+                {' '}
+                <Image
+                  className="mr-2"
+                  src={'/google.png'}
+                  alt="google icon"
+                  width={25}
+                  height={25}
+                />{' '}
+                Google
+              </button>
+
+              <button
+                onClick={handleDisplayWallet}
+                className="flex h-11 w-32 items-center justify-center rounded border-[1px] border-solid border-[#DEDEDE] bg-white"
+              >
+                {' '}
+                <Image
+                  className="mr-2"
+                  src={'/fox.png'}
+                  alt="google icon"
+                  width={25}
+                  height={25}
+                />{' '}
+                MetaMask
+              </button>
             </div>
           </div>
-          <div className='flex items-center justify-between w-[400px] max-w-full space-x-4 mb-8'>
-            <hr className='w-full h-[2px] bg-[#DBDBDB]'/>
-            <p className='whitespace-nowrap'>Or continue with</p>
-            <hr className='w-full h-[2px] bg-[#DBDBDB]'/>
+        </div>
+
+        <div className="relative hidden w-1/2 flex-col items-center justify-center px-4 text-black md:flex">
+          <div className="absolute top-0 left-0 mr-4  flex w-full items-center justify-end space-x-4  py-16 px-11">
+            <p>have an account?</p>
+            <Link className="text-color" href="/">
+              Sign in!
+            </Link>
+          </div>
+          <div className="flex flex-col items-center justify-center">
+            <strong className="text-2xl ">Get Started</strong>
+            <p className="text-[#7E7E7E]">Getting started is easy</p>
+
+            <div className="mt-11 mb-3 flex items-center justify-between space-x-3">
+              <button className="flex h-11 w-32 items-center justify-center rounded border-[1px] border-solid border-[#D80027] bg-white">
+                {' '}
+                <Image
+                  className="mr-2"
+                  src={'/google.png'}
+                  alt="google icon"
+                  width={25}
+                  height={25}
+                />{' '}
+                Google
+              </button>
+
+              <button
+                onClick={handleDisplayWallet}
+                className="flex h-11 w-32 items-center justify-center rounded border-[1px] border-solid border-[#DEDEDE] bg-white"
+              >
+                {' '}
+                <Image
+                  className="mr-2"
+                  src={'/fox.png'}
+                  alt="google icon"
+                  width={25}
+                  height={25}
+                />{' '}
+                MetaMask
+              </button>
+            </div>
+          </div>
+          <div className="mb-8 flex w-[400px] max-w-full items-center justify-between space-x-4">
+            <hr className="h-[2px] w-full bg-[#DBDBDB]" />
+            <p className="whitespace-nowrap">Or continue with</p>
+            <hr className="h-[2px] w-full bg-[#DBDBDB]" />
           </div>
           <form
-            className="flex w-[400px] max-w-full flex-col space-y-5 text-[#5A5A5A] text-base mb-12"
+            className="mb-12 flex w-[400px] max-w-full flex-col space-y-5 text-base text-[#5A5A5A]"
             autoComplete="false"
             onSubmit={handleSubmit}
           >
             <input
               className="h-16 rounded-lg border-[1px] border-solid border-[#D9D9D9] bg-white px-6"
               type="text"
-              name='fullName'
+              name="fullName"
               value={formValues.fullName}
               onChange={handleChange}
               placeholder="Full Name"
-              />
+            />
             <input
               className="h-16 rounded-lg border-[1px] border-solid border-[#D9D9D9] bg-white px-6 "
               type="email"
-              name='email'
+              name="email"
               value={formValues.email}
               onChange={handleChange}
               placeholder="Enter Email"
-              />
+            />
             <input
               className="h-16 rounded-lg border-[1px] border-solid border-[#D9D9D9] bg-white px-6"
               type="password"
-              name='password'
+              name="password"
               value={formValues.password}
               onChange={handleChange}
               placeholder="Password"
-              />
+            />
             <input
               className="h-16 rounded-lg border-[1px] border-solid border-[#D9D9D9] bg-white px-6"
               type="password"
-              name='confirmPassword'
+              name="confirmPassword"
               value={formValues.confirmPassword}
               onChange={handleChange}
               placeholder="Confirm Password"
             />
             <button type="submit">
-              <p className='orange-gradient text-white h-16 rounded-lg flex items-center justify-center'>Create Account</p>
+              <p className="orange-gradient flex h-16 items-center justify-center rounded-lg text-white">
+                Create Account
+              </p>
             </button>
           </form>
 
-          <p className='text-[#5A5A5A] text-center'>
+          <p className="text-center text-[#5A5A5A]">
             By continuing you indicate that you read and agreed to the Terms of
             Use
           </p>
-
-
         </div>
       </section>
     </>
