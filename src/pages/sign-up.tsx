@@ -63,7 +63,7 @@ const signUp = () => {
           <ConnectToWallet handleDisplayWallet={handleDisplayWallet} />
         )}
         <div className="flex w-full flex-col md:justify-center justify-start bg-[url('/hot-air-balloons.jpg')] bg-cover bg-center bg-no-repeat md:w-1/2 md:items-start">
-          <div className="absolute top-0 left-0 flex w-full  justify-between py-16 px-11 md:w-1/2">
+          <div className="absolute top-0 left-0 flex  w-full  justify-between mt-8 px-11 md:w-1/2">
             <strong className="text-2xl text-black">Logo Here</strong>
             <Link className="text-color block md:hidden" href="/">
               Sign in!
@@ -159,13 +159,13 @@ const signUp = () => {
         </div>
 
         <div className="relative hidden w-1/2 flex-col items-center justify-center px-4 text-black md:flex">
-          <div className="absolute top-0 left-0 mr-4  flex w-full items-center justify-end space-x-4  py-16 px-11">
+          <div className="absolute top-0 left-0 mr-4  flex w-full items-center justify-end space-x-4  mt-10 px-11">
             <p>have an account?</p>
             <Link className="text-color" href="/">
               Sign in!
             </Link>
           </div>
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center mt-16">
             <strong className="text-2xl ">Get Started</strong>
             <p className="text-[#7E7E7E]">Getting started is easy</p>
 
