@@ -51,7 +51,7 @@ const signUp = () => {
       </Head>
 
       <section className="relative flex min-h-screen">
-        <Tutorial />
+        {/* <Tutorial /> */}
         {/* <CryptoPaymentDetails/> */}
         {/* <CryptoPaymentDetails2/> */}
         {/* <CryptoPaymentUpdated/> */}

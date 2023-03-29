@@ -1,5 +1,5 @@
-import React from "react";
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
 const profileSetting = () => {
   return (
     <section className="flex min-h-screen flex-col gap-8 px-4 py-24 md:flex-row">
@@ -15,7 +15,7 @@ const profileSetting = () => {
         </div>
         <strong className="text-3xl">Jeremy Rose</strong>
       </div>
-      <div className=" w-3/4 text-black">
+      <div className=" text-black md:w-3/4">
         <form className="flex flex-col gap-4 rounded-lg border-[1px] border-[#DB0F29] p-4">
           <strong className="text-xl">Profile Basics</strong>
           <div className="flex flex-col gap-4 md:flex-row">
@@ -23,7 +23,7 @@ const profileSetting = () => {
               <label>First Name</label>
               <input
                 type="text"
-                className="h-12 rounded border-[1px] border-[#ADB3C4] bg-white"
+                className="h-12 rounded border-[1px] border-[#ADB3C4] bg-transparent"
               />
             </div>
 
@@ -31,7 +31,7 @@ const profileSetting = () => {
               <label>Last Name</label>
               <input
                 type="text"
-                className="h-12 rounded border-[1px] border-[#ADB3C4] bg-white"
+                className="h-12 rounded border-[1px] border-[#ADB3C4] bg-transparent"
               />
             </div>
           </div>
@@ -40,7 +40,7 @@ const profileSetting = () => {
               <label>Email</label>
               <input
                 type="text"
-                className="h-12 rounded border-[1px] border-[#ADB3C4] bg-white"
+                className="h-12 rounded border-[1px] border-[#ADB3C4] bg-transparent"
               />
             </div>
 
@@ -48,7 +48,7 @@ const profileSetting = () => {
               <label>Contact Number</label>
               <input
                 type="text"
-                className="h-12 rounded border-[1px] border-[#ADB3C4] bg-white"
+                className="h-12 rounded border-[1px] border-[#ADB3C4] bg-transparent"
               />
             </div>
           </div>
@@ -97,14 +97,16 @@ const profileSetting = () => {
           <strong>Wallet Setting</strong>
           <div>
             <div className="flex flex-col items-center gap-4  rounded-md py-6 md:flex-row">
-              <div className="flex h-[60px] w-full items-center justify-between rounded border-[2px] border-[#ADB3C4] p-2 md:w-[300px] md:flex-row">
-                <div className="flex gap-2 ">
+
+              <div className="flex h-[60px] w-full  items-center justify-between gap-4 rounded border-[2px] border-[#ADB3C4]  p-2 md:w-[500px]">
+
+                <div className="flex space-x-4 ">
                   <strong>Metamask</strong>
-                  <div className=" hidden  gap-1 md:flex">
-                    Networks
+                  <div className=" hidden  space-x-3 md:flex">
+                    <p>Networks</p>
                     <Image
-                      src={"/help-info-svgrepo-com.svg"}
-                      alt={""}
+                      src={'/help-info-svgrepo-com.svg'}
+                      alt={''}
                       width={12.97}
                       height={12.97}
                     />
@@ -113,7 +115,7 @@ const profileSetting = () => {
 
                 <Image
                   className=""
-                  src={"/fox.png"}
+                  src={'/fox.png'}
                   alt="google icon"
                   width={33}
                   height={30}
@@ -122,11 +124,11 @@ const profileSetting = () => {
 
               <div className="flex w-full flex-row items-center justify-between text-[#9D9D9D]">
                 <button className="md:hidden">
-                  <p className="orange-gradient flex h-[26px] w-[142px] items-center justify-center rounded text-[10px] text-white">
+                  <p className="orange-gradient flex h-10 w-48 items-center justify-center rounded text-sm text-white">
                     + Add Another Wallet
                   </p>
                 </button>
-                <div className="flex">
+                <div className="flex space-x-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -180,8 +182,8 @@ const profileSetting = () => {
             className=" flex h-12 w-32 items-center
 				justify-center rounded border-2 border-[#DB0F29] py-4"
           >
-            {" "}
-            <p className="text-color">Back</p>{" "}
+            {' '}
+            <p className="text-color">Cancel</p>{' '}
           </button>
 
           <button type="submit">
