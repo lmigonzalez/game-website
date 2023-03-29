@@ -1,10 +1,10 @@
-import React from 'react';
-import Head from 'next/head';
-import Layout from '@/components/Layout';
-import Hero from '@/sections/Landing2/Hero';
-import AboutGame from '@/sections/Landing2/AboutGame';
-import ShowCase from '@/sections/Landing2/ShowCase';
-import OurGallery from '@/sections/Landing2/OurGallery';
+import React from "react";
+import Head from "next/head";
+import Layout from "@/components/Layout";
+import Hero from "@/sections/Landing2/Hero";
+import AboutGame from "@/sections/Landing2/AboutGame";
+import ShowCase from "@/sections/Landing2/ShowCase";
+import OurGallery from "@/sections/Landing2/OurGallery";
 const landingTwo = () => {
   return (
     <>
@@ -15,8 +15,8 @@ const landingTwo = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Layout>
-        <div className="text-black pt-24">
+      <Layout navBarBehavior={1}>
+        <div className="pt-24 text-black">
           <Hero />
           <AboutGame />
           <ShowCase />

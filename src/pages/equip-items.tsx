@@ -87,7 +87,7 @@ const EquipItems: FC<{
         </div>
 
         <div
-          className="dropdown-bottom dropdown w-[338px]"
+          className="dropdown dropdown-bottom w-[338px]"
           onClick={() => setDropDown(true)}
         >
           <button tabIndex={0} className="h-12 w-full">
@@ -149,7 +149,7 @@ const EquipItems: FC<{
 
 const Test = () => {
   return (
-    <Layout>
+    <Layout navBarBehavior={1}>
       <div className="container m-auto w-[1440] p-8">
         <EquipItems
           inventory={[

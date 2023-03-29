@@ -1,16 +1,17 @@
-import React, { useContext, useState } from "react";
+import React, { FC, useContext, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Poppins } from "next/font/google";
 import { motion, AnimatePresence } from "framer-motion";
-import { useStateContext } from "@/context/StateContext";
+import { useStateContext } from "../context/StateContext";
 import Image from "next/image";
+import classNames from "classnames";
 const poppins = Poppins({
   weight: ["400", "500", "700"],
   subsets: ["latin"],
 });
 
-const Navbar = () => {
+const Navbar: FC<{ behavior: number }> = ({ behavior }) => {
   const router = useRouter();
   const [showMenu, setShowMenu] = useState(false);
   const { user, setUser } = useStateContext();
@@ -59,14 +60,20 @@ const Navbar = () => {
         {user ? (
           <Link
             href="buy-currency"
-            className="orange-gradient hidden rounded py-3 px-7 text-white md:flex"
+            className={classNames(
+              `orange-gradient rounded py-3 px-7 text-white md:flex`,
+              { hidden: behavior !== 1 }
+            )}
           >
             Buy Currency
           </Link>
         ) : (
           <Link
             href="contact"
-            className="orange-gradient hidden rounded py-3 px-7 text-white md:flex"
+            className={classNames(
+              `orange-gradient rounded py-3 px-7 text-white md:flex`,
+              { hidden: behavior !== 1 }
+            )}
           >
             Contact us
           </Link>
