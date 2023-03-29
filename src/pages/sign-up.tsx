@@ -82,7 +82,7 @@ const signUp = () => {
               Get Started
             </strong>
             <form
-              className="mb-12 flex w-full flex-col space-y-5 text-base text-[#5A5A5A]"
+              className="mb-12 py-8 flex w-full flex-col space-y-5 text-base text-[#5A5A5A]"
               autoComplete="false"
               onSubmit={handleSubmit}
             >
@@ -127,7 +127,7 @@ const signUp = () => {
 
             <p className="text-center text-white">Or continue with</p>
 
-            <div className="mt-11 mb-3 flex items-center justify-center space-x-3">
+            <div className="mt-11 py-8 mb-3 flex items-center justify-center space-x-3">
               <button className="flex h-11 w-32 items-center justify-center rounded border-[1px] border-solid border-[#D80027] bg-white">
                 {' '}
                 <Image
@@ -204,7 +204,7 @@ const signUp = () => {
             <hr className="h-[2px] w-full bg-[#DBDBDB]" />
           </div>
           <form
-            className="mb-12 flex w-[400px] max-w-full flex-col space-y-5 text-base text-[#5A5A5A]"
+            className="mb-12 py-8 flex w-[400px] max-w-full flex-col space-y-5 text-base text-[#5A5A5A]"
             autoComplete="false"
             onSubmit={handleSubmit}
           >
@@ -247,7 +247,7 @@ const signUp = () => {
             </button>
           </form>
 
-          <p className="text-center text-[#5A5A5A]">
+          <p className="text-center text-[#5A5A5A] mb-8">
             By continuing you indicate that you read and agreed to the Terms of
             Use
           </p>
