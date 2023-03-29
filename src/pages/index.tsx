@@ -1,19 +1,19 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-import { Poppins } from 'next/font/google';
-import CountDown from '@/sections/Home/CountDown';
-import Hero from '@/sections/Home/Hero';
-import HowToMint from '@/sections/Home/HowToMint';
-import AboutDrop from '@/sections/Home/AboutDrop';
-import RoadMap from '@/sections/Home/RoadMap';
-import OurTeam from '@/sections/Home/OurTeam';
-import Layout from '@/components/Layout';
-import { Modal } from '@/components/Modal';
-import { useStateContext } from '@/context/StateContext';
+import React, { useState, useEffect } from "react";
+import Head from "next/head";
+import { Poppins } from "next/font/google";
+import CountDown from "@/sections/Home/CountDown";
+import Hero from "@/sections/Home/Hero";
+import HowToMint from "@/sections/Home/HowToMint";
+import AboutDrop from "@/sections/Home/AboutDrop";
+import RoadMap from "@/sections/Home/RoadMap";
+import OurTeam from "@/sections/Home/OurTeam";
+import Layout from "@/components/Layout";
+import { Modal } from "@/components/Modal";
+import { useStateContext } from "@/context/StateContext";
 
 const poppins = Poppins({
-  weight: ['400', '500', '700'],
-  subsets: ['latin'],
+  weight: ["400", "500", "700"],
+  subsets: ["latin"],
 });
 
 export default function Home() {
@@ -25,7 +25,7 @@ export default function Home() {
       setScreenWidth(window.innerWidth);
     };
 
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
     // Set initial width
     setScreenWidth(window.innerWidth);
@@ -33,7 +33,7 @@ export default function Home() {
     // console.log(screenWidth);
     // Clean up
     return () => {
-      window.removeEventListener('resize', handleResize);
+      window.removeEventListener("resize", handleResize);
     };
   }, [screenWidth]);
 
@@ -46,7 +46,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Modal {...globalNFT} />
-      <Layout>
+      <Layout navBarBehavior={1}>
         <div className={`${poppins.className}  text-black`}>
           <Hero screenWidth={screenWidth} />
           <CountDown

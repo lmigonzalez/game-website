@@ -5,7 +5,7 @@ import LeaderBoard from "@/components/LeaderBoard";
 
 export default function LeaderBoardPage() {
   return (
-    <Layout>
+    <Layout navBarBehavior={1}>
       <LeaderBoard leaders={leaderBoard} prizes={prizes} />
     </Layout>
   );

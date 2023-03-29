@@ -4,7 +4,7 @@ import MatchingCard from "@/components/MatchingCard";
 
 const PlayersWaiting = () => {
   return (
-    <Layout>
+    <Layout navBarBehavior={1}>
       <div className="container m-auto w-[1440] p-8">
         <div className="flex flex-col gap-20">
           <p className=" text-xs font-semibold md:text-base">

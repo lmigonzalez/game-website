@@ -15,5 +15,5 @@ import Layout from "@/components/Layout";
 import MatchingCard from "@/components/MatchingCard";
 
 export default function asd() {
-  return <Layout></Layout>;
+  return <></>;
 }
