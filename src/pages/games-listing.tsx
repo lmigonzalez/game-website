@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 import Layout from "@/components/layout/Layout";
 
 const gamesListing = () => {
@@ -51,7 +51,7 @@ const gamesListing = () => {
                 </div>
                 <div className="orange-gradient h-[118px] w-full p-4 text-white">
                   <p className="text-sm font-normal">
-                    The Witcher 3: Wild Hunt{' '}
+                    The Witcher 3: Wild Hunt{" "}
                   </p>
                   <p className="text-xs opacity-75">Fighting, Action</p>
 
@@ -67,13 +67,18 @@ const gamesListing = () => {
 
               {/* 2 */}
 
-              <div className=" flex h-[282.2px] w-[226px] flex-col items-end shadow-md shadow-black">
-                <div className="h-[164px] w-[226px] ">
-                  <Image src="/COD.png" alt="" width={226} height={164} />
-                </div>
-                <div className="orange-gradient h-[118px] w-full p-4 text-white">
-                  <p className="text-sm font-normal">
-                    The Witcher 3: Wild Hunt{' '}
+              <div className="relative h-[282.2px] w-[226px] overflow-hidden">
+                <Image
+                  src={"/COD-MW.svg"}
+                  alt={""}
+                  width={300}
+                  height={282.2}
+                  className="absolute left-[-10px] min-w-[250px]"
+                />
+
+                <div className="orange-gradient absolute bottom-0 h-[118px] w-[226px] p-4 text-white">
+                  <p className="whitespace-nowrap text-sm font-normal">
+                    Call of Duty Modern Warfare II
                   </p>
                   <p className="text-xs opacity-75">Fighting, Action</p>
 
@@ -89,15 +94,18 @@ const gamesListing = () => {
 
               {/* 3 */}
 
-              <div className=" flex h-[282.2px] w-[226px] flex-col items-end shadow-md shadow-black">
-                <div className="h-[164px] w-[226px] ">
-                  <Image src="/NBA.png" alt="" width={226} height={164} />
-                </div>
-                <div className="orange-gradient h-[118px] w-full p-4 text-white">
-                  <p className="text-sm font-normal">
-                    The Witcher 3: Wild Hunt{' '}
-                  </p>
-                  <p className="text-xs opacity-75">Fighting, Action</p>
+              <div className="relative h-[282.2px] w-[226px] overflow-hidden">
+                <Image
+                  src={"/NBA.svg"}
+                  alt={""}
+                  width={300}
+                  height={282.2}
+                  className="absolute left-[-10px] min-w-[250px]"
+                />
+
+                <div className="orange-gradient absolute bottom-0 h-[118px] w-[226px] p-4 text-white">
+                  <p className="text-sm font-normal">NBA 2K23 </p>
+                  <p className="text-xs opacity-75">Sport</p>
 
                   <div className=" mt-6 w-full">
                     <button className="h-8  w-24 rounded-full bg-white">
@@ -110,15 +118,18 @@ const gamesListing = () => {
               </div>
 
               {/* 4 */}
-              <div className=" flex h-[282.2px] w-[226px] flex-col items-end shadow-md shadow-black">
-                <div className="h-[164px] w-[226px] ">
-                  <Image src="/messi.png" alt="" width={226} height={164} />
-                </div>
-                <div className="orange-gradient h-[118px] w-full p-4 text-white">
-                  <p className="text-sm font-normal">
-                    The Witcher 3: Wild Hunt{' '}
-                  </p>
-                  <p className="text-xs opacity-75">Fighting, Action</p>
+              <div className="relative h-[282.2px] w-[226px] overflow-hidden">
+                <Image
+                  src={"/Pes-2023.svg"}
+                  alt={""}
+                  width={300}
+                  height={282.2}
+                  className="absolute left-[-10px] min-w-[250px]"
+                />
+
+                <div className="orange-gradient absolute bottom-0 h-[118px] w-[226px] p-4 text-white">
+                  <p className="text-sm font-normal">Pes 2023</p>
+                  <p className="text-xs opacity-75">Sport</p>
 
                   <div className=" mt-6 w-full">
                     <button className="h-8  w-24 rounded-full bg-white">
@@ -129,6 +140,7 @@ const gamesListing = () => {
                   </div>
                 </div>
               </div>
+
               {/* 5 */}
 
               <div className=" flex h-[282.2px] w-[226px] flex-col items-end shadow-md shadow-black">
@@ -137,7 +149,7 @@ const gamesListing = () => {
                 </div>
                 <div className="orange-gradient h-[118px] w-full p-4 text-white">
                   <p className="text-sm font-normal">
-                    The Witcher 3: Wild Hunt{' '}
+                    The Witcher 3: Wild Hunt{" "}
                   </p>
                   <p className="text-xs opacity-75">Fighting, Action</p>
 
@@ -153,13 +165,18 @@ const gamesListing = () => {
 
               {/* 6 */}
 
-              <div className=" flex h-[282.2px] w-[226px] flex-col items-end shadow-md shadow-black">
-                <div className="h-[164px] w-[226px] ">
-                  <Image src="/COD.png" alt="" width={226} height={164} />
-                </div>
-                <div className="orange-gradient h-[118px] w-full p-4 text-white">
+              <div className="relative h-[282.2px] w-[226px] overflow-hidden">
+                <Image
+                  src={"/COD-MW.svg"}
+                  alt={""}
+                  width={300}
+                  height={282.2}
+                  className="absolute left-[-10px] min-w-[250px]"
+                />
+
+                <div className="orange-gradient absolute bottom-0 h-[118px] w-[226px] p-4 text-white">
                   <p className="text-sm font-normal">
-                    The Witcher 3: Wild Hunt{' '}
+                    The Witcher 3: Wild Hunt{" "}
                   </p>
                   <p className="text-xs opacity-75">Fighting, Action</p>
 
