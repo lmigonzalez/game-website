@@ -22,7 +22,7 @@ const gamesListing = () => {
             screenshots and trailers for each game.
           </p>
 
-          <div className="flex items-end justify-center space-x-2 px-4">
+          <div className="mt-20 flex items-end justify-center gap-4">
             <Image
               src="/Group 1000001536.svg"
               alt=""
@@ -43,7 +43,7 @@ const gamesListing = () => {
             />
           </div>
 
-          <div className="hide-scroll-bar relative mt-24 h-[282px] w-full overflow-y-hidden overflow-x-scroll">
+          <div className="hide-scroll-bar relative mt-10 h-[282px] w-full overflow-y-hidden overflow-x-scroll">
             <div className="absolute flex space-x-5 ">
               <div className=" flex h-[282.2px] w-[226px] flex-col items-end shadow-md shadow-black">
                 <div className="h-[164px] w-[226px]">
@@ -142,15 +142,17 @@ const gamesListing = () => {
               </div>
 
               {/* 5 */}
+              <div className="relative h-[282.2px] w-[226px] overflow-hidden">
+                <Image
+                  src={"/GTA.png"}
+                  alt={""}
+                  width={300}
+                  height={282.2}
+                  className="absolute left-[-10px] min-w-[250px]"
+                />
 
-              <div className=" flex h-[282.2px] w-[226px] flex-col items-end shadow-md shadow-black">
-                <div className="h-[164px] w-[226px] ">
-                  <Image src="/GTA.png" alt="" width={226} height={164} />
-                </div>
-                <div className="orange-gradient h-[118px] w-full p-4 text-white">
-                  <p className="text-sm font-normal">
-                    The Witcher 3: Wild Hunt{" "}
-                  </p>
+                <div className="orange-gradient absolute bottom-0 h-[118px] w-[226px] p-4 text-white">
+                  <p className="text-sm font-normal">GTA VI</p>
                   <p className="text-xs opacity-75">Fighting, Action</p>
 
                   <div className=" mt-6 w-full">
