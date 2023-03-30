@@ -1,19 +1,21 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 const ShowCase = () => {
   return (
-    <section className="flex items-center justify-start bg-[url('/hot-air-balloons.jpg')] bg-cover bg-center bg-no-repeat md:py-28">
+    <section className="flex items-center justify-start bg-[url('/hot-air-balloons.jpg')] bg-cover bg-center bg-no-repeat py-6 md:py-28">
       <div className="m-auto w-[1400px] max-w-full  px-4 text-center text-white">
-        <strong className="hidden text-3xl font-bold leading-[56px] md:block">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
-        </strong>
-        <p className="hidden md:block">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s.
-        </p>
-        <div className="mt-24 grid  grid-cols-3 gap-x-4 gap-y-8 md:grid-cols-4">
+        <div className="hidden flex-col p-[50px] sm:px-[100px] md:flex md:px-[150px] lg:px-[200px] xl:px-[306px]">
+          <strong className=" text-3xl font-bold leading-[56px] ">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </strong>
+          <p className="hidden md:block">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s.
+          </p>
+        </div>
+        <div className=" grid grid-cols-3  gap-x-4 gap-y-8 md:mt-24  md:grid-cols-4">
           <div className="flex flex-col items-center space-y-6">
             <Image src="/Group 48.svg" alt="" width={65} height={65} />
             <p className="font-medium">Mobile Game App</p>
