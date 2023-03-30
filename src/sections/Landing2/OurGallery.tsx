@@ -3,7 +3,6 @@ import Image from "next/image";
 const OurGallery = () => {
   return (
     <section className="m-auto w-[1400px] max-w-full py-24 text-center">
-      <div className=" box-border h-32 w-32 border-4 p-4">asdfsd</div>
       <div className="px-4">
         <h2 className="mb-4 text-3xl font-bold">Our Gallery</h2>
         <p>
