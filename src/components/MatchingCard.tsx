@@ -6,9 +6,9 @@ const MatchingCard: FC<{
   name?: string;
 }> = ({ ocuppied, img, name }) => {
   return (
-    <div className="container flex justify-center">
+    <div className="flex justify-center">
       {ocuppied ? (
-        <div className="flex flex-col items-center justify-center gap-4">
+        <div className=" flex w-auto flex-col items-center justify-center gap-4">
           <Image
             src={img?.src || ""}
             alt={"no img"}
@@ -28,7 +28,7 @@ const MatchingCard: FC<{
           </div>
         </div>
       ) : (
-        <div className="flex   h-[250px] w-[250px] items-center justify-center rounded-3xl border-2 border-[#DB0F29] text-center">
+        <div className="flex h-[167px] w-[167px] items-center justify-center rounded-3xl border-2 border-[#DB0F29] text-center md:h-[250px] md:w-[250px]">
           Opponent waiting...
         </div>
       )}

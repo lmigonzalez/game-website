@@ -13,7 +13,7 @@ const PlayersWaiting = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Layout navBarBehavior={1}>
-        <div className="container m-auto w-[1440] p-8">
+        <div className=" m-auto w-[1440] p-8">
           <div className="flex flex-col gap-20">
             <p className=" text-xs font-semibold md:text-base">
               <strong className="text-color whitespace-nowrap text-3xl md:text-6xl">
@@ -26,7 +26,7 @@ const PlayersWaiting = () => {
             </p>
             <div className="grid grid-flow-row"></div>
           </div>
-          <div className="mb-[138px] grid grid-flow-col grid-rows-2 gap-14 md:grid-rows-1">
+          <div className="mb-[138px] grid grid-flow-col grid-rows-2 gap-14 xl:grid-rows-1">
             <MatchingCard
               ocuppied={true}
               img={{
