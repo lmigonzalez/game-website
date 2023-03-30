@@ -9,7 +9,7 @@ const LeaderBoard: FC<{
   prizes: { pos: number; prize: string }[];
 }> = ({ leaders, prizes }) => {
   return (
-    <div className="container m-auto w-[1400px] max-w-full text-black">
+    <div className="container m-auto w-[1400px] max-w-full text-black px-4">
       <strong className="text-color text-[32px] md:text-[58px]">
         Leaderboard
       </strong>
