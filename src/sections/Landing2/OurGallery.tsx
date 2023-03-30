@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Image from 'next/image';
 const OurGallery = () => {
   return (
     <section className="m-auto w-[1400px] max-w-full py-24 text-center">
@@ -10,7 +10,15 @@ const OurGallery = () => {
           industry.{' '}
         </p>
 
-        <div>Gallery goes here!!!</div>
+        <div className='grid grid-cols-3 gap-4 mt-16'>
+          <Image src='Rectangle 15.svg' alt='' width={382} height={223} />
+          <Image src='Rectangle 16.svg' alt='' width={382} height={223} />
+          <Image src='Rectangle 17.svg' alt='' width={382} height={223} />
+
+          <Image src='Rectangle 19.svg' alt='' width={382} height={223} />
+          <Image src='Rectangle 18.svg' alt='' width={382} height={223} />
+          <Image src='Rectangle 20 (11).svg' alt='' width={382} height={223} />
+        </div>
         <div className="mb-24 flex w-full justify-center">
           <button className="">
             <p className="orange-gradient mt-24 flex h-14 w-36 items-center justify-center rounded-lg text-white">
