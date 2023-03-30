@@ -20,21 +20,20 @@ export const dropv = () => {
 
   return (
     <>
-      <Layout navBarBehavior={0}>
-        <div className="relative">
-          <div className="absolute flex h-full w-full flex-col items-start justify-center px-4 py-8 text-2xl font-extrabold text-white md:text-6xl md:leading-[87px]">
-            <h2>Drop Name Here</h2>
-            <h3>Subtitle</h3>
-          </div>
-          <Image
-            className="mb-11"
-            src="/FREE-NFT-drops-cover 1.svg"
-            alt="FREE-NFT-drops-cover"
-            width={1500}
-            height={900}
-          />
+      <div className="relative">
+        <div className="absolute flex h-full w-full flex-col items-start justify-center px-4 py-8 text-2xl font-extrabold text-white md:text-6xl md:leading-[87px]">
+          <h2>Drop Name Here</h2>
+          <h3>Subtitle</h3>
         </div>
-
+        <Image
+          className="mb-11"
+          src="/FREE-NFT-drops-cover 1.svg"
+          alt="FREE-NFT-drops-cover"
+          width={1500}
+          height={900}
+        />
+      </div>
+      <Layout navBarBehavior={0}>
         <div className="tabs flex justify-center gap-4 ">
           <a
             className={cn("tab w-11 text-2xl text-[roboto] text-black", {
