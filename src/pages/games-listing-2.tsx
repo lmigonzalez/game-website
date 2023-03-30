@@ -27,7 +27,7 @@ const gamesListing2 = () => {
             screenshots and trailers for each game.
           </p>
 
-          <div className="my-grid mt-14 grid grid-cols-1 gap-x-24 gap-y-12 lg:grid-cols-2">
+          <div className="my-grid mt-14 grid grid-cols-1 gap-x-24 gap-y-12 md:grid-cols-2 place-items-center">
             <div className="w-fit">
               <div>
                 <Image src="/1048227 1.svg" alt="" width={505} height={285} />

@@ -1,5 +1,5 @@
-import Layout from "@/components/layout/Layout";
-import React, { useState } from "react";
+import Layout from '@/components/layout/Layout';
+import React, { useState } from 'react';
 
 const CurrencyPage = () => {
   const [selectedRow, setSelectedRow] = useState(0);
@@ -7,73 +7,73 @@ const CurrencyPage = () => {
   const table = [
     {
       id: 1,
-      Player: "Sample",
-      Amount: "¥ 500k",
-      Game: "Call of Duty",
-      Status: "win",
-      Wallet: "0x2C396bcB8...Bb85",
-      PurchaseDate: "22/03/2023  11:00AM",
-      ReceivedDate: "22/03/2023  11:00AM",
+      Player: 'Sample',
+      Amount: '¥ 500k',
+      Game: 'Call of Duty',
+      Status: 'win',
+      Wallet: '0x2C396bcB8...Bb85',
+      PurchaseDate: '22/03/2023  11:00AM',
+      ReceivedDate: '22/03/2023  11:00AM',
     },
     {
       id: 2,
-      Player: "Sample",
-      Amount: "¥ 500k",
-      Game: "Call of Duty",
-      Status: "win",
-      Wallet: "0x2C396bcB8...Bb85",
-      PurchaseDate: "22/03/2023  11:00AM",
-      ReceivedDate: "22/03/2023  11:00AM",
+      Player: 'Sample',
+      Amount: '¥ 500k',
+      Game: 'Call of Duty',
+      Status: 'Lose',
+      Wallet: '0x2C396bcB8...Bb85',
+      PurchaseDate: '22/03/2023  11:00AM',
+      ReceivedDate: '22/03/2023  11:00AM',
     },
     {
       id: 3,
-      Player: "Sample",
-      Amount: "¥ 500k",
-      Game: "Call of Duty",
-      Status: "win",
-      Wallet: "0x2C396bcB8...Bb85",
-      PurchaseDate: "22/03/2023  11:00AM",
-      ReceivedDate: "22/03/2023  11:00AM",
+      Player: 'Sample',
+      Amount: '¥ 500k',
+      Game: 'Call of Duty',
+      Status: 'win',
+      Wallet: '0x2C396bcB8...Bb85',
+      PurchaseDate: '22/03/2023  11:00AM',
+      ReceivedDate: '22/03/2023  11:00AM',
     },
     {
       id: 4,
-      Player: "Sample",
-      Amount: "¥ 500k",
-      Game: "Call of Duty",
-      Status: "win",
-      Wallet: "0x2C396bcB8...Bb85",
-      PurchaseDate: "22/03/2023  11:00AM",
-      ReceivedDate: "22/03/2023  11:00AM",
+      Player: 'Sample',
+      Amount: '¥ 500k',
+      Game: 'Call of Duty',
+      Status: 'win',
+      Wallet: '0x2C396bcB8...Bb85',
+      PurchaseDate: '22/03/2023  11:00AM',
+      ReceivedDate: '22/03/2023  11:00AM',
     },
     {
       id: 5,
-      Player: "Sample",
-      Amount: "¥ 500k",
-      Game: "Call of Duty",
-      Status: "win",
-      Wallet: "0x2C396bcB8...Bb85",
-      PurchaseDate: "22/03/2023  11:00AM",
-      ReceivedDate: "22/03/2023  11:00AM",
+      Player: 'Sample',
+      Amount: '¥ 500k',
+      Game: 'Call of Duty',
+      Status: 'Lose',
+      Wallet: '0x2C396bcB8...Bb85',
+      PurchaseDate: '22/03/2023  11:00AM',
+      ReceivedDate: '22/03/2023  11:00AM',
     },
     {
       id: 6,
-      Player: "Sample",
-      Amount: "¥ 500k",
-      Game: "Call of Duty",
-      Status: "win",
-      Wallet: "0x2C396bcB8...Bb85",
-      PurchaseDate: "22/03/2023  11:00AM",
-      ReceivedDate: "22/03/2023  11:00AM",
+      Player: 'Sample',
+      Amount: '¥ 500k',
+      Game: 'Call of Duty',
+      Status: 'win',
+      Wallet: '0x2C396bcB8...Bb85',
+      PurchaseDate: '22/03/2023  11:00AM',
+      ReceivedDate: '22/03/2023  11:00AM',
     },
     {
       id: 7,
-      Player: "Sample",
-      Amount: "¥ 500k",
-      Game: "Call of Duty",
-      Status: "win",
-      Wallet: "0x2C396bcB8...Bb85",
-      PurchaseDate: "22/03/2023  11:00AM",
-      ReceivedDate: "22/03/2023  11:00AM",
+      Player: 'Sample',
+      Amount: '¥ 500k',
+      Game: 'Call of Duty',
+      Status: 'Lose',
+      Wallet: '0x2C396bcB8...Bb85',
+      PurchaseDate: '22/03/2023  11:00AM',
+      ReceivedDate: '22/03/2023  11:00AM',
     },
   ];
 
@@ -92,7 +92,7 @@ const CurrencyPage = () => {
       <section className="m-auto w-[1400px] max-w-full  px-4 py-24 text-black">
         <div className="rounded-lg border-[2px] border-[#D80027] py-8 px-4">
           <div className=" flex items-center justify-between">
-            <h1 className="orange-gradient mb-4 bg-clip-text text-3xl   font-bold text-transparent">
+            <h1 className="orange-gradient mb-4 bg-clip-text text-3xl  font-bold   text-transparent ">
               Purchase Currency History
             </h1>
             <div className="flex  h-8 items-center justify-center space-x-2">
@@ -134,14 +134,14 @@ const CurrencyPage = () => {
                     key={item.id}
                     className={`h-16 border-[1px] border-b-[#C0C0C0] ${
                       selectedRow === item.id
-                        ? "bg-[#0ECF2D] bg-opacity-50 text-black"
-                        : "bg-transparent"
+                        ? 'bg-[#0ECF2D] bg-opacity-50 text-black'
+                        : 'bg-transparent'
                     }`}
                   >
                     <td>{item.Player}</td>
                     <td>{item.Amount}</td>
                     <td>{item.Game}</td>
-                    <td>{item.Status}</td>
+                    <td className={`${item.Status === 'Lose' ? 'orange-gradient bg-clip-text text-transparent': ''}`}>{item.Status}</td>
                     <td>{item.Wallet}</td>
                     <td>{item.PurchaseDate}</td>
                     <td>{item.ReceivedDate}</td>
@@ -150,6 +150,14 @@ const CurrencyPage = () => {
               })}
             </tbody>
           </table>
+
+          <div className="mt-8 text-end">
+            <button>
+              <p className="orange-gradient bg-clip-text font-bold text-transparent">
+                View More...
+              </p>
+            </button>
+          </div>
         </div>
       </section>
     </Layout>
