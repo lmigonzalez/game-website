@@ -11,7 +11,7 @@ const OurGallery = () => {
           industry.{" "}
         </p>
 
-        <div className="mt-16 flex flex-wrap gap-7">
+        <div className="mt-16 flex flex-auto flex-wrap gap-7">
           <Image
             src="Rectangle 15.svg"
             alt=""
@@ -38,7 +38,7 @@ const OurGallery = () => {
             alt=""
             width={134.99}
             height={107.13}
-            className="order-last md:order-none md:h-[223px] md:w-[246px]"
+            className="order-last md:h-[223px] md:w-[246px] xl:order-none"
           />
           <Image
             src="Rectangle 18.svg"
