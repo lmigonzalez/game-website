@@ -46,7 +46,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Modal {...globalNFT} />
-      <Layout navBarBehavior={1}>
+      <Layout navBarBehavior={0}>
         <div className={`${poppins.className}  text-black`}>
           <Hero screenWidth={screenWidth} />
           <CountDown

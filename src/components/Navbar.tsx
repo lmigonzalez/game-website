@@ -37,83 +37,93 @@ const Navbar: FC<{ behavior: number }> = ({ behavior }) => {
           <li>
             <Link href="/portfolio">Portfolio</Link>
           </li>
-          {(behavior === 1 || behavior === 0) && (
+          {(behavior === 1 || behavior === 3) && (
             <li className="">
               <Link href="/news">News</Link>
             </li>
           )}
         </ul>
 
-        {user && (behavior === 1 || behavior === 0) ? (
-          <div className="mr-5 hidden h-[48px] flex-row items-center gap-2 text-[20px] md:flex ">
-            <Image
-              src={user.avatar}
-              alt={"no img"}
-              width={48}
-              height={48}
-              className="rounded-full"
-            />
-            <strong>${user.money}k</strong>
-          </div>
-        ) : (
-          <div className="dropdown-end dropdown">
-            <label
-              tabIndex={0}
-              className="btn m-1 w-auto border-none bg-transparent p-0 hover:bg-transparent"
-            >
-              <Image
-                className="h-8 w-8 rounded-full"
-                src="/michael-dam.jpg"
-                alt=""
-                width={32}
-                height={32}
-              />
-              <Image
-                className=""
-                src="/triangle-down-svgrepo-com.svg"
-                alt=""
-                width={20}
-                height={20}
-              />
-            </label>
-            <ul
-              tabIndex={0}
-              className="dropdown-content menu rounded-box w-52 bg-base-100 p-2 shadow-lg"
-            >
-              <li>
-                <a>View Profile</a>
-              </li>
-              <li>
-                <a>Setting</a>
-              </li>
-              <li>
-                <a>Logout</a>
-              </li>
-            </ul>
-          </div>
-        )}
-
-        {(behavior === 1 || behavior === 0) &&
+        {behavior === 1 &&
           (user ? (
-            <Link
-              href="buy-currency"
-              className={classNames(
-                `orange-gradient rounded py-3 px-7 text-white md:flex`,
-                { hidden: behavior !== 1 }
-              )}
-            >
-              Buy Currency
-            </Link>
+            <>
+              <div className="mr-5 hidden h-[48px] flex-row items-center gap-2 text-[20px] md:flex ">
+                <Image
+                  src={user.avatar}
+                  alt={"no img"}
+                  width={48}
+                  height={48}
+                  className="rounded-full"
+                />
+                <strong>${user.money}k</strong>
+              </div>
+              <Link
+                href="buy-currency"
+                className={classNames(
+                  `orange-gradient rounded py-3 px-7 text-white md:flex`,
+                  { hidden: behavior === 1 }
+                )}
+              >
+                Buy Currency
+              </Link>
+            </>
           ) : (
+            ""
+          ))}
+
+        {behavior === 2 &&
+          (user ? (
+            <div className="dropdown-end dropdown">
+              <label
+                tabIndex={0}
+                className="btn m-1 w-auto border-none bg-transparent p-0 hover:bg-transparent"
+              >
+                <Image
+                  className="h-8 w-8 rounded-full"
+                  src="/michael-dam.jpg"
+                  alt=""
+                  width={32}
+                  height={32}
+                />
+                <Image
+                  className=""
+                  src="/triangle-down-svgrepo-com.svg"
+                  alt=""
+                  width={20}
+                  height={20}
+                />
+              </label>
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu rounded-box w-52 bg-base-100 p-2 shadow-lg"
+              >
+                <li>
+                  <a>View Profile</a>
+                </li>
+                <li>
+                  <a>Setting</a>
+                </li>
+                <li>
+                  <a>Logout</a>
+                </li>
+              </ul>
+            </div>
+          ) : (
+            ""
+          ))}
+
+        {(behavior === 3 || behavior === 0) &&
+          (user ? (
             <Link
               href="contact"
               className={classNames(
-                `orange-gradient rounded py-3 px-7 text-white md:flex`,
-                { hidden: behavior !== 1 }
+                `orange-gradient rounded py-3 px-7 text-white md:flex`
               )}
             >
               Contact us
             </Link>
+          ) : (
+            ""
           ))}
 
         <button
