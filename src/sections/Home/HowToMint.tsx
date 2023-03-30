@@ -184,7 +184,7 @@ const HowToMint: React.FC<Props> = ({screenWidth}) => {
       </div>
 
       <div
-        className="hide-scroll-bar relative mt-24 h-[320px] w-full overflow-y-hidden overflow-x-scroll"
+        className="hide-scroll-bar overflow-x-scroll overflow-y-hidden relative w-full h-[320px]  mt-24"
       >
         <div className="absolute flex h-[320px]">
           <Image src="/8Qz2gKJ2.svg" alt="" width={338} height={320} />
