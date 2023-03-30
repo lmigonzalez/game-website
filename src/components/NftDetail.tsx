@@ -99,7 +99,7 @@ export const NftDetail: FC<Inft> = (nft) => {
             htmlFor="my-modal"
             className="orange-gradient btn-circle btn h-14 w-[320px] border-none text-lg normal-case text-white lg:w-[300px] xl:w-[478px]"
           >
-            Mint Nowas
+            Mint Now
           </label>
         </div>
       </div>

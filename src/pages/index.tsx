@@ -7,8 +7,8 @@ import HowToMint from "@/sections/Home/HowToMint";
 import AboutDrop from "@/sections/Home/AboutDrop";
 import RoadMap from "@/sections/Home/RoadMap";
 import OurTeam from "@/sections/Home/OurTeam";
-import Layout from "@/components/Layout";
-import { Modal } from "@/components/Modal";
+import Layout from "@/components/layout/Layout";
+import { Modal } from "@/components/modals/Modal";
 import { useStateContext } from "@/context/StateContext";
 
 const poppins = Poppins({
@@ -46,7 +46,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Modal {...globalNFT} />
-      <Layout navBarBehavior={1}>
+      <Layout navBarBehavior={0}>
         <div className={`${poppins.className}  text-black`}>
           <Hero screenWidth={screenWidth} />
           <CountDown

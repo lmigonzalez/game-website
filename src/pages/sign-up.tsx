@@ -3,17 +3,9 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 
-import ConnectToWallet from "@/components/ConnectToWallet";
-import Tutorial from "@/components/Tutorial";
-import CryptoPaymentDetails from "@/components/CryptoPaymentDetails";
-import CryptoPaymentDetails2 from "@/components/CryptoPaymentDetails2";
-import CryptoPaymentUpdated from "@/components/CryptoPaymentUpdated";
-import ChooseBundle from "@/components/ChooseBundle";
-import ConnectToWallet2 from "@/components/ConnectToWallet2";
-import SuccessStat from "@/components/SuccessStat";
-import EnterCardDetails from "@/components/EnterCardDetails";
+import ConnectToWallet from "@/components/modals/ConnectToWallet";
 
-const signUp = () => {
+const SignUp = () => {
   const initialValue = {
     fullName: "",
     email: "",
@@ -257,4 +249,4 @@ const signUp = () => {
   );
 };
 
-export default signUp;
+export default SignUp;
