@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { Poppins } from "next/font/google";
 import { motion, AnimatePresence } from "framer-motion";
-import { useStateContext } from "../context/StateContext";
+import { useStateContext } from "../../context/StateContext";
 import Image from "next/image";
 import classNames from "classnames";
 const poppins = Poppins({

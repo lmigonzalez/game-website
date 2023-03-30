@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import Image from "next/image";
-import Layout from "@/components/Layout";
+import Layout from "@/components/layout/Layout";
 import Head from "next/head";
 
 const gamesListing = () => {

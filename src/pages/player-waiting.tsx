@@ -1,6 +1,6 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useEffect, useState } from "react";
-import Layout from "@/components/Layout";
+import Layout from "@/components/layout/Layout";
 import MatchingCard from "@/components/MatchingCard";
 import Head from "next/head";
 

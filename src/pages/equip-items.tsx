@@ -1,5 +1,5 @@
 import ItemCard from "@/components/ItemCard";
-import Layout from "@/components/Layout";
+import Layout from "@/components/layout/Layout";
 import Image, { ImageLoaderProps } from "next/image";
 import { FC, useEffect, useState } from "react";
 

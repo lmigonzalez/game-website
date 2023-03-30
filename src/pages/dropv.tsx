@@ -4,7 +4,7 @@ import NftCard from "@/components/NftCard";
 import classNames from "classnames";
 import { useState } from "react";
 import { Info } from "@/components/info";
-import Layout from "@/components/Layout";
+import Layout from "@/components/layout/Layout";
 import Image from "next/image";
 import { Poppins } from "next/font/google";
 import Head from "next/head";

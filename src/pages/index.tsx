@@ -7,8 +7,8 @@ import HowToMint from "@/sections/Home/HowToMint";
 import AboutDrop from "@/sections/Home/AboutDrop";
 import RoadMap from "@/sections/Home/RoadMap";
 import OurTeam from "@/sections/Home/OurTeam";
-import Layout from "@/components/Layout";
-import { Modal } from "@/components/Modal";
+import Layout from "@/components/layout/Layout";
+import { Modal } from "@/components/modals/Modal";
 import { useStateContext } from "@/context/StateContext";
 
 const poppins = Poppins({
