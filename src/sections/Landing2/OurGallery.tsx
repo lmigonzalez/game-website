@@ -10,7 +10,7 @@ const OurGallery = () => {
           industry.{' '}
         </p>
 
-        <div className='grid grid-cols-3 gap-4 mt-16'>
+        {/* <div className='grid grid-cols-3 gap-4 mt-16'>
           <Image src='Rectangle 15.svg' alt='' width={382} height={223} />
           <Image src='Rectangle 16.svg' alt='' width={382} height={223} />
           <Image src='Rectangle 17.svg' alt='' width={382} height={223} />
@@ -18,6 +18,16 @@ const OurGallery = () => {
           <Image src='Rectangle 19.svg' alt='' width={382} height={223} />
           <Image src='Rectangle 18.svg' alt='' width={382} height={223} />
           <Image src='Rectangle 20 (11).svg' alt='' width={382} height={223} />
+        </div> */}
+
+        <div className="mt-16 flex flex-wrap  gap-7 justify-center">
+          <Image src="Rectangle 15.svg" alt="" width={382} height={223} />
+          <Image src="Rectangle 16.svg" alt="" width={382} height={223} />
+          <Image src="Rectangle 17.svg" alt="" width={352} height={223} />
+
+          <Image src="Rectangle 19.svg" alt="" width={246} height={223} />
+          <Image src="Rectangle 18.svg" alt="" width={401} height={223} />
+          <Image src="Rectangle 20 (11).svg" alt="" width={469} height={223} />
         </div>
         <div className="mb-24 flex w-full justify-center">
           <button className="">

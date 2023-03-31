@@ -1,13 +1,15 @@
 import Layout from '@/components/layout/Layout';
 import React, { useState } from 'react';
-
+import Image from 'next/image';
+import CurrencyPlayer from '@/components/CurrencyPlayer';
 const CurrencyPage = () => {
   const [selectedRow, setSelectedRow] = useState(0);
 
   const table = [
     {
       id: 1,
-      Player: 'Sample',
+      medal: true,
+      Player: 3,
       Amount: '¥ 500k',
       Game: 'Call of Duty',
       Status: 'win',
@@ -17,7 +19,8 @@ const CurrencyPage = () => {
     },
     {
       id: 2,
-      Player: 'Sample',
+      medal: false,
+      Player: 3,
       Amount: '¥ 500k',
       Game: 'Call of Duty',
       Status: 'Lose',
@@ -27,7 +30,8 @@ const CurrencyPage = () => {
     },
     {
       id: 3,
-      Player: 'Sample',
+      medal: true,
+      Player: 1,
       Amount: '¥ 500k',
       Game: 'Call of Duty',
       Status: 'win',
@@ -37,7 +41,8 @@ const CurrencyPage = () => {
     },
     {
       id: 4,
-      Player: 'Sample',
+      medal: false,
+      Player: 2,
       Amount: '¥ 500k',
       Game: 'Call of Duty',
       Status: 'win',
@@ -47,7 +52,8 @@ const CurrencyPage = () => {
     },
     {
       id: 5,
-      Player: 'Sample',
+      medal: false,
+      Player: 2,
       Amount: '¥ 500k',
       Game: 'Call of Duty',
       Status: 'Lose',
@@ -57,7 +63,8 @@ const CurrencyPage = () => {
     },
     {
       id: 6,
-      Player: 'Sample',
+      medal: true,
+      Player: 1,
       Amount: '¥ 500k',
       Game: 'Call of Duty',
       Status: 'win',
@@ -67,7 +74,8 @@ const CurrencyPage = () => {
     },
     {
       id: 7,
-      Player: 'Sample',
+      medal: false,
+      Player: 2,
       Amount: '¥ 500k',
       Game: 'Call of Duty',
       Status: 'Lose',
@@ -76,6 +84,9 @@ const CurrencyPage = () => {
       ReceivedDate: '22/03/2023  11:00AM',
     },
   ];
+
+
+  
 
   function handleSelectedRow(id: number) {
     if (id === selectedRow) {
@@ -138,7 +149,7 @@ const CurrencyPage = () => {
                         : 'bg-transparent'
                     }`}
                   >
-                    <td>{item.Player}</td>
+                    <td> { <CurrencyPlayer medal = {item.medal} images = {item.Player} /> } </td>
                     <td>{item.Amount}</td>
                     <td>{item.Game}</td>
                     <td className={`${item.Status === 'Lose' ? 'orange-gradient bg-clip-text text-transparent': ''}`}>{item.Status}</td>

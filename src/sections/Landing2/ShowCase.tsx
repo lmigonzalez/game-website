@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 const ShowCase = () => {
   return (
-    <section className="flex items-center justify-start bg-[url('/hot-air-balloons.jpg')] bg-cover bg-center bg-no-repeat md:py-28">
+    <section className="flex items-center justify-start bg-[url('/1000001538.svg')] bg-cover bg-center bg-no-repeat md:py-28">
       <div className="m-auto w-[1400px] max-w-full  px-4 text-center text-white">
         <strong className="hidden text-3xl font-bold leading-[56px] md:block">
           Lorem Ipsum is simply dummy text of the printing and typesetting
