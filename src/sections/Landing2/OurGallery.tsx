@@ -1,5 +1,5 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 const OurGallery = () => {
   return (
     <section className="m-auto w-[1400px] max-w-full py-24 text-center">
@@ -7,7 +7,7 @@ const OurGallery = () => {
         <h2 className="mb-4 text-3xl font-bold">Our Gallery</h2>
         <p>
           Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.{' '}
+          industry.{" "}
         </p>
 
         {/* <div className='grid grid-cols-3 gap-4 mt-16'>
@@ -41,21 +41,21 @@ const OurGallery = () => {
           <strong className="text-3xl font-semibold">Lorem Ipsum</strong>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.{' '}
+            industry.{" "}
           </p>
         </div>
       </div>
 
-      <div className="flex flex-col items-center justify-between md:rounded-xl bg-black py-10 px-4 text-white md:flex-row md:mx-4">
+      <div className="flex flex-col items-center justify-between bg-black py-10 px-4 text-white md:mx-4 md:flex-row md:rounded-xl">
         <div className="mb-8 text-start md:mb-0 md:w-1/2">
           <strong className="text-3xl font-medium">Stay in the loop</strong>
           <p className="mt-3">
             Subscribe to receive the latest news and updates about TDA. We
-            promise not to spam you!{' '}
+            promise not to spam you!{" "}
           </p>
         </div>
 
-        <div className="flex h-12 w-full md:w-[385px] items-center justify-between rounded-lg bg-white px-2">
+        <div className="flex h-12 w-full items-center justify-between rounded-lg bg-white px-2 md:w-[385px]">
           <input
             className="h-full bg-transparent pl-4"
             type="text"

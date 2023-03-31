@@ -27,108 +27,112 @@ const EquipItems: FC<{
   }, [whereEver]);
 
   return (
-    <div className="grid grid-cols-1" onClick={() => setWhereEver(true)}>
-      <div className="flex flex-col gap-10">
-        <strong className="text-color text-[32px] lg:text-[58px]">
-          Inventory
-        </strong>
-        <div className="grid w-fit grid-flow-row grid-cols-2 gap-8">
-          {inventory?.map((item, idx) => (
-            <ItemCard
-              key={`inventory-item-${idx}`}
-              img={item.img}
-              equipped={false}
-            />
-          ))}
-        </div>
-      </div>
-      <div className=" hidden items-center gap-4 lg:flex lg:flex-col">
-        <strong className="text-color text-[58px]">Preview</strong>
-        <Image
-          src={preview?.src}
-          alt={"no img"}
-          width={338}
-          height={337}
-          className="w-fill mt-6 rounded-2xl"
-        />
-
-        <div className="dropdown dropdown-hover">
-          <label
-            tabIndex={0}
-            className="orange-gradient btn m-1 flex h-12 w-[338px] flex-row items-center justify-between rounded-xl border-none px-5 text-[#FCDDEC]"
-          >
-            <span id="dropDownBox">Select Game</span>
-            <Image
-              src={"/down-svgrepo-com (2).svg"}
-              alt={"down"}
-              width={20}
-              height={20}
-            />
-          </label>
-          <ul
-            tabIndex={0}
-            className="dropdown-content menu rounded-box w-[338px] bg-base-100 p-2 shadow"
-          >
-            {games.map((item) => (
-              <li
-                key={`game-${item.name}`}
-                onClick={() => {
-                  let a: HTMLLabelElement = document.getElementById(
-                    "dropDownBox"
-                  ) as HTMLLabelElement;
-                  a.textContent = item.name;
-                }}
-              >
-                {" "}
-                <a>{item.name}</a>
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        <div
-          className="dropdown dropdown-bottom w-[338px]"
-          onClick={() => setDropDown(true)}
-        >
-          <button tabIndex={0} className="h-12 w-full">
-            <div
-              className={`orange-gradient flex h-full w-full items-center justify-between ${
-                active ? "rounded-t-xl" : "rounded-xl"
-              } px-5 text-justify text-[#FCDDEC]`}
-            >
-              <span>Select Avatar </span>
-              {
-                <Image
-                  src={
-                    !active
-                      ? "/down-svgrepo-com (2).svg"
-                      : "/down-svgrepo-com (3).svg"
-                  }
-                  alt={"down"}
-                  width={20}
-                  height={20}
-                />
-              }
-            </div>
-          </button>
-          <div
-            tabIndex={0}
-            className="hide-scroll-bar dropdown-content flex max-w-[338px] flex-row overflow-hidden  overflow-x-scroll rounded-b-xl"
-          >
-            {avatars?.map((item, idx) => (
-              <Image
-                key={`avatar-${idx}`}
-                src={item.src}
-                alt={"no img"}
-                width={59}
-                height={59}
-                onClick={() => {}}
+    <>
+      <div
+        className="flex flex-row justify-between"
+        onClick={() => setWhereEver(true)}
+      >
+        <div className="flex flex-col gap-10">
+          <strong className="text-color text-[32px] lg:text-[58px]">
+            Inventory
+          </strong>
+          <div className="grid w-fit grid-flow-row grid-cols-2 gap-8">
+            {inventory?.map((item, idx) => (
+              <ItemCard
+                key={`inventory-item-${idx}`}
+                img={item.img}
+                equipped={false}
               />
             ))}
-          </div>{" "}
+          </div>
+        </div>
+        <div className=" hidden items-center gap-4 lg:flex lg:flex-col">
+          <strong className="text-color text-[58px]">Preview</strong>
+          <Image
+            src={preview?.src}
+            alt={"no img"}
+            width={338}
+            height={337}
+            className="w-fill mt-6 rounded-2xl"
+          />
+
+          <div className="dropdown-hover dropdown">
+            <label
+              tabIndex={0}
+              className="orange-gradient btn m-1 flex h-12 w-[338px] flex-row items-center justify-between rounded-xl border-none px-5 text-[#FCDDEC]"
+            >
+              <span id="dropDownBox">Select Game</span>
+              <Image
+                src={"/down-svgrepo-com (2).svg"}
+                alt={"down"}
+                width={20}
+                height={20}
+              />
+            </label>
+            <ul
+              tabIndex={0}
+              className="dropdown-content menu rounded-box w-[338px] bg-base-100 p-2 shadow"
+            >
+              {games.map((item) => (
+                <li
+                  key={`game-${item.name}`}
+                  onClick={() => {
+                    let a: HTMLLabelElement = document.getElementById(
+                      "dropDownBox"
+                    ) as HTMLLabelElement;
+                    a.textContent = item.name;
+                  }}
+                >
+                  {" "}
+                  <a>{item.name}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div
+            className="dropdown dropdown-bottom w-[338px]"
+            onClick={() => setDropDown(true)}
+          >
+            <button tabIndex={0} className="h-12 w-full">
+              <div
+                className={`orange-gradient flex h-full w-full items-center justify-between ${
+                  active ? "rounded-t-xl" : "rounded-xl"
+                } px-5 text-justify text-[#FCDDEC]`}
+              >
+                <span>Select Avatar </span>
+                {
+                  <Image
+                    src={
+                      !active
+                        ? "/down-svgrepo-com (2).svg"
+                        : "/down-svgrepo-com (3).svg"
+                    }
+                    alt={"down"}
+                    width={20}
+                    height={20}
+                  />
+                }
+              </div>
+            </button>
+            <div
+              tabIndex={0}
+              className="hide-scroll-bar dropdown-content flex max-w-[338px] flex-row overflow-hidden  overflow-x-scroll rounded-b-xl"
+            >
+              {avatars?.map((item, idx) => (
+                <Image
+                  key={`avatar-${idx}`}
+                  src={item.src}
+                  alt={"no img"}
+                  width={59}
+                  height={59}
+                  onClick={() => {}}
+                />
+              ))}
+            </div>{" "}
+          </div>
         </div>
       </div>
-
       <div className="col-span-2 flex flex-col gap-6 py-16 lg:mr-[140px]">
         <strong className="text-color text-[32px] lg:text-[58px]">
           Equipped Items
@@ -143,7 +147,7 @@ const EquipItems: FC<{
           ))}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
