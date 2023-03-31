@@ -6,7 +6,7 @@ const wagerSelection = () => {
   return (
     <>
       <Head>
-        <title>NFT Details</title>
+        <title>Wager Selection</title>
         <meta name="description" content="Selected NFT details" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>

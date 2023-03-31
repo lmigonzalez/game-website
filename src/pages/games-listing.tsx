@@ -2,10 +2,16 @@
 import React from 'react';
 import Image from 'next/image';
 import Layout from '@/components/layout/Layout';
+import Head from 'next/head';
 
 const gamesListing = () => {
   return (
     <>
+      <Head>
+        <title>Games Listing</title>
+        <meta name="description" content="Selected NFT details" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <Layout navBarBehavior={1}>
         <section className="m-auto w-[1400px] max-w-full  px-4 py-24 text-black">
           <h1 className="orange-gradient mb-4 bg-clip-text text-6xl font-bold text-transparent ">
@@ -22,7 +28,7 @@ const gamesListing = () => {
             screenshots and trailers for each game.
           </p>
 
-          <div className="flex flex-col md:flex-row items-center justify-center space-x-2">
+          <div className="flex flex-col items-center justify-center space-x-2 md:flex-row">
             <div className="relative flex h-[375px] w-[375px] items-end ">
               <Image
                 src="/Group 1000001536.svg"
@@ -66,12 +72,10 @@ const gamesListing = () => {
                 </p>
               </button>
             </div>
-
           </div>
 
           <div className="hide-scroll-bar relative mt-24 h-[282px] w-full overflow-y-hidden overflow-x-scroll">
             <div className="absolute flex space-x-5 ">
-
               <div className=" flex h-[282.2px] w-[226px] flex-col items-end shadow-md shadow-black">
                 <div className="h-[164px] w-[226px]">
                   <Image src="/witcher.png" alt="" width={226} height={164} />
@@ -103,8 +107,6 @@ const gamesListing = () => {
               </div>
 
               {/* 2 */}
-
-              
 
               <div className="relative h-[282.2px] w-[226px] overflow-hidden">
                 <Image

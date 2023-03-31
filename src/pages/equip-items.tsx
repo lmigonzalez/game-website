@@ -1,7 +1,8 @@
-import ItemCard from "@/components/ItemCard";
-import Layout from "@/components/layout/Layout";
-import Image, { ImageLoaderProps } from "next/image";
-import { FC, useEffect, useState } from "react";
+import ItemCard from '@/components/ItemCard';
+import Layout from '@/components/layout/Layout';
+import Head from 'next/head';
+import Image, { ImageLoaderProps } from 'next/image';
+import { FC, useEffect, useState } from 'react';
 
 interface Item {
   img: ImageLoaderProps;
@@ -28,6 +29,11 @@ const EquipItems: FC<{
 
   return (
     <>
+      <Head>
+        <title>Equip Items</title>
+        <meta name="description" content="Selected NFT details" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+      </Head>
       <div
         className="flex flex-row justify-between"
         onClick={() => setWhereEver(true)}
@@ -50,7 +56,7 @@ const EquipItems: FC<{
           <strong className="text-color text-[58px]">Preview</strong>
           <Image
             src={preview?.src}
-            alt={"no img"}
+            alt={'no img'}
             width={338}
             height={337}
             className="w-fill mt-6 rounded-2xl"
@@ -63,8 +69,8 @@ const EquipItems: FC<{
             >
               <span id="dropDownBox">Select Game</span>
               <Image
-                src={"/down-svgrepo-com (2).svg"}
-                alt={"down"}
+                src={'/down-svgrepo-com (2).svg'}
+                alt={'down'}
                 width={20}
                 height={20}
               />
@@ -78,12 +84,12 @@ const EquipItems: FC<{
                   key={`game-${item.name}`}
                   onClick={() => {
                     let a: HTMLLabelElement = document.getElementById(
-                      "dropDownBox"
+                      'dropDownBox'
                     ) as HTMLLabelElement;
                     a.textContent = item.name;
                   }}
                 >
-                  {" "}
+                  {' '}
                   <a>{item.name}</a>
                 </li>
               ))}
@@ -97,7 +103,7 @@ const EquipItems: FC<{
             <button tabIndex={0} className="h-12 w-full">
               <div
                 className={`orange-gradient flex h-full w-full items-center justify-between ${
-                  active ? "rounded-t-xl" : "rounded-xl"
+                  active ? 'rounded-t-xl' : 'rounded-xl'
                 } px-5 text-justify text-[#FCDDEC]`}
               >
                 <span>Select Avatar </span>
@@ -105,10 +111,10 @@ const EquipItems: FC<{
                   <Image
                     src={
                       !active
-                        ? "/down-svgrepo-com (2).svg"
-                        : "/down-svgrepo-com (3).svg"
+                        ? '/down-svgrepo-com (2).svg'
+                        : '/down-svgrepo-com (3).svg'
                     }
-                    alt={"down"}
+                    alt={'down'}
                     width={20}
                     height={20}
                   />
@@ -123,13 +129,13 @@ const EquipItems: FC<{
                 <Image
                   key={`avatar-${idx}`}
                   src={item.src}
-                  alt={"no img"}
+                  alt={'no img'}
                   width={59}
                   height={59}
                   onClick={() => {}}
                 />
               ))}
-            </div>{" "}
+            </div>{' '}
           </div>
         </div>
       </div>
@@ -159,14 +165,14 @@ const Test = () => {
           inventory={[
             {
               img: {
-                src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+                src: '/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg',
                 width: 0,
                 quality: undefined,
               },
             },
             {
               img: {
-                src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+                src: '/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg',
                 width: 0,
                 quality: undefined,
               },
@@ -175,71 +181,71 @@ const Test = () => {
           equippedItems={[
             {
               img: {
-                src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+                src: '/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg',
                 width: 0,
                 quality: undefined,
               },
             },
             {
               img: {
-                src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+                src: '/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg',
                 width: 0,
                 quality: undefined,
               },
             },
             {
               img: {
-                src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+                src: '/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg',
                 width: 0,
                 quality: undefined,
               },
             },
           ]}
-          games={[{ name: "fulanito" }, { name: "menganito" }]}
+          games={[{ name: 'fulanito' }, { name: 'menganito' }]}
           avatars={[
             {
-              src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+              src: '/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg',
               width: 0,
               quality: undefined,
             },
             {
-              src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+              src: '/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg',
               width: 0,
               quality: undefined,
             },
             {
-              src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+              src: '/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg',
               width: 0,
               quality: undefined,
             },
             {
-              src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+              src: '/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg',
               width: 0,
               quality: undefined,
             },
             {
-              src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+              src: '/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg',
               width: 0,
               quality: undefined,
             },
             {
-              src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+              src: '/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg',
               width: 0,
               quality: undefined,
             },
             {
-              src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+              src: '/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg',
               width: 0,
               quality: undefined,
             },
             {
-              src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+              src: '/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg',
               width: 0,
               quality: undefined,
             },
           ]}
           preview={{
-            src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+            src: '/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg',
             width: 0,
             quality: undefined,
           }}
