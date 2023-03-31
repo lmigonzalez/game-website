@@ -26,7 +26,7 @@ const LeaderBoard: FC<{
             />
 
             <div className="overflow-x-auto bg-transparent">
-              <table className="table w-full bg-transparent">
+              <table className="table w-full border-collapse bg-transparent">
                 {/* head */}
                 <tbody>
                   {/* row 1 */}
@@ -42,12 +42,12 @@ const LeaderBoard: FC<{
                     .map((item) => (
                       <tr
                         key={`leaderB-${item.pos}`}
-                        className=" border-y-[1px] border-[#5F59598A] py-3 text-xl"
+                        className="border-b-2 border-[#5F59598A]  bg-transparent text-xl first:border-t-2"
                       >
-                        <th className="border-y-[1px] border-[#5F59598A] bg-transparent py-3 pr-0 pl-7 font-semibold">
+                        <th className=" border-b-2 border-[#5F59598A] bg-transparent pr-0 pl-7 font-semibold">
                           {item.pos}
                         </th>
-                        <td className="flex flex-row bg-transparent  py-3">
+                        <td className="border-b-2 border-[#5F59598A] bg-transparent">
                           <div className="flex items-center space-x-3">
                             <div className="avatar">
                               <div className="mask mask-squircle h-12 w-12">
@@ -60,15 +60,15 @@ const LeaderBoard: FC<{
                                 />
                               </div>
                             </div>
-                            <div className="flex flex-col">
-                              <strong>{item.name}</strong>
-                              <span className="text-[#B7B3B3]">
+                            <div>
+                              <div className="font-bold">{item.name}</div>
+                              <div className="text-sm opacity-50">
                                 {item.userName}
-                              </span>
+                              </div>
                             </div>
                           </div>
                         </td>
-                        <td className="border-y-[1px] border-[#5F59598A] bg-transparent px-0 py-3 font-bold">
+                        <td className="border-b-2 border-[#5F59598A] bg-transparent text-center font-bold">
                           {prizes.find((item2) => item2.pos == item.pos)?.prize}
                         </td>
                       </tr>
