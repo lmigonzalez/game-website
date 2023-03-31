@@ -7,7 +7,7 @@ const TopLeaderCard: FC<ITopLeaderCard> = ({ pos, name, userName, img }) => {
   return (
     <div className="flex flex-col items-center justify-center">
       <div className="indicator h-[97px] w-[97px] md:h-[162px] md:w-[162px]">
-        <div className="indicator-start indicator-item translate-y-0 translate-x-0">
+        <div className="indicator-start indicator-item hidden -translate-y-5 -translate-x-[7px] md:flex">
           <Medal pos={pos} />
         </div>
         <Image
