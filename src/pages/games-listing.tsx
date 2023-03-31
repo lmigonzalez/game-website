@@ -66,10 +66,12 @@ const gamesListing = () => {
                 </p>
               </button>
             </div>
+
           </div>
 
-          <div className="hide-scroll-bar relative mt-12 h-[282px] w-full overflow-y-hidden overflow-x-scroll">
+          <div className="hide-scroll-bar relative mt-24 h-[282px] w-full overflow-y-hidden overflow-x-scroll">
             <div className="absolute flex space-x-5 ">
+
               <div className=" flex h-[282.2px] w-[226px] flex-col items-end shadow-md shadow-black">
                 <div className="h-[164px] w-[226px]">
                   <Image src="/witcher.png" alt="" width={226} height={164} />
@@ -101,6 +103,8 @@ const gamesListing = () => {
               </div>
 
               {/* 2 */}
+
+              
 
               <div className="relative h-[282.2px] w-[226px] overflow-hidden">
                 <Image
