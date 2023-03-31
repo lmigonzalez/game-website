@@ -10,24 +10,49 @@ const OurGallery = () => {
           industry.{" "}
         </p>
 
-        {/* <div className='grid grid-cols-3 gap-4 mt-16'>
-          <Image src='Rectangle 15.svg' alt='' width={382} height={223} />
-          <Image src='Rectangle 16.svg' alt='' width={382} height={223} />
-          <Image src='Rectangle 17.svg' alt='' width={382} height={223} />
-
-          <Image src='Rectangle 19.svg' alt='' width={382} height={223} />
-          <Image src='Rectangle 18.svg' alt='' width={382} height={223} />
-          <Image src='Rectangle 20 (11).svg' alt='' width={382} height={223} />
-        </div> */}
-
-        <div className="mt-16 flex flex-wrap  gap-7 justify-center">
-          <Image src="Rectangle 15.svg" alt="" width={382} height={223} />
-          <Image src="Rectangle 16.svg" alt="" width={382} height={223} />
-          <Image src="Rectangle 17.svg" alt="" width={352} height={223} />
-
-          <Image src="Rectangle 19.svg" alt="" width={246} height={223} />
-          <Image src="Rectangle 18.svg" alt="" width={401} height={223} />
-          <Image src="Rectangle 20 (11).svg" alt="" width={469} height={223} />
+        <div className="mt-16 flex flex-auto flex-wrap gap-7">
+          <Image
+            src="Rectangle 15.svg"
+            alt=""
+            width={183.51}
+            height={107.13}
+            className="md:h-[223px] md:w-[382px]"
+          />
+          <Image
+            src="Rectangle 16.svg"
+            alt=""
+            width={183.51}
+            height={107.13}
+            className="md:h-[223px] md:w-[382px]"
+          />
+          <Image
+            src="Rectangle 17.svg"
+            alt=""
+            width={169.1}
+            height={107.13}
+            className="md:h-[223px] md:w-[352px]"
+          />
+          <Image
+            src="Rectangle 19.svg"
+            alt=""
+            width={134.99}
+            height={107.13}
+            className="order-last md:h-[223px] md:w-[246px] xl:order-none"
+          />
+          <Image
+            src="Rectangle 18.svg"
+            alt=""
+            width={192.64}
+            height={107.13}
+            className="md:h-[223px] md:w-[401px]"
+          />
+          <Image
+            src="Rectangle 20 (11).svg"
+            alt=""
+            width={225.31}
+            height={107.13}
+            className="md:h-[223px] md:w-[469px]"
+          />
         </div>
         <div className="mb-24 flex w-full justify-center">
           <button className="">
