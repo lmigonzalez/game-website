@@ -21,7 +21,7 @@ const gamesListing2 = () => {
             have a large variety of games for you to choose from, including
             action, adventure, puzzle, simulation, strategy, and more. We are
             constantly adding new games to our library, so check back often to
-            see what's new. ur game listing screen is designed to make it easy
+            see whats new. ur game listing screen is designed to make it easy
             for you to find the games you want to play. You can search for games
             by name, sort games by category, popularity, or price, and view
             screenshots and trailers for each game.

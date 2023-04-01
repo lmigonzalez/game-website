@@ -164,7 +164,4 @@
     text-shadow: -1px -1px 0 #da0828, 1px -1px 0 #da0828, -1px 1px 0 #da0828,
       1px 1px 0 #da0828;
   }
-  .hide-scroll-bar::-webkit-scrollbar {
-    display: none;
-  }
 }

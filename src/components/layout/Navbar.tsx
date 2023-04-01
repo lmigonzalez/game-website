@@ -1,15 +1,16 @@
 import React, { FC, useContext, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { Poppins } from "next/font/google";
+import {Poppins} from "next/font/google"
 import { motion, AnimatePresence } from "framer-motion";
 import { useStateContext } from "../../context/StateContext";
 import Image from "next/image";
 import classNames from "classnames";
-const poppins = Poppins({
-  weight: ["400", "500", "700"],
-  subsets: ["latin"],
-});
+
+// const poppins = Poppins({
+//   weight:["400", "500", "700"],
+//   subsets:["latin"]
+// })
 
 const Navbar: FC<{ behavior: number }> = ({ behavior }) => {
   const router = useRouter();
@@ -18,9 +19,7 @@ const Navbar: FC<{ behavior: number }> = ({ behavior }) => {
 
   return (
     <header
-      className={`${
-        poppins.className
-      } absolute top-0 left-0 z-50 flex w-full items-center justify-between bg-transparent px-4 py-10 text-black ${
+      className={`absolute top-0 left-0 z-50 flex w-full items-center justify-between bg-transparent px-4 py-10 text-black ${
         router.asPath === "/dropv" ? "text-white" : "text-black"
       }`}
     >
