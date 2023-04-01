@@ -8,7 +8,7 @@ const CurrencyPlayer: React.FC<MyProps> = ({ medal, images }) => {
   const imagesArray = repeatImages(images);
   function repeatImages(images: number) {
     const array = [];
-    for (let i = 0; i < images; i++) {
+    for (let i = 0; i < 3 && i < images; i++) {
       array.push(
         <Image
           src="/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg"
@@ -36,9 +36,7 @@ const CurrencyPlayer: React.FC<MyProps> = ({ medal, images }) => {
           return <div key={index}>{item}</div>;
         })}
       </div>
-      {imagesArray.length > 3 && (
-        <span className="-ml-5">{imagesArray.length - 3}</span>
-      )}
+      {images > 3 && <span className="-ml-6 text-white">+{images - 3}</span>}
     </div>
   );
 };
