@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Layout from '@/components/layout/Layout';
 import Head from 'next/head';
 
@@ -36,11 +37,13 @@ const gamesListing = () => {
                 width={375}
                 height={375}
               />
-              <button className="absolute left-4 bottom-4">
-                <p className="orange-gradient flex h-8 w-20 items-center justify-center rounded-full text-xs text-white">
-                  Play Now
-                </p>
-              </button>
+
+              <Link
+                href="/wager-selection"
+                className="orange-gradient absolute left-4 bottom-4 flex h-8 w-20 items-center justify-center rounded-full text-xs text-white"
+              >
+                Play Now
+              </Link>
             </div>
 
             <div className="relative flex h-[375px] w-[375px] items-end ">
@@ -51,11 +54,12 @@ const gamesListing = () => {
                 height={375}
               />
 
-              <button className="absolute left-4 bottom-4">
-                <p className="orange-gradient flex h-8 w-20 items-center justify-center rounded-full text-xs text-white">
-                  Play Now
-                </p>
-              </button>
+              <Link
+                href="/wager-selection"
+                className="orange-gradient absolute left-4 bottom-4 flex h-8 w-20 items-center justify-center rounded-full text-xs text-white"
+              >
+                Play Now
+              </Link>
             </div>
 
             <div className="relative flex h-[375px] w-[375px] items-end ">
@@ -66,11 +70,12 @@ const gamesListing = () => {
                 height={375}
               />
 
-              <button className="absolute left-4 bottom-4">
-                <p className="orange-gradient flex h-8 w-20 items-center justify-center rounded-full text-xs text-white">
-                  Play Now
-                </p>
-              </button>
+              <Link
+                href="/wager-selection"
+                className="orange-gradient absolute left-4 bottom-4 flex h-8 w-20 items-center justify-center rounded-full text-xs text-white"
+              >
+                Play Now
+              </Link>
             </div>
           </div>
 
