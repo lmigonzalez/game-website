@@ -1,12 +1,16 @@
-import Image, { ImageLoaderProps } from "next/image";
 import { FC } from "react";
+import Image, { ImageLoaderProps } from "next/image";
+import { useRouter } from "next/router";
+
 const MatchingCard: FC<{
   ocuppied: Boolean;
   img?: ImageLoaderProps;
   name?: string;
 }> = ({ ocuppied, img, name }) => {
+
+  const router = useRouter()
   return (
-    <div className="flex justify-center">
+    <div onClick={() => router.push('/leader-board')} className="flex justify-center cursor-pointer">
       {ocuppied ? (
         <div className=" flex w-auto flex-col items-center justify-center gap-4">
           <Image

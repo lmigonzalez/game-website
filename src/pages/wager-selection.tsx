@@ -1,6 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
-import Head from 'next/head';
 import React from 'react';
+import Head from 'next/head';
+import Link from 'next/link';
 import Layout from '@/components/layout/Layout';
 const wagerSelection = () => {
   return (
@@ -68,11 +69,12 @@ const wagerSelection = () => {
                   <p>Lorem ipsum dolor sit amet, consectetur</p>
                 </div>
 
-                <button className=" h-full">
-                  <p className="orange-gradient flex h-[26.23px] w-[152.16px] items-center justify-center rounded-full text-white lg:h-14 lg:w-[315px]">
-                    Select this Wager
-                  </p>
-                </button>
+                <Link
+                  href="/player-waiting"
+                  className="orange-gradient flex h-[26.23px] w-[152.16px] items-center justify-center rounded-full text-white lg:h-14 lg:w-[315px]"
+                >
+                  Select this Wager
+                </Link>
               </div>
             </div>
 
@@ -126,11 +128,12 @@ const wagerSelection = () => {
                   className="h-[26.23px] w-[152.16px] rounded-full border-2 border-[#DB0F29] text-center
             			lg:h-14 lg:w-[315px]"
                 >
-                  {' '}
-                  <p className="text-color text-[7.87px] font-medium lg:text-base">
-                    {' '}
-                    Select this Wager
-                  </p>{' '}
+                  <Link href="/player-waiting" className="h-full w-full">
+                    <p className="text-color text-[7.87px] font-medium lg:text-base">
+                      {' '}
+                      Select this Wager
+                    </p>
+                  </Link>{' '}
                 </button>
               </div>
             </div>
@@ -185,11 +188,12 @@ const wagerSelection = () => {
                   className="h-[26.23px] w-[152.16px] rounded-full border-2 border-[#DB0F29] text-center
             			lg:h-14 lg:w-[315px]"
                 >
-                  {' '}
-                  <p className="text-color text-[7.87px] font-medium lg:text-base">
-                    {' '}
-                    Select this Wager
-                  </p>{' '}
+                  <Link href="/player-waiting" className="h-full w-full">
+                    <p className="text-color text-[7.87px] font-medium lg:text-base">
+                      {' '}
+                      Select this Wager
+                    </p>
+                  </Link>{' '}
                 </button>
               </div>
             </div>
@@ -244,11 +248,12 @@ const wagerSelection = () => {
                   className="h-[26.23px] w-[152.16px] rounded-full border-2 border-[#DB0F29] text-center
             			lg:h-14 lg:w-[315px]"
                 >
-                  {' '}
-                  <p className="text-color text-[7.87px] font-medium lg:text-base">
-                    {' '}
-                    Select this Wager
-                  </p>{' '}
+                  <Link href="/player-waiting" className="h-full w-full">
+                    <p className="text-color text-[7.87px] font-medium lg:text-base">
+                      {' '}
+                      Select this Wager
+                    </p>
+                  </Link>{' '}
                 </button>
               </div>
             </div>
