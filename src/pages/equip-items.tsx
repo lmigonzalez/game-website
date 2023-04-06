@@ -47,18 +47,36 @@ const EquipItems: FC<{
             className="w-fill mt-6 rounded-2xl"
           />
 
-          <div className="dropdown-hover group dropdown">
+          <div className="group dropdown dropdown-hover">
             <label
               tabIndex={0}
               className="orange-gradient btn m-1 flex h-12 w-[338px] flex-row items-center justify-between rounded-xl border-none px-5 text-[#FCDDEC]"
             >
               <span id="dropDownBox">Select Game</span>
-              <Image
-                src={"/down-svgrepo-com (2).svg"}
-                alt={"down"}
-                width={20}
-                height={20}
-              />
+              <svg
+                className="group-hover:mr-[5px] group-hover:rotate-180"
+                fill="#FCDDEC"
+                width="20px"
+                height="20px"
+                viewBox="0 0 32 32"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                stroke="#FCDDEC"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+
+                <g id="SVGRepo_iconCarrier">
+                  {" "}
+                  <title>down</title>{" "}
+                  <path d="M11.125 16.313l7.688-7.688 3.594 3.719-11.094 11.063-11.313-11.313 3.5-3.531z" />{" "}
+                </g>
+              </svg>
             </label>
             <ul
               tabIndex={0}
