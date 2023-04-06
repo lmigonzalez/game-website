@@ -5,6 +5,8 @@ import Link from "next/link";
 
 import ConnectToWallet from "@/components/modals/ConnectToWallet";
 
+import BuyCurrency from "@/components/BuyCurrency";
+
 const SignUp = () => {
   const initialValue = {
     fullName: "",
@@ -52,7 +54,7 @@ const SignUp = () => {
         {/* <SuccessStat/> */}
         {/* <EnterCardDetails/>*/}
         {showConnectWallet && (
-          <ConnectToWallet handleDisplayWallet={handleDisplayWallet} />
+          <BuyCurrency handleDisplayWallet={handleDisplayWallet} />
         )}
         <div className="flex w-full flex-col justify-start bg-[url('/hot-air-balloons.jpg')] bg-cover bg-center bg-no-repeat md:w-1/2 md:items-start md:justify-center">
           <div className="absolute top-0 left-0 mt-8  flex  w-full justify-between px-11 md:w-1/2">

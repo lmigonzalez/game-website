@@ -1,12 +1,23 @@
-import React from "react";
-import Image from "next/image";
-const ConnectToWallet2 = () => {
+import React from 'react';
+import Image from 'next/image';
+
+interface Props {
+  handleDisplayWallet: () => void;
+  nextWindow: () => void;
+  prevWindow: () => void
+}
+
+const ConnectToWallet2: React.FC<Props> = ({
+  handleDisplayWallet,
+  nextWindow,
+  prevWindow
+}) => {
   return (
     <div className="absolute top-0 left-0 z-20 flex h-full w-full items-end justify-center bg-black bg-opacity-70 lg:items-center">
       <div className="w-[470px] max-w-full rounded-lg bg-white text-black">
         <div className="relative w-full border-b-[2px] border-solid px-10  py-4 text-center">
           <strong className="text-2xl">Connect to wallet</strong>
-          <button className="absolute right-4 top-4">
+          <button onClick={handleDisplayWallet} className="absolute right-4 top-4">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -25,13 +36,16 @@ const ConnectToWallet2 = () => {
         </div>
 
         <div className="flex flex-col space-y-4 px-10 py-5">
-          <button className="flex w-full items-center justify-between rounded-md border-[1px] border-solid border-[#DBDDE5] bg-[#F2F3F5] px-4 py-6">
+          <button
+            onClick={() => nextWindow()}
+            className="flex w-full items-center justify-between rounded-md border-[1px] border-solid border-[#DBDDE5] bg-[#F2F3F5] px-4 py-6"
+          >
             <div className="flex space-x-4">
               <strong>Metamask</strong>
               <div className="flex">
-                Networks{" "}
+                Networks{' '}
                 <span className="ml-1 rounded-full bg-slate-400 text-white">
-                  {" "}
+                  {' '}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -52,20 +66,23 @@ const ConnectToWallet2 = () => {
 
             <Image
               className="mr-2"
-              src={"/fox.png"}
+              src={'/fox.png'}
               alt="google icon"
               width={40}
               height={40}
             />
           </button>
 
-          <button className="flex w-full items-center justify-between rounded-md border-[1px] border-solid border-[#DBDDE5] bg-[#F2F3F5] px-4 py-6">
+          <button
+            onClick={() => nextWindow()}
+            className="flex w-full items-center justify-between rounded-md border-[1px] border-solid border-[#DBDDE5] bg-[#F2F3F5] px-4 py-6"
+          >
             <div className="flex space-x-4">
               <strong>Metamask</strong>
               <div className="flex">
-                Networks{" "}
+                Networks{' '}
                 <span className="ml-1 rounded-full bg-slate-400 text-white">
-                  {" "}
+                  {' '}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -86,7 +103,7 @@ const ConnectToWallet2 = () => {
 
             <Image
               className="mr-2"
-              src={"/fox.png"}
+              src={'/fox.png'}
               alt="google icon"
               width={40}
               height={40}
@@ -96,11 +113,12 @@ const ConnectToWallet2 = () => {
 
         <div className="flex justify-end space-x-3 border-t-[2px] border-solid border-[#CDD6D7] py-7 px-8 ">
           <button
+          onClick={prevWindow}
             className=" flex h-12 w-32 items-center
 				  justify-center rounded-full border-2 border-[#DB0F29] py-4"
           >
-            {" "}
-            <p className="text-color">Back</p>{" "}
+            {' '}
+            <p className="text-color">Back</p>{' '}
           </button>
 
           <button type="submit">

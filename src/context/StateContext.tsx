@@ -30,11 +30,7 @@ type user = {
   userId: string;
   avatar: string;
   money: number;
-<<<<<<< HEAD
-
-=======
   name: string;
->>>>>>> 9bed61e3efd9be4dab4025f3fd930772693e9b67
 };
 
 export const StateContext = ({ children }: { children: ReactNode }) => {

@@ -1,6 +1,9 @@
 import React from "react";
 import Image from "next/image";
-const SuccessStat = () => {
+interface Props {
+  handleDisplayWallet: () => void;
+}
+const SuccessStat: React.FC <Props> = ({handleDisplayWallet}) => {
   return (
     <div className="absolute top-0 left-0 z-20 flex h-full w-full items-end justify-center bg-black bg-opacity-70 lg:items-center">
       <div className="flex w-[400px] max-w-full flex-col items-center justify-center space-y-6 rounded-lg bg-white p-8 text-center text-black">
@@ -13,8 +16,8 @@ const SuccessStat = () => {
         />
 
         <strong className="text-color text-2xl">Woo hoo!</strong>
-        <p>You have successfully Purchase your coins.</p>
-        <button type="submit">
+        <p>You have successfully Purchase 13 coins.</p>
+        <button onClick={handleDisplayWallet}>
           <p className="orange-gradient flex h-8 w-24 items-center justify-center rounded text-white">
             Home
           </p>
