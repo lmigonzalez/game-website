@@ -30,6 +30,7 @@ type user = {
   userId: string;
   avatar: string;
   money: number;
+  name: string;
 };
 
 export const StateContext = ({ children }: { children: ReactNode }) => {

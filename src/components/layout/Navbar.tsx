@@ -1,7 +1,7 @@
 import React, { FC, useContext, useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import {Poppins} from "next/font/google"
+import { Poppins } from "next/font/google";
 import { motion, AnimatePresence } from "framer-motion";
 import { useStateContext } from "../../context/StateContext";
 import Image from "next/image";
@@ -36,6 +36,10 @@ const Navbar: FC<{ behavior: number }> = ({ behavior }) => {
           <li>
             <Link href="/portfolio">Portfolio</Link>
           </li>
+          <li>
+            <Link href="/games-listing">Games</Link>
+          </li>
+
           {(behavior === 1 || behavior === 3) && (
             <li className="">
               <Link href="/news">News</Link>
@@ -43,32 +47,52 @@ const Navbar: FC<{ behavior: number }> = ({ behavior }) => {
           )}
         </ul>
 
-        {behavior === 1 &&
-          (user ? (
-            <>
-              <div className="mr-5 hidden h-[48px] flex-row items-center gap-2 text-[20px] md:flex ">
-                <Image
-                  src={user.avatar}
-                  alt={"no img"}
-                  width={48}
-                  height={48}
-                  className="rounded-full"
-                />
-                <strong>${user.money}k</strong>
-              </div>
-              <Link
-                href="buy-currency"
-                className={classNames(
-                  `orange-gradient rounded py-3 px-7 text-white md:flex`,
-                  { hidden: behavior === 1 }
-                )}
+        {behavior === 1 && user && (
+          <>
+            <div className="dropdown-end dropdown">
+              <label
+                tabIndex={0}
+                className="btn m-1 flex w-auto flex-row gap-2 border-none bg-transparent p-0 hover:bg-transparent"
               >
-                Buy Currency
-              </Link>
-            </>
-          ) : (
-            ""
-          ))}
+                <Image
+                  className="h-8 w-8 rounded-full"
+                  src="/michael-dam.jpg"
+                  alt=""
+                  width={32}
+                  height={32}
+                />
+                <span className="font-bold text-black">{user.name}</span>
+                <Image
+                  className=""
+                  src="/triangle-down-svgrepo-com.svg"
+                  alt=""
+                  width={20}
+                  height={20}
+                />
+              </label>
+              <ul
+                tabIndex={0}
+                className="dropdown-content menu w-32 rounded-md bg-base-100 text-sm shadow-lg"
+              >
+                <li>
+                  <Link href={"/profile-setting"}>View Profile</Link>
+                </li>
+                <li>
+                  <Link href={"/equip-items"}>Inventory</Link>
+                </li>
+                <li>
+                  <Link href={""}>Buy Currency</Link>
+                </li>
+                <li>
+                  <Link href={"/profile-setting"}>Setting</Link>
+                </li>
+                <li>
+                  <Link href={"/profile-setting"}>Logout</Link>
+                </li>
+              </ul>
+            </div>
+          </>
+        )}
 
         {behavior === 2 &&
           (user ? (
