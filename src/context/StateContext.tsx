@@ -1,4 +1,4 @@
-import { Inft, defaultNFT, defaultUser } from '@/pages/api/testdb';
+import { Inft, defaultNFT, defaultUser } from "@/pages/api/testdb";
 import {
   Dispatch,
   FC,
@@ -7,7 +7,7 @@ import {
   createContext,
   useContext,
   useState,
-} from 'react';
+} from "react";
 
 export const Context = createContext<nftContext & userContext>({
   globalNFT: defaultNFT,
@@ -37,7 +37,6 @@ export const StateContext = ({ children }: { children: ReactNode }) => {
   const [globalNFT, setGlobalNFT] = useState<Inft>(defaultNFT);
 
   const [user, setUser] = useState<user>(defaultUser);
-
 
   return (
     <Context.Provider

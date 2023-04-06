@@ -23,13 +23,12 @@ const MatchingCard: FC<{
           <span className="text-color text-base font-bold md:text-2xl">
             {name}
           </span>
-          <div className="orange-gradient flex h-[22.09px] w-[105.11px] items-center justify-center rounded-full p-[1px] pl-[1px] text-[8.03px] md:h-[45px]  md:w-[192px] md:text-base">
-            <button className="orange-text flex h-full w-full items-center justify-center rounded-full bg-[#dcdce7]">
-              <p className="orange-gradient bg-clip-text text-transparent">
-                Change Image
-              </p>
-            </button>
-          </div>
+
+          <button className="orange-text flex w-9/12 items-center justify-center rounded-full  border-2 border-[#DB0F29]">
+            <p className="orange-gradient bg-clip-text py-2 text-[8.03px] text-transparent md:text-base">
+              Change Image
+            </p>
+          </button>
         </div>
       ) : (
         <div className="flex h-[167px] w-[167px] items-center justify-center rounded-3xl border-2 border-[#DB0F29] text-center md:h-[250px] md:w-[250px]">

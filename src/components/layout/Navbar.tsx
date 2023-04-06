@@ -19,13 +19,13 @@ const Navbar: FC<{ behavior: number }> = ({ behavior }) => {
 
   return (
     <header
-      className={`absolute top-0 left-0 z-50 flex w-full items-center justify-between bg-transparent px-4 py-10 text-black ${
+      className={`absolute top-0 left-0 z-50 flex w-full items-center justify-between bg-transparent px-4 py-10 ${
         router.asPath === "/dropv" ? "text-white" : "text-black"
       }`}
     >
-      <p className="font-bold">LOGO</p>
+      <p className="font-bold text-black">LOGO</p>
 
-      <nav className="flex items-center ">
+      <nav className="flex items-center text-black">
         <ul className="mr-8 hidden space-x-14 md:flex">
           <li>
             <Link href="/">Home</Link>
@@ -49,7 +49,7 @@ const Navbar: FC<{ behavior: number }> = ({ behavior }) => {
 
         {behavior === 1 && user && (
           <>
-            <div className="dropdown-end dropdown">
+            <div className="dropdown-end dropdown text-black">
               <label
                 tabIndex={0}
                 className="btn m-1 flex w-auto flex-row gap-2 border-none bg-transparent p-0 hover:bg-transparent"
@@ -72,7 +72,7 @@ const Navbar: FC<{ behavior: number }> = ({ behavior }) => {
               </label>
               <ul
                 tabIndex={0}
-                className="dropdown-content menu w-32 rounded-md bg-base-100 text-sm shadow-lg"
+                className="dropdown-content menu w-32 rounded-md bg-base-100 text-sm text-black shadow-lg"
               >
                 <li>
                   <Link href={"/profile-setting"}>View Profile</Link>
@@ -96,7 +96,7 @@ const Navbar: FC<{ behavior: number }> = ({ behavior }) => {
 
         {behavior === 2 &&
           (user ? (
-            <div className="dropdown-end dropdown">
+            <div className="dropdown-end dropdown text-black">
               <label
                 tabIndex={0}
                 className="btn m-1 w-auto border-none bg-transparent p-0 hover:bg-transparent"
@@ -118,7 +118,7 @@ const Navbar: FC<{ behavior: number }> = ({ behavior }) => {
               </label>
               <ul
                 tabIndex={0}
-                className="dropdown-content menu rounded-box w-52 bg-base-100 p-2 shadow-lg"
+                className="dropdown-content menu rounded-box w-52 bg-base-100 p-2 text-black shadow-lg"
               >
                 <li>
                   <a>View Profile</a>
@@ -199,7 +199,7 @@ const Navbar: FC<{ behavior: number }> = ({ behavior }) => {
               router.asPath === "/dropv" ? "bg-black" : "bg-white"
             }  pb-8 pt-32 shadow-xl md:hidden`}
           >
-            <ul className="flex flex-col items-center justify-center space-y-6">
+            <ul className="flex flex-col items-center justify-center space-y-6 text-black">
               <li>
                 <Link href="/">Home</Link>
               </li>
