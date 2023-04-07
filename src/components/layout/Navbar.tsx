@@ -72,7 +72,7 @@ const Navbar: FC<{ behavior: number }> = ({ behavior }) => {
               </label>
               <ul
                 tabIndex={0}
-                className="dropdown-content menu w-32 rounded-md bg-base-100 text-sm text-black shadow-lg"
+                className="dropdown-content menu w-32 rounded-md text-sm text-black shadow-lg"
               >
                 <li>
                   <Link href={"/profile-setting"}>View Profile</Link>
