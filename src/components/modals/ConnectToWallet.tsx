@@ -1,5 +1,5 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 interface Props {
   handleDisplayWallet: () => void;
@@ -10,7 +10,7 @@ const ConnectToWallet: React.FC<Props> = ({
   nextWindow,
 }) => {
   return (
-    <div className="absolute top-0 left-0 z-20 flex h-full w-full items-end justify-center bg-black bg-opacity-70 md:items-center">
+    <div className="absolute inset-0 z-20 flex h-full w-full items-end justify-center bg-black bg-opacity-70 md:items-center">
       <div className="w-full rounded-lg bg-white text-black md:w-[470px] md:max-w-full">
         <div className="relative w-full border-b-[2px] border-solid px-10  py-4 text-center">
           <div className="text-start md:text-center">
@@ -45,9 +45,9 @@ const ConnectToWallet: React.FC<Props> = ({
             <div className="flex space-x-4">
               <strong>Metamask</strong>
               <div className="flex">
-                Networks{' '}
+                Networks{" "}
                 <span className="ml-1 rounded-full bg-slate-400 text-white">
-                  {' '}
+                  {" "}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -68,7 +68,7 @@ const ConnectToWallet: React.FC<Props> = ({
 
             <Image
               className="mr-2"
-              src={'/fox.png'}
+              src={"/fox.png"}
               alt="google icon"
               width={40}
               height={40}
@@ -82,9 +82,9 @@ const ConnectToWallet: React.FC<Props> = ({
             <div className="flex space-x-4">
               <strong>Metamask</strong>
               <div className="flex">
-                Networks{' '}
+                Networks{" "}
                 <span className="ml-1 rounded-full bg-slate-400 text-white">
-                  {' '}
+                  {" "}
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -105,7 +105,7 @@ const ConnectToWallet: React.FC<Props> = ({
 
             <Image
               className="mr-2"
-              src={'/coinbase-icon.svg'}
+              src={"/coinbase-icon.svg"}
               alt="google icon"
               width={40}
               height={40}
