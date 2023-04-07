@@ -13,7 +13,7 @@ const PlayersWaiting = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Layout navBarBehavior={1}>
-        <div className=" m-auto w-[1440] p-8">
+        <div className=" m-auto w-[1400px] max-w-full px-8">
           <div className="flex flex-col gap-20">
             <p className=" text-xs font-semibold text-black md:text-base">
               <strong className="text-color whitespace-nowrap text-3xl md:text-6xl">

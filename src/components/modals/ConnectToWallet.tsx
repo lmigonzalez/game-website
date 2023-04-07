@@ -10,7 +10,6 @@ const ConnectToWallet: React.FC<Props> = ({
   nextWindow,
 }) => {
   return (
-    <div className="absolute inset-0 z-20 flex h-full w-full items-end justify-center bg-black bg-opacity-70 md:items-center">
       <div className="w-full rounded-lg bg-white text-black md:w-[470px] md:max-w-full">
         <div className="relative w-full border-b-[2px] border-solid px-10  py-4 text-center">
           <div className="text-start md:text-center">
@@ -123,7 +122,7 @@ const ConnectToWallet: React.FC<Props> = ({
           </button>
         </div>
       </div>
-    </div>
+
   );
 };
 

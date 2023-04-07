@@ -11,7 +11,7 @@ const profileSetting = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Layout navBarBehavior={2}>
-        <section className="flex min-h-screen flex-col gap-8 px-4 py-24 md:flex-row">
+        <section className="flex min-h-screen w-[1400px] max-w-full m-auto flex-col gap-8 px-4 py-24 md:flex-row">
           <div className="w-1/4 text-black">
             <div>
               <Image

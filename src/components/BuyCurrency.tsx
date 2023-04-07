@@ -25,7 +25,7 @@ const BuyCurrency: React.FC<Props> = ({ handleDisplayWallet }) => {
   }
 
   return (
-    <div>
+    <div className='absolute z-50 left-0 top-0  h-screen w-full bg-black bg-opacity-50 flex items-end justify-center md:items-center'>
       {current === 0 && (
         <ConnectToWallet
           handleDisplayWallet={handleDisplayWallet}

@@ -25,8 +25,8 @@ export const dropv = () => {
         <meta name="description" content="Selected NFT details" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <div className="relative">
-        <div className="absolute flex h-full w-full flex-col items-start justify-center px-4 py-8 text-2xl font-extrabold text-white md:text-6xl md:leading-[87px]">
+      <div className="relative flex justify-center items-center max-w-[1400px] m-auto">
+        <div className="absolute flex h-full w-full m-auto flex-col items-start justify-center px-4 py-8 text-2xl font-extrabold text-white md:text-6xl md:leading-[87px]">
           <h2>Drop Name Here</h2>
           <h3>Subtitle</h3>
         </div>
