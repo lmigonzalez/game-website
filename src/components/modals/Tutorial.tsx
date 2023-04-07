@@ -1,13 +1,17 @@
 import React from "react";
 import Image from "next/image";
-const Tutorial = () => {
+interface Props {
+  handleDisplayWallet: () => void;
+  nextWindow: () => void;
+}
+const Tutorial: React.FC <Props> = ({handleDisplayWallet, nextWindow}) => {
   return (
     <div className="absolute top-0 left-0 z-20 flex h-full w-full items-end justify-center bg-black bg-opacity-70 lg:items-center">
       <div className="w-[750px] max-w-full rounded-lg bg-white text-black">
         <div className="relative w-full border-b-[2px] border-solid px-10  py-4 text-center">
           <strong className="text-2xl ">Learn How to Purchase Token</strong>
           <button
-            // onClick={handleDisplayWallet}
+            onClick={handleDisplayWallet}
             className="absolute right-4 top-4"
           >
             <svg
@@ -33,7 +37,7 @@ const Tutorial = () => {
         </div>
 
         <div className="flex justify-center border-t-[2px] border-solid border-[#CDD6D7] py-7">
-          <button type="submit">
+          <button onClick={nextWindow}>
             <p className="orange-gradient flex h-14 w-48 items-center justify-center rounded-full text-white">
               Next
             </p>

@@ -1,13 +1,17 @@
 import React from "react";
-
-const EnterCardDetails = () => {
+interface Props {
+  handleDisplayWallet: () => void;
+  nextWindow: () => void;
+  prevWindow: () => void;
+}
+const EnterCardDetails: React.FC <Props> = ({handleDisplayWallet, nextWindow, prevWindow}) => {
   return (
     <div className="absolute top-0 left-0 z-20 flex h-full w-full items-end justify-center bg-black bg-opacity-70 px-4 lg:items-center">
       <div className="w-[750px] max-w-full rounded-lg bg-white text-black">
         <div className="relative w-full border-b-[2px] border-solid px-10  py-4 text-center">
           <strong className="text-2xl ">Check out Summary</strong>
           <button
-            // onClick={handleDisplayWallet}
+            onClick={handleDisplayWallet}
             className="absolute right-4 top-4"
           >
             <svg
@@ -72,6 +76,7 @@ const EnterCardDetails = () => {
 
         <div className="flex justify-end space-x-3 border-t-[2px] border-solid border-[#CDD6D7] py-7 px-8 ">
           <button
+          onClick={prevWindow}
             className=" flex h-12 w-32 items-center
 				justify-center rounded-full border-2 border-[#DB0F29] py-4"
           >
@@ -79,7 +84,7 @@ const EnterCardDetails = () => {
             <p className="text-color">Back</p>{" "}
           </button>
 
-          <button type="submit">
+          <button onClick={nextWindow}>
             <p className="orange-gradient flex h-12 w-32 items-center justify-center rounded-full text-white">
               Pay
             </p>
