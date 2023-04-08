@@ -46,11 +46,12 @@ const Navbar: FC<{ behavior: number }> = ({ behavior }) => {
             <li>
               <Link href="/portfolio">Portfolio</Link>
             </li>
-            <li>
-              <Link href="/games-listing">Games</Link>
-            </li>
-
-            {(behavior === 1 || behavior === 3) && (
+            {behavior !== 4 && (
+              <li>
+                <Link href="/games-listing">Games</Link>
+              </li>
+            )}
+            {(behavior === 1 || behavior === 3 || behavior === 4) && (
               <li className="">
                 <Link href="/news">News</Link>
               </li>
@@ -207,6 +208,16 @@ const Navbar: FC<{ behavior: number }> = ({ behavior }) => {
               </svg>
             )}
           </button>
+          {behavior === 4 && (
+            <Link
+              href="contact"
+              className={classNames(
+                `orange-gradient rounded py-3 px-7 text-white md:flex`
+              )}
+            >
+              Sign in / Sign Up
+            </Link>
+          )}
         </nav>
 
         <AnimatePresence>

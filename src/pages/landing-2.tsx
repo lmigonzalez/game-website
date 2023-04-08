@@ -15,7 +15,7 @@ const landingTwo = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Layout navBarBehavior={3}>
+      <Layout navBarBehavior={4}>
         <div className="pt-24 text-black">
           <Hero />
           <AboutGame />
