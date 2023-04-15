@@ -119,11 +119,11 @@ const OurGallery = () => {
             </p>
           </div>
 
-          <div className="flex h-12 w-full items-center justify-between rounded-lg bg-white px-2 md:w-[385px]">
+          <div className="flex h-12 w-full items-center justify-between space-x-1 rounded-lg bg-white px-2 md:w-[385px]">
             <input
-              className="h-full bg-transparent pl-4"
-              type="text"
-              placeholder="Enter email address"
+              className="input-ghost input h-full flex-grow bg-transparent text-black focus:outline-0"
+              type="email"
+              placeholder="Enter your email"
             />
             <button className=" h-full">
               <p className="orange-gradient flex h-9 w-24 items-center justify-center rounded-lg text-white">
@@ -213,11 +213,11 @@ const OurGallery = () => {
             </p>
           </div>
 
-          <div className="flex h-12 w-full items-center justify-between rounded-lg bg-white px-2 md:w-[385px]">
+          <div className="flex h-12 w-full items-center justify-between space-x-1 rounded-lg bg-white px-2 md:w-[385px]">
             <input
-              className="h-full bg-transparent pl-4"
-              type="text"
-              placeholder="Enter email address"
+              className="input-ghost input h-full flex-grow bg-transparent text-black focus:outline-0"
+              type="email"
+              placeholder="Enter your email"
             />
             <button className=" h-full">
               <p className="orange-gradient flex h-9 w-24 items-center justify-center rounded-lg text-white">
