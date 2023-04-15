@@ -1,7 +1,7 @@
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 const OurGallery = () => {
   return (
     <>
@@ -23,14 +23,14 @@ const OurGallery = () => {
             transition={{ delay: 0.2 }}
           >
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.{' '}
+            industry.{" "}
           </motion.p>
           <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true, amount: 0.8 }}
             transition={{ delay: 0.2 }}
-            className="mt-16 flex flex-auto flex-wrap gap-7"
+            className="mt-16 flex flex-auto flex-wrap justify-center gap-7"
           >
             <Image
               src="Rectangle 15.svg"
@@ -99,7 +99,7 @@ const OurGallery = () => {
             <strong className="text-3xl font-semibold">Lorem Ipsum</strong>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.{' '}
+              industry.{" "}
             </p>
           </motion.div>
         </div>
@@ -115,7 +115,7 @@ const OurGallery = () => {
             <strong className="text-3xl font-medium">Stay in the loop</strong>
             <p className="mt-3">
               Subscribe to receive the latest news and updates about TDA. We
-              promise not to spam you!{' '}
+              promise not to spam you!{" "}
             </p>
           </div>
 
@@ -141,9 +141,9 @@ const OurGallery = () => {
           <h2 className="mb-4 text-3xl font-bold">Our Gallery</h2>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry.{' '}
+            industry.{" "}
           </p>
-          <div className="mt-16  flex justify-center flex-auto flex-wrap gap-7">
+          <div className="mt-16  flex flex-auto flex-wrap justify-center gap-7">
             <Image
               src="Rectangle 15.svg"
               alt=""
@@ -199,7 +199,7 @@ const OurGallery = () => {
             <strong className="text-3xl font-semibold">Lorem Ipsum</strong>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
-              industry.{' '}
+              industry.{" "}
             </p>
           </div>
         </div>
@@ -209,7 +209,7 @@ const OurGallery = () => {
             <strong className="text-3xl font-medium">Stay in the loop</strong>
             <p className="mt-3">
               Subscribe to receive the latest news and updates about TDA. We
-              promise not to spam you!{' '}
+              promise not to spam you!{" "}
             </p>
           </div>
 
