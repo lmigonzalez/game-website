@@ -134,7 +134,7 @@ const EquipItems: FC<{
             </button>
             <div
               tabIndex={0}
-              className="hide-scroll-bar hide-scrollbar dropdown-content flex max-w-[338px] flex-row overflow-hidden overflow-x-scroll  rounded-b-xl shadow-md"
+              className="hide-scrollbar no-scrollbar dropdown-content flex max-w-[338px] flex-row overflow-hidden overflow-x-scroll  rounded-b-xl shadow-md"
             >
               {avatars?.map((item, idx) => (
                 <Image
