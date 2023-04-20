@@ -105,7 +105,7 @@ const CurrencyPage = () => {
       </Head>
 
       <Layout navBarBehavior={1}>
-        <section className="m-auto w-[1400px] max-w-full  px-4 py-24 text-black">
+        <section className="m-auto w-[1200px] max-w-full  px-4 py-24 text-black">
           <div className="rounded-lg border-[2px] border-[#D80027] py-8 px-4">
             <div className=" flex items-center justify-between">
               <h1 className="orange-gradient mb-4 bg-clip-text text-3xl  font-bold   text-transparent ">

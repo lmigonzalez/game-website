@@ -8,7 +8,7 @@ type Props = {
 const AboutDrop: React.FC<Props> = ({ screenWidth }) => {
   return screenWidth > 768 ? (
     <section className="bg-transparent py-24">
-      <div className="m-auto mb-36 w-[1400px] max-w-full px-4">
+      <div className="m-auto mb-36 w-[1200px] max-w-full px-4">
         <motion.h2
           initial={{ y: -50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -83,7 +83,7 @@ const AboutDrop: React.FC<Props> = ({ screenWidth }) => {
         </div>
       </div>
 
-      <div className="m-auto w-[1400px] max-w-full px-4 uppercase text-white">
+      <div className="m-auto w-[1200px] max-w-full px-4 uppercase text-white">
         <motion.h2
           initial={{ y: -50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -144,7 +144,7 @@ const AboutDrop: React.FC<Props> = ({ screenWidth }) => {
     </section>
   ) : (
     <section className="bg-transparent py-24">
-      <div className="m-auto mb-36 w-[1400px] max-w-full px-4">
+      <div className="m-auto mb-36 w-[1200px] max-w-full px-4">
         <h2
           className="orange-gradient mb-12 bg-clip-text text-center   text-5xl font-bold text-transparent "
         >
@@ -195,7 +195,7 @@ const AboutDrop: React.FC<Props> = ({ screenWidth }) => {
         </div>
       </div>
 
-      <div className="m-auto w-[1400px] max-w-full px-4 uppercase text-white">
+      <div className="m-auto w-[1200px] max-w-full px-4 uppercase text-white">
         <h2
           className="orange-gradient mb-12  bg-clip-text text-center text-4xl font-bold text-transparent md:text-5xl"
         >

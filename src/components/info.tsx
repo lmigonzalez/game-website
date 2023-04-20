@@ -19,7 +19,7 @@ export const Info = () => {
 
   return (
     <div
-      className={`${roboto.className} m-auto w-[1400px] max-w-full px-4 pb-24 leading-7 text-[#434040]`}
+      className={`${roboto.className} m-auto w-[1200px] max-w-full px-4 pb-24 leading-7 text-[#434040]`}
     >
       <h3 className={`mb-6 text-xl font-bold`}>About the drop</h3>
       <p className="mb-4">

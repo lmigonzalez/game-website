@@ -5,7 +5,7 @@ const ShowCase = () => {
   return (
     <>
       <section className="hidden items-center justify-start bg-[url('/1000001538.svg')] bg-cover bg-center bg-no-repeat md:flex md:py-28">
-        <div className="m-auto w-[1400px] max-w-full  px-4 text-center text-white">
+        <div className="m-auto w-[1200px] max-w-full  px-4 text-center text-white">
           <motion.div
             initial={{ y: -50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -184,7 +184,7 @@ const ShowCase = () => {
       {/* Small Screen */}
 
       <section className="flex items-center justify-start bg-[url('/1000001538.svg')] bg-cover bg-center bg-no-repeat md:hidden md:py-28">
-        <div className="m-auto w-[1400px] max-w-full  p-4 text-center text-white">
+        <div className="m-auto w-[1200px] max-w-full  p-4 text-center text-white">
           <div className="hidden flex-col p-[50px] sm:px-[100px] md:flex md:px-[150px] lg:px-[200px] xl:px-[306px]">
             <strong className=" text-3xl font-bold leading-[56px] ">
               Lorem Ipsum is simply dummy text of the printing and typesetting

@@ -16,7 +16,7 @@ const HowToMint: React.FC<Props> = ({screenWidth}) => {
   return (
 
     screenWidth > 768 ? <section className={`${poppins.className} bg-transparent pt-20`}>
-    <div className="m-auto w-[1400px] max-w-full space-y-8 px-4">
+    <div className="m-auto w-[1200px] max-w-full space-y-8 px-4">
       <motion.p
         initial={{ y: -50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
@@ -92,7 +92,7 @@ const HowToMint: React.FC<Props> = ({screenWidth}) => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.8 }}
       transition={{ delay: 1 }}
-      className="hide-scroll-bar relative mt-24 h-[320px] w-full overflow-y-hidden overflow-x-scroll"
+      className="hide-scroll-bar relative mt-24 h-[320px] w-full overflow-y-hidden overflow-x-scroll hide-scrollbar"
     >
       <div className="absolute flex h-[320px]">
         <Image src="/8Qz2gKJ2.svg" alt="" width={338} height={320} />
@@ -136,7 +136,7 @@ const HowToMint: React.FC<Props> = ({screenWidth}) => {
   </section> 
   : 
   <section className={`${poppins.className} bg-transparent pt-20`}>
-      <div className="m-auto w-[1400px] max-w-full space-y-8 px-4">
+      <div className="m-auto w-[1200px] max-w-full space-y-8 px-4">
         <p
           className="text-2xl font-semibold text-[#DB0F29]"
         >
@@ -184,7 +184,7 @@ const HowToMint: React.FC<Props> = ({screenWidth}) => {
       </div>
 
       <div
-        className="hide-scroll-bar overflow-x-scroll overflow-y-hidden relative w-full h-[320px]  mt-24"
+        className="overflow-x-hidden overflow-y-hidden relative w-full h-[320px]  mt-24"
       >
         <div className="absolute flex h-[320px]">
           <Image src="/8Qz2gKJ2.svg" alt="" width={338} height={320} />

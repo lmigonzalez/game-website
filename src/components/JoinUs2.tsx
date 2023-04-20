@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export const JoinUs2 = () => {
   return (
-    <div className="orange-gradient m-auto  flex h-[164px] w-[1400px] max-w-full flex-col items-center justify-center gap-2 rounded-lg py-16 text-white md:h-[289.78px]">
+    <div className="orange-gradient m-auto  flex h-[164px] w-[1200px] max-w-full flex-col items-center justify-center gap-2 rounded-lg py-16 text-white md:h-[289.78px]">
       <Image
         className=""
         src={'/discord-icon-svgrepo-com.svg'}

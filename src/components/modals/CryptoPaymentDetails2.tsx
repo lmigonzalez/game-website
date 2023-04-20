@@ -1,13 +1,16 @@
-import React from "react";
-import Image from "next/image";
+import React, { useState } from 'react';
+import Image from 'next/image';
 
-interface Props{
-  handleDisplayWallet: () => void
-  nextWindow: () => void
+interface Props {
+  handleDisplayWallet: () => void;
+  nextWindow: () => void;
 }
 
-
-const CryptoPaymentDetails2: React.FC <Props> = ({handleDisplayWallet, nextWindow}) => {
+const CryptoPaymentDetails2: React.FC<Props> = ({
+  handleDisplayWallet,
+  nextWindow,
+}) => {
+  const [paymentOption, setPaymentOption] = useState(1);
   return (
     <div className="absolute top-0 left-0 z-20 flex h-full w-full items-end justify-center bg-black bg-opacity-70 px-4 lg:items-center">
       <div className="w-[750px] max-w-full rounded-lg bg-white text-black">
@@ -35,7 +38,14 @@ const CryptoPaymentDetails2: React.FC <Props> = ({handleDisplayWallet, nextWindo
         </div>
         <div className="py-8">
           <div className="flex items-center justify-between space-x-3 px-8">
-            <div className="custom-shadow flex w-1/2 flex-col items-center justify-center space-y-2 rounded border-[2px] border-solid border-[#DB0F29] py-4">
+            <div
+              onClick={() => setPaymentOption(1)}
+              className={`custom-shadow flex w-1/2 cursor-pointer flex-col items-center justify-center space-y-2 rounded  py-4 ${
+                paymentOption === 1
+                  ? 'border-[2px] border-solid border-[#DB0F29]'
+                  : null
+              }`}
+            >
               <Image
                 src="/image 35.svg"
                 alt="visa"
@@ -46,7 +56,14 @@ const CryptoPaymentDetails2: React.FC <Props> = ({handleDisplayWallet, nextWindo
               <strong>Crypto</strong>
               <p>Payment with Matic</p>
             </div>
-            <div className="custom-shadow flex w-1/2 flex-col items-center justify-center space-y-2 rounded py-4">
+            <div
+              onClick={() => setPaymentOption(2)}
+              className={`custom-shadow flex w-1/2 cursor-pointer flex-col items-center justify-center space-y-2 rounded  py-4 ${
+                paymentOption === 2
+                  ? 'border-[2px] border-solid border-[#DB0F29]'
+                  : null
+              }`}
+            >
               <Image
                 src="/Vector.svg"
                 alt="visa"
@@ -56,20 +73,20 @@ const CryptoPaymentDetails2: React.FC <Props> = ({handleDisplayWallet, nextWindo
               />
               <strong>Credit Card</strong>
               <p className="flex items-center">
-                Payment with{" "}
+                Payment with{' '}
                 <Image
                   src="/visa.png"
                   alt="visa"
                   width={35}
                   height={35}
                   className="mx-2"
-                />{" "}
+                />{' '}
                 <Image
                   src="/Mastercard.svg"
                   alt="visa"
                   width={35}
                   height={35}
-                />{" "}
+                />{' '}
               </p>
             </div>
           </div>
@@ -132,8 +149,8 @@ const CryptoPaymentDetails2: React.FC <Props> = ({handleDisplayWallet, nextWindo
                 className=" flex h-8 w-24 items-center
 				  justify-center rounded-full border-2 border-[#DB0F29] py-4"
               >
-                {" "}
-                <p className="text-color">Select</p>{" "}
+                {' '}
+                <p className="text-color">Select</p>{' '}
               </button>
             </div>
             <div className="custom-shadow flex h-32 w-56 flex-col items-center justify-center rounded-md">
@@ -146,8 +163,8 @@ const CryptoPaymentDetails2: React.FC <Props> = ({handleDisplayWallet, nextWindo
                 className=" flex h-8 w-24 items-center
 				  justify-center rounded-full border-2 border-[#DB0F29] py-4"
               >
-                {" "}
-                <p className="text-color">Select</p>{" "}
+                {' '}
+                <p className="text-color">Select</p>{' '}
               </button>
             </div>
             <div className="custom-shadow flex h-32 w-56 flex-col items-center justify-center rounded-md">
@@ -160,8 +177,8 @@ const CryptoPaymentDetails2: React.FC <Props> = ({handleDisplayWallet, nextWindo
                 className=" flex h-8 w-24 items-center
 				  justify-center rounded-full border-2 border-[#DB0F29] py-4"
               >
-                {" "}
-                <p className="text-color">Select</p>{" "}
+                {' '}
+                <p className="text-color">Select</p>{' '}
               </button>
             </div>
           </div>

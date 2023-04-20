@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const Hero = () => {
   return (
     <>
-      <section className="hidden md:block relative m-auto w-[1400px] max-w-full  px-4">
+      <section className="hidden md:block relative m-auto w-[1200px] max-w-full  px-4">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -45,7 +45,7 @@ const Hero = () => {
 
       {/* Small screen */}
 
-      <section className="block md:hidden relative m-auto w-[1400px] max-w-full  px-4">
+      <section className="block md:hidden relative m-auto w-[1200px] max-w-full  px-4">
         <div>
           <Image
             className="absolute top-1/4 left-1/2 w-2/3 -translate-x-1/2 -translate-y-1/2 transform md:top-1/2

@@ -11,7 +11,7 @@ export const JoinUs: React.FC<Props> = ({ screenWidth }) => {
       whileInView={{ opacity: 1 }}
       viewport={{ once: true, amount: 0.8 }}
       transition={{ delay: 0.3 }}
-      className="orange-gradient m-auto mt-48 flex w-[1400px] max-w-full flex-col items-center justify-center rounded-lg py-8 text-white"
+      className="orange-gradient m-auto mt-48 flex w-[1200px] max-w-full flex-col items-center justify-center rounded-lg py-8 text-white"
     >
       <motion.h3
         initial={{ y: -50, opacity: 0 }}
@@ -34,7 +34,7 @@ export const JoinUs: React.FC<Props> = ({ screenWidth }) => {
     </motion.div>
   ) : (
     <div
-      className="orange-gradient m-auto mt-48 flex w-[1400px] max-w-full flex-col items-center justify-center rounded-lg py-8 text-white"
+      className="orange-gradient m-auto mt-48 flex w-[1200px] max-w-full flex-col items-center justify-center rounded-lg py-8 text-white"
     >
       <h3
         className=" mb-8 text-xl font-bold md:text-6xl"

@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const OurGallery = () => {
   return (
     <>
-      <section className=" m-auto hidden w-[1400px] max-w-full py-24 text-center md:block">
+      <section className=" m-auto hidden w-[1200px] max-w-full py-24 text-center md:block">
         <div className="px-4">
           <motion.h2
             initial={{ x: 50, opacity: 0 }}
@@ -136,7 +136,7 @@ const OurGallery = () => {
 
       {/* Small Screen */}
 
-      <section className="m-auto block  w-[1400px] max-w-full py-24 text-center md:hidden">
+      <section className="m-auto block  w-[1200px] max-w-full py-24 text-center md:hidden">
         <div className="px-4">
           <h2 className="mb-4 text-3xl font-bold">Our Gallery</h2>
           <p>

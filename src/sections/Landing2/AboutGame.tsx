@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 const AboutGame = () => {
   return (
     <>
-      <section className="hidden md:block m-auto w-[1400px] max-w-full  px-4 py-12 md:py-24">
+      <section className="hidden md:block m-auto w-[1200px] max-w-full  px-4 py-12 md:py-24">
         <div className=" mb-14 flex items-center justify-between">
           <motion.strong
             initial={{ x: -50, opacity: 0 }}
@@ -418,7 +418,7 @@ const AboutGame = () => {
         </div>
       </section>
       {/* Small Screen */}{' '}
-      <section className="block md:hidden  m-auto w-[1400px] max-w-full  px-4 py-12 md:py-24">
+      <section className="block md:hidden  m-auto w-[1200px] max-w-full  px-4 py-12 md:py-24">
         <div className=" mb-14 flex items-center justify-between">
           <strong className="text-3xl">About Game</strong>
           <button className="h-14 w-36 rounded bg-zinc-300 text-xl font-medium">

@@ -10,7 +10,7 @@ const Hero: React.FC<Props> = ({screenWidth}) => {
  
   return (
        screenWidth > 768 ? <section className="">
-       <div className="m-auto  hidden w-[1400px] max-w-full items-center bg-transparent px-4 pt-24 md:flex">
+       <div className="m-auto  hidden w-[1200px] max-w-full items-center bg-transparent px-4 pt-24 md:flex">
          <motion.div
            initial={{ x: -100, opacity: 0 }}
            animate={ { x: 0, opacity: 1 }}
@@ -106,7 +106,7 @@ const Hero: React.FC<Props> = ({screenWidth}) => {
      </section> 
      :
      <section className="">
-     <div className="m-auto  hidden w-[1400px] max-w-full items-center bg-transparent px-4 pt-24 md:flex">
+     <div className="m-auto  hidden w-[1200px] max-w-full items-center bg-transparent px-4 pt-24 md:flex">
        <div
          className="w-1/2 space-y-10"
        >
