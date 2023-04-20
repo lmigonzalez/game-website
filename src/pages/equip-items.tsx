@@ -47,7 +47,7 @@ const EquipItems: FC<{
             className="w-fill mt-6 rounded-2xl"
           />
 
-          <div className="group dropdown dropdown-hover">
+          <div className="dropdown-hover group dropdown">
             <label
               tabIndex={0}
               className="orange-gradient btn m-1 flex h-12 w-[338px] flex-row items-center justify-between rounded-xl border-none px-5 text-[#FCDDEC]"
@@ -80,7 +80,7 @@ const EquipItems: FC<{
             </label>
             <ul
               tabIndex={0}
-              className="dropdown-content menu rounded-box w-[338px] bg-base-100 p-2 shadow"
+              className="dropdown-content menu rounded-box w-[338px] bg-white p-2 text-black shadow"
             >
               {games.map((item) => (
                 <li
@@ -134,7 +134,7 @@ const EquipItems: FC<{
             </button>
             <div
               tabIndex={0}
-              className="hide-scroll-bar dropdown-content flex max-w-[338px] flex-row overflow-hidden overflow-x-scroll hide-scrollbar  rounded-b-xl shadow-md"
+              className="hide-scroll-bar hide-scrollbar dropdown-content flex max-w-[338px] flex-row overflow-hidden overflow-x-scroll  rounded-b-xl shadow-md"
             >
               {avatars?.map((item, idx) => (
                 <Image
