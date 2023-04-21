@@ -15,8 +15,8 @@ const ItemCard: FC<{ img: ImageLoaderProps; equipped: boolean }> = ({
         className=" w-full rounded-2xl"
       />
       {!equipped ? (
-        <button className="flex h-[24.37px] w-[103.97px] items-center justify-center rounded-3xl border-2 border-[#DB0F29] py-2  text-black md:h-[45px] md:w-[192px] md:text-base">
-          Equip
+        <button className="flex h-[24.37px] w-[103.97px] items-center justify-center rounded-3xl border-2 border-[#DB0F29] py-2   md:h-[45px] md:w-[192px] md:text-base">
+          <span className="text-color"> Equip</span>
         </button>
       ) : (
         <button className="h-[24.37px] w-[103.97px] md:h-[45px] md:w-[192px]">
