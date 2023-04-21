@@ -13,8 +13,9 @@ const EquipItems: FC<{
   equippedItems: Item[];
   games: { name: string }[];
   avatars: ImageLoaderProps[];
-  preview: ImageLoaderProps;
-}> = ({ inventory, equippedItems, preview, games, avatars }) => {
+}> = ({ inventory, equippedItems, games, avatars }) => {
+  const [preview, setPreview] = useState(avatars[0]);
+  const [avatarSelected, setAvatar] = useState(0);
   return (
     <>
       <Head>
@@ -37,14 +38,13 @@ const EquipItems: FC<{
             ))}
           </div>
         </div>
-        <div className=" hidden items-center gap-4 lg:flex lg:flex-col">
+        <div className="hidden items-center gap-4 lg:flex lg:flex-col">
           <strong className="text-color text-[58px]">Preview</strong>
           <Image
-            src={preview?.src}
             alt={"no img"}
-            width={338}
+            {...preview}
             height={337}
-            className="w-fill mt-6 rounded-2xl"
+            className="mt-6 h-[337px] w-[338px] rounded-2xl"
           />
 
           <div className="dropdown-hover group dropdown">
@@ -52,7 +52,9 @@ const EquipItems: FC<{
               tabIndex={0}
               className="orange-gradient btn m-1 flex h-12 w-[338px] flex-row items-center justify-between rounded-xl border-none px-5 text-[#FCDDEC]"
             >
-              <span id="dropDownBox">Select Game</span>
+              <p id="dropDownBox" className="normal-case">
+                Select Game
+              </p>
               <svg
                 className="group-hover:mr-[5px] group-hover:rotate-180"
                 fill="#FCDDEC"
@@ -142,8 +144,13 @@ const EquipItems: FC<{
                   {...item}
                   key={`avatar-${idx}`}
                   height={item.width}
-                  onClick={() => {}}
-                  className="w-[59px]"
+                  onClick={() => {
+                    setAvatar(idx);
+                    setPreview(item);
+                  }}
+                  className={`h-[59px] w-[59px] cursor-pointer ${
+                    avatarSelected == idx ? " h-[59px] w-[56px] border-2 " : ""
+                  }`}
                 />
               ))}
             </div>{" "}
@@ -183,7 +190,7 @@ const Test = () => {
             },
             {
               img: {
-                src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+                src: "/vaRnk3D.svg",
                 width: 0,
                 quality: undefined,
               },
@@ -199,14 +206,14 @@ const Test = () => {
             },
             {
               img: {
-                src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+                src: "/vaRnk3D.svg",
                 width: 0,
                 quality: undefined,
               },
             },
             {
               img: {
-                src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
+                src: "/8Qz2gKJ2.svg",
                 width: 0,
                 quality: undefined,
               },
@@ -216,50 +223,45 @@ const Test = () => {
           avatars={[
             {
               src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
-              width: 0,
+              width: 1000,
+              quality: undefined,
+            },
+            {
+              src: "/vaRnk3D.svg",
+              width: 1000,
+              quality: undefined,
+            },
+            {
+              src: "/D4Q9FxU 2.svg",
+              width: 1000,
+              quality: undefined,
+            },
+            {
+              src: "/8Qz2gKJ2.svg",
+              width: 1000,
               quality: undefined,
             },
             {
               src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
-              width: 0,
+              width: 1000,
+              quality: undefined,
+            },
+            {
+              src: "/vaRnk3D.svg",
+              width: 1000,
+              quality: undefined,
+            },
+            {
+              src: "/D4Q9FxU 2.svg",
+              width: 1000,
               quality: undefined,
             },
             {
               src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
-              width: 0,
-              quality: undefined,
-            },
-            {
-              src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
-              width: 0,
-              quality: undefined,
-            },
-            {
-              src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
-              width: 0,
-              quality: undefined,
-            },
-            {
-              src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
-              width: 0,
-              quality: undefined,
-            },
-            {
-              src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
-              width: 0,
-              quality: undefined,
-            },
-            {
-              src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
-              width: 0,
+              width: 1000,
               quality: undefined,
             },
           ]}
-          preview={{
-            src: "/C783SC6k02TS2lt15FiMpEypcfXDFJ2kW4aGeDMy 2.svg",
-            width: 0,
-            quality: undefined,
-          }}
         />
       </div>
     </Layout>
