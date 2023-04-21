@@ -134,16 +134,16 @@ const EquipItems: FC<{
             </button>
             <div
               tabIndex={0}
-              className="hide-scrollbar no-scrollbar dropdown-content flex max-w-[338px] flex-row overflow-hidden overflow-x-scroll  rounded-b-xl shadow-md"
+              className="hide-scrollbar no-scrollbar dropdown-content flex max-w-[337px] flex-row overflow-hidden overflow-x-scroll  rounded-b-xl shadow-md"
             >
               {avatars?.map((item, idx) => (
                 <Image
+                  alt={""}
+                  {...item}
                   key={`avatar-${idx}`}
-                  src={item.src}
-                  alt={"no img"}
-                  width={59}
-                  height={59}
+                  height={item.width}
                   onClick={() => {}}
+                  className="w-[59px]"
                 />
               ))}
             </div>{" "}
