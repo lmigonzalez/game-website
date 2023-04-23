@@ -50,7 +50,7 @@ const EquipItems: FC<{
           <div className="dropdown-hover group dropdown">
             <label
               tabIndex={0}
-              className="orange-gradient btn m-1 flex h-12 w-[338px] flex-row items-center justify-between rounded-xl border-none px-5 text-[#FCDDEC]"
+              className="orange-gradient btn m-1 flex h-12 w-[338px] flex-row items-center justify-between rounded-full border-none px-5 text-[#FCDDEC] group-hover:rounded-xl"
             >
               <p id="dropDownBox" className="normal-case">
                 Select Game
@@ -65,12 +65,12 @@ const EquipItems: FC<{
                 xmlns="http://www.w3.org/2000/svg"
                 stroke="#FCDDEC"
               >
-                <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                <g id="SVGRepo_bgCarrier" strokeWidth="0" />
 
                 <g
                   id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
 
                 <g id="SVGRepo_iconCarrier">
@@ -104,8 +104,8 @@ const EquipItems: FC<{
           <div className="group dropdown dropdown-bottom w-[338px]">
             <button tabIndex={0} className="h-12 w-full">
               <div
-                className="orange-gradient flex h-full w-full items-center justify-between rounded-2xl
-                  px-5  text-justify text-[#FCDDEC] group-focus-within:rounded-b-none"
+                className="orange-gradient flex h-full w-full items-center justify-between rounded-full
+                  px-5  text-justify text-[#FCDDEC] group-focus-within:rounded-xl group-focus-within:rounded-b-none"
               >
                 <span>Select Avatar </span>
                 <svg
@@ -118,12 +118,12 @@ const EquipItems: FC<{
                   xmlns="http://www.w3.org/2000/svg"
                   stroke="#FCDDEC"
                 >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
+                  <g id="SVGRepo_bgCarrier" strokeWidth="0" />
 
                   <g
                     id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
 
                   <g id="SVGRepo_iconCarrier">
