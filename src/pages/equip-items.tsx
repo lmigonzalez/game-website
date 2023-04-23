@@ -50,7 +50,7 @@ const EquipItems: FC<{
           <div className="dropdown-hover group dropdown">
             <label
               tabIndex={0}
-              className="orange-gradient btn m-1 flex h-12 w-[338px] flex-row items-center justify-between rounded-xl border-none px-5 text-[#FCDDEC]"
+              className="orange-gradient btn m-1 flex h-12 w-[338px] flex-row items-center justify-between rounded-full border-none px-5 text-[#FCDDEC]"
             >
               <p id="dropDownBox" className="normal-case">
                 Select Game

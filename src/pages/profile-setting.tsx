@@ -1,7 +1,7 @@
-import React from "react";
-import Image from "next/image";
-import Layout from "@/components/layout/Layout";
-import Head from "next/head";
+import React from 'react';
+import Image from 'next/image';
+import Layout from '@/components/layout/Layout';
+import Head from 'next/head';
 const profileSetting = () => {
   return (
     <>
@@ -11,16 +11,17 @@ const profileSetting = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Layout navBarBehavior={2}>
-        <section className="flex min-h-screen w-[1200px] max-w-full m-auto flex-col gap-8 px-4 py-24 md:flex-row">
-          <div className="w-1/4 text-black">
-            <div>
+        <section className="m-auto flex min-h-screen w-[1200px] max-w-full flex-col gap-8 px-4 py-24 md:flex-row">
+          <div className="w-1/2 max-w-[250px] md:w-1/4 text-black">
+            <div className='relative mb-4'>
               <Image
-                className="rounded-2xl"
-                src="/michael-dam.jpg"
+                className="rounded-2xl relative z-10"
+                src="/profile-big-img.png"
                 alt=""
                 width={275}
                 height={275}
               />
+              <div className="absolute -bottom-2 -right-2 z-0 w-full h-full border-[1px] border-[#DB0F29] rounded-2xl"></div>
             </div>
             <strong className="text-3xl">Jeremy Rose</strong>
           </div>
@@ -69,19 +70,19 @@ const profileSetting = () => {
                   <div className="relative">
                     <Image
                       className="rounded-lg"
-                      src="/michael-dam.jpg"
+                      src="/profile-pic.svg"
                       alt=""
                       width={80}
                       height={80}
                     />
-                    <div className="absolute top-1 right-1 rounded bg-[#FF0100] p-1">
+                    <div className="absolute top-1 right-1 rounded bg-[#FF0100] p-[2px]">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         fill="none"
                         viewBox="0 0 24 24"
                         strokeWidth={1.5}
                         stroke="currentColor"
-                        className="h-6 w-6 text-white"
+                        className="h-4 w-4 text-white"
                       >
                         <path
                           strokeLinecap="round"
@@ -112,8 +113,8 @@ const profileSetting = () => {
                       <div className=" hidden  space-x-3 md:flex">
                         <p>Networks</p>
                         <Image
-                          src={"/help-info-svgrepo-com.svg"}
-                          alt={""}
+                          src={'/help-info-svgrepo-com.svg'}
+                          alt={''}
                           width={12.97}
                           height={12.97}
                         />
@@ -122,7 +123,7 @@ const profileSetting = () => {
 
                     <Image
                       className=""
-                      src={"/fox.png"}
+                      src={'/fox.png'}
                       alt="google icon"
                       width={33}
                       height={30}
@@ -130,7 +131,7 @@ const profileSetting = () => {
                   </div>
 
                   <div className="flex w-full flex-row items-center justify-between text-[#9D9D9D]">
-                    <button className="md:hidden">
+                    <button className=" md:hidden">
                       <p className="orange-gradient flex h-10 w-48 items-center justify-center rounded text-sm text-white">
                         + Add Another Wallet
                       </p>
@@ -181,16 +182,24 @@ const profileSetting = () => {
                     </div>
                   </div>
                 </div>
+
+                <div className="w-full hidden md:block">
+                  <button className="">
+                    <p className="orange-gradient flex h-10 w-48 items-center justify-center rounded text-sm text-white">
+                      + Add Another Wallet
+                    </p>
+                  </button>
+                </div>
               </div>
             </div>
 
-            <div className="flex justify-end space-x-3 border-t-[2px] border-solid border-[#CDD6D7] py-7 px-8 ">
+            <div className="hidden md:flex justify-end space-x-3 border-t-[2px] border-solid border-[#CDD6D7] py-7 px-8">
               <button
                 className=" flex h-12 w-32 items-center
 				justify-center rounded border-2 border-[#DB0F29] py-4"
               >
-                {" "}
-                <p className="text-color">Cancel</p>{" "}
+                {' '}
+                <p className="text-color">Cancel</p>{' '}
               </button>
 
               <button type="submit">
