@@ -60,7 +60,7 @@ const Navbar: FC<{ behavior: number }> = ({ behavior }) => {
 
           {behavior === 1 && user && (
             <>
-              <div className="dropdown-end dropdown shrink-0 text-black ">
+              <div className="dropdown dropdown-end shrink-0 text-black ">
                 <label
                   tabIndex={0}
                   className="btn m-1 flex w-auto flex-row gap-2 border-none bg-transparent p-0 hover:bg-transparent"
@@ -69,8 +69,8 @@ const Navbar: FC<{ behavior: number }> = ({ behavior }) => {
                     className="h-12 w-12 rounded-full"
                     src="/michael-dam.jpg"
                     alt=""
-                    width={32}
-                    height={32}
+                    width={1200}
+                    height={1200}
                   />
                   <span className="text-xl font-bold text-black">
                     {user.name}
@@ -117,18 +117,20 @@ const Navbar: FC<{ behavior: number }> = ({ behavior }) => {
 
           {behavior === 2 &&
             (user ? (
-              <div className="dropdown-end dropdown text-black">
+              <div className="dropdown dropdown-end text-black">
                 <label
                   tabIndex={0}
                   className="btn m-1 w-auto border-none bg-transparent p-0 hover:bg-transparent"
                 >
-                  <Image
-                    className="h-8 w-8 rounded-full"
-                    src="/michael-dam.jpg"
-                    alt=""
-                    width={32}
-                    height={32}
-                  />
+                  <div className="h-8 w-8 rounded-full">
+                    <Image
+                      className="h-8 w-8 rounded-full object-cover object-center"
+                      src="/michael-dam.jpg"
+                      alt=""
+                      width={1200}
+                      height={1200}
+                    />
+                  </div>
                   <Image
                     className=""
                     src="/triangle-down-svgrepo-com.svg"
@@ -139,7 +141,7 @@ const Navbar: FC<{ behavior: number }> = ({ behavior }) => {
                 </label>
                 <ul
                   tabIndex={0}
-                  className="dropdown-content menu rounded-box w-52 bg-base-100 p-2 text-black shadow-lg"
+                  className="dropdown-content menu rounded-box w-52 p-2 text-black shadow-lg"
                 >
                   <li>
                     <a>View Profile</a>
