@@ -51,7 +51,6 @@ const EquipItems: FC<{
             <label
               tabIndex={0}
               className="orange-gradient btn m-1 flex h-12 w-[338px] flex-row items-center justify-between rounded-full border-none px-5 text-[#FCDDEC] group-hover:rounded-xl"
-              className="orange-gradient btn m-1 flex h-12 w-[338px] flex-row items-center justify-between rounded-full border-none px-5 text-[#FCDDEC]"
             >
               <p id="dropDownBox" className="normal-case">
                 Select Game

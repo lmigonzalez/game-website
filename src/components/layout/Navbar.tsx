@@ -67,7 +67,7 @@ const Navbar: FC<{ behavior: number }> = ({ behavior }) => {
                 >
                   <Image
                     className="h-12 w-12 rounded-full"
-                    src="/michael-dam.jpg"
+                    src="/profile-pic.svg"
                     alt=""
                     width={1200}
                     height={1200}
