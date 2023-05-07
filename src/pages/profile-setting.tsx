@@ -1,7 +1,7 @@
-import React from 'react';
-import Image from 'next/image';
-import Layout from '@/components/layout/Layout';
-import Head from 'next/head';
+import React from "react";
+import Image from "next/image";
+import Layout from "@/components/layout/Layout";
+import Head from "next/head";
 const profileSetting = () => {
   return (
     <>
@@ -10,18 +10,18 @@ const profileSetting = () => {
         <meta name="description" content="My Profile Settings" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Layout navBarBehavior={2}>
+      <Layout navBarBehavior={1}>
         <section className="m-auto flex min-h-screen w-[1200px] max-w-full flex-col gap-8 px-4 py-24 md:flex-row">
-          <div className="w-1/2 max-w-[250px] md:w-1/4 text-black">
-            <div className='relative mb-4'>
+          <div className="w-1/2 max-w-[250px] text-black md:w-1/4">
+            <div className="relative mb-4">
               <Image
-                className="rounded-2xl relative z-10"
+                className="relative z-10 rounded-2xl"
                 src="/profile-big-img.png"
                 alt=""
                 width={275}
                 height={275}
               />
-              <div className="absolute -bottom-2 -right-2 z-0 w-full h-full border-[1px] border-[#DB0F29] rounded-2xl"></div>
+              <div className="absolute -bottom-2 -right-2 z-0 h-full w-full rounded-2xl border-[1px] border-[#DB0F29]"></div>
             </div>
             <strong className="text-3xl">Jeremy Rose</strong>
           </div>
@@ -113,8 +113,8 @@ const profileSetting = () => {
                       <div className=" hidden  space-x-3 md:flex">
                         <p>Networks</p>
                         <Image
-                          src={'/help-info-svgrepo-com.svg'}
-                          alt={''}
+                          src={"/help-info-svgrepo-com.svg"}
+                          alt={""}
                           width={12.97}
                           height={12.97}
                         />
@@ -123,7 +123,7 @@ const profileSetting = () => {
 
                     <Image
                       className=""
-                      src={'/fox.png'}
+                      src={"/fox.png"}
                       alt="google icon"
                       width={33}
                       height={30}
@@ -183,7 +183,7 @@ const profileSetting = () => {
                   </div>
                 </div>
 
-                <div className="w-full hidden md:block">
+                <div className="hidden w-full md:block">
                   <button className="">
                     <p className="orange-gradient flex h-10 w-48 items-center justify-center rounded text-sm text-white">
                       + Add Another Wallet
@@ -193,13 +193,13 @@ const profileSetting = () => {
               </div>
             </div>
 
-            <div className="hidden md:flex justify-end space-x-3 border-t-[2px] border-solid border-[#CDD6D7] py-7 px-8">
+            <div className="hidden justify-end space-x-3 border-t-[2px] border-solid border-[#CDD6D7] py-7 px-8 md:flex">
               <button
                 className=" flex h-12 w-32 items-center
 				justify-center rounded border-2 border-[#DB0F29] py-4"
               >
-                {' '}
-                <p className="text-color">Cancel</p>{' '}
+                {" "}
+                <p className="text-color">Cancel</p>{" "}
               </button>
 
               <button type="submit">

@@ -14,7 +14,7 @@ import MatchingCard from "@/components/MatchingCard";
 
 export default function asd() {
   return (
-    <Layout navBarBehavior={23}>
+    <Layout navBarBehavior={1}>
       <form>
         <label className="block">
           <span className="block text-sm font-medium text-slate-700">
