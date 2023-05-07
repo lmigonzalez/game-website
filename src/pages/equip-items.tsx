@@ -82,7 +82,7 @@ const EquipItems: FC<{
             </label>
             <ul
               tabIndex={0}
-              className="dropdown-content menu rounded-box w-[338px] bg-white p-2 text-black shadow"
+              className="dropdown-content menu rounded-box ml-1 w-[338px] bg-white p-2 text-black shadow"
             >
               {games.map((item) => (
                 <li
