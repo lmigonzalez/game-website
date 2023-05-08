@@ -17,7 +17,7 @@ const nftDetail = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <Modal {...globalNFT} />
-      <Layout navBarBehavior={0}>
+      <Layout navBarBehavior={1}>
         <main className="flex flex-col items-center justify-center gap-[114px]  px-4 pt-32 pb-[148px]">
           <NftDetail {...globalNFT} />
           <JoinUs2 />
