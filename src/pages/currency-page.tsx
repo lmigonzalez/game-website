@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Head from 'next/head';
 import CurrencyPlayer from '@/components/CurrencyPlayer';
 const CurrencyPage = () => {
-  const [selectedRow, setSelectedRow] = useState(0);
+  const [selectedRow, setSelectedRow] = useState(1);
 
   const table = [
     {
@@ -84,6 +84,17 @@ const CurrencyPage = () => {
       PurchaseDate: '22/03/2023  11:00AM',
       ReceivedDate: '22/03/2023  11:00AM',
     },
+    {
+      id: 8,
+      medal: true,
+      Player: 1,
+      Amount: '¥ 500k',
+      Game: 'Call of Duty',
+      Status: 'win',
+      Wallet: '0x2C396bcB8...Bb85',
+      PurchaseDate: '22/03/2023  11:00AM',
+      ReceivedDate: '22/03/2023  11:00AM',
+    },
   ];
 
   function handleSelectedRow(id: number) {
@@ -115,11 +126,11 @@ const CurrencyPage = () => {
                 <input
                   type="text"
                   placeholder="Search"
-                  className="h-full w-1/2 rounded border-[2px]  border-black bg-transparent px-2 text-black"
+                  className="h-full w-1/2 rounded border-[2px]  border-black bg-transparent px-2 text-black border-opacity-50"
                 />
                 <select
                   id="options"
-                  className="h-full w-1/2 rounded border-[2px]  border-black bg-transparent px-2 text-black"
+                  className="h-full w-1/2 rounded border-[2px]  border-black border-opacity-50 bg-transparent px-2 text-black"
                 >
                   <option value="" selected>
                     Filters
@@ -130,58 +141,50 @@ const CurrencyPage = () => {
               </div>
             </div>
 
-            <table className="mt-7 w-full  border-collapse text-center text-[#7F8A94]">
-              <thead>
-                <tr className="h-8 border-[1px] border-b-[#C0C0C0]">
-                  <th>Player</th>
-                  <th>Amount</th>
-                  <th>Game</th>
-                  <th>Status</th>
-                  <th>Wallet</th>
-                  <th>Purchase Date and Time</th>
-                  <th>Received Date and Time</th>
-                </tr>
-              </thead>
-              <tbody>
-                {table.map((item) => {
-                  return (
-                    <tr
-                      onClick={() => handleSelectedRow(item.id)}
-                      key={item.id}
-                      className={`h-16 border-[1px] border-b-[#C0C0C0] ${
-                        selectedRow === item.id
-                          ? 'bg-[#0ECF2D] bg-opacity-50 text-black'
-                          : 'bg-transparent'
-                      }`}
-                    >
-                      <td>
-                        {' '}
-                        {
-                          <CurrencyPlayer
-                            medal={item.medal}
-                            images={item.Player}
-                          />
-                        }{' '}
-                      </td>
-                      <td>{item.Amount}</td>
-                      <td>{item.Game}</td>
-                      <td
-                        className={`${
-                          item.Status === 'Lose'
-                            ? 'orange-gradient bg-clip-text text-transparent'
-                            : ''
-                        }`}
-                      >
-                        {item.Status}
-                      </td>
-                      <td>{item.Wallet}</td>
-                      <td>{item.PurchaseDate}</td>
-                      <td>{item.ReceivedDate}</td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
+            <table className="mt-7 w-full border-collapse text-center text-[#7F8A94]">
+  <thead>
+    <tr className="h-8">
+      <th>Player</th>
+      <th>Amount</th>
+      <th>Game</th>
+      <th>Status</th>
+      <th>Wallet</th>
+      <th>Purchase Date and Time</th>
+      <th>Received Date and Time</th>
+    </tr>
+  </thead>
+  <tbody>
+    {table.map((item) => {
+      return (
+        <tr
+          onClick={() => handleSelectedRow(item.id)}
+          key={item.id}
+          className={`h-16 ${selectedRow === item.id ? 'bg-[#0ECF2D] bg-opacity-50 text-black' : 'bg-transparent'}`}
+          style={{ borderBottom: '1px solid #C0C0C0' }}
+        >
+          <td>
+            {' '}
+            {
+              <CurrencyPlayer
+                medal={item.medal}
+                images={item.Player}
+              />
+            }{' '}
+          </td>
+          <td>{item.Amount}</td>
+          <td>{item.Game}</td>
+          <td className={`${item.Status === 'Lose' ? 'orange-gradient bg-clip-text text-transparent' : ''}`}>
+            {item.Status}
+          </td>
+          <td>{item.Wallet}</td>
+          <td>{item.PurchaseDate}</td>
+          <td>{item.ReceivedDate}</td>
+        </tr>
+      );
+    })}
+  </tbody>
+</table>
+
 
             <div className="mt-8 text-end">
               <button>

@@ -27,7 +27,7 @@ const CurrencyPlayer: React.FC<MyProps> = ({ medal, images }) => {
   return (
     <div className="flex items-center">
       {medal ? (
-        <Image src="/medal.svg" alt="" width={32} height={32} />
+        <Image src="/medal-1.svg" alt="" width={32} height={32} />
       ) : (
         <div className="h-8 w-8"></div>
       )}
